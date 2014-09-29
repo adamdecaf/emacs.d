@@ -59,9 +59,9 @@
           (smartparens-global-strict-mode)))
 
 (use-package expand-region
- :bind ("C-e" . er/expand-region)
- :init (progn (pending-delete-mode t))
- :ensure t)
+  :bind ("C-w" . er/expand-region)
+  :init (progn (pending-delete-mode t))
+  :ensure t)
 
 (use-package highlight-parentheses
   :init (progn (global-highlight-parentheses-mode))
