@@ -31,6 +31,7 @@
 
 ;; packages
 (use-package ag :ensure t)
+(use-package highlight-parentheses :ensure t)
 (use-package dockerfile-mode :ensure t)
 (use-package markdown-mode :ensure t)
 (use-package projectile :ensure t)
