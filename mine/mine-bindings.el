@@ -22,6 +22,7 @@
 
 ;; sbt-mode
 (global-set-key (kbd "C-c s c") 'sbt-compile)
+(global-set-key (kbd "C-c s o") 'sbt-test-only-current-test)
 
 ;; erlang-mode
 (global-set-key (kbd "C-c e c") 'erlang-compile)
