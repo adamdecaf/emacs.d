@@ -83,13 +83,6 @@
     (subword-mode t)
   (c-subword-mode t))
 
-;; (require 'dired-x)
-;; (add-hook 'dired-load-hook
-;;           (lambda ()
-;;             (define-key dired-mode-map (kbd "M-RET") 'dired-external-open)))
-
-;; (setq ediff-window-setup-function 'ediff-setup-windows-plain)
-
 ;; Create non-existent directories containing a new file before saving
 (add-hook 'before-save-hook
           (lambda ()
@@ -127,17 +120,6 @@
 ;;   (yank)
 ;;   (call-interactively 'indent-region))
 
-;; Misc Aliases
-(defalias 'qrr 'query-replace-regexp)
-(defalias 'scala 'scala-run-scala)
-(defalias 'elisp-shell 'ielm)
-(defalias 'colors 'list-colors-display)
-(defalias 'buffers 'bs-show)
-(defalias 'git 'magit-status)
-(defalias 'web 'w3m)
-(defalias 'ps 'proced)
-(defalias 'find-anything 'apropos)
-
 ;; dired things
 (add-hook 'dired-mode-hook '(lambda ()
                               (local-set-key (kbd "C-c R") 'wdired-change-to-wdired-mode)))
@@ -145,9 +127,6 @@
 (setq wdired-confirm-overwrite t)
 (setq wdired-use-dired-vertical-movement t)
 (defalias 'wdired 'wdired-change-to-wdired-mode)
-
-;; Midnight mode to clean up old buffers
-;; (require 'midnight)
 
 (add-hook 'emacs-lisp-mode-hook '(lambda () (eldoc-mode t)))
 
@@ -162,57 +141,6 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 (setq create-lockfiles nil)
-
-;; Protobuf files are like c
-;; (add-to-list 'auto-mode-alist '("Vagrantfile" . ruby-mode))
-;; (add-to-list 'auto-mode-alist '("Rakefile" . ruby-mode))
-;; (add-to-list 'auto-mode-alist '("\\.proto\\'" . c-mode))
-
-;; auto revert logs by tail
-;; (add-to-list 'auto-mode-alist '("\\.log\\'" . auto-revert-tail-mode))
-
-;; custom battery info
-;; (setq display-time-format "(%I:%M%p %A %B %d %Y) ")
-;; (setq display-time-mail-file -1)
-;; (setq display-time-default-load-average nil)
-
-;; (setq battery-mode-line-format "(%p %B) ")
-;; (setq battery-echo-area-format "Battery: %p%% %B")
-;; (setq battery-update-interval 10)
-
-;; (add-hook 'window-configuration-change-hook
-;;           '(lambda ()
-;;              (setq rcirc-fill-column (- (window-width) 2))))
-
-;; viewing gists in browse-url after gisting
-;; (setq gist-view-gist t)
-
-;; pop-to-buffer to split horizontally rather than vertically
-;; (setq split-width-threshold nil)
-
-;; rcirc things
-
-;; (defun mine-rcirc-message (message)
-;;   (interactive "i")
-;;   (rcirc-cmd-msg message))
-
-;; (defun-rcirc-command msg (message)
-;;   "Send private MESSAGE to TARGET."
-;;   (interactive "i")
-;;   (if (null message)
-;;       (progn
-;;         (setq target (completing-read "Message nick: "
-;;                                       (with-rcirc-server-buffer
-;; 					rcirc-nick-table)))
-;;         (when (> (length target) 0)
-;;           (setq message (read-string (format "Message %s: " target)))
-;;           (when (> (length message) 0)
-;;             (rcirc-send-message process target message))))
-;;     (if (not (string-match "\\([^ ]+\\) \\(.+\\)" message))
-;;         (message "Not enough args, or something.")
-;;       (setq target (match-string 1 message)
-;;             message (match-string 2 message))
-;;       (rcirc-send-message process target message))))
 
 (toggle-case-fold-search)
 
