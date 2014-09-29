@@ -54,7 +54,7 @@
   :ensure t)
 
 (use-package highlight-parentheses
-  :init (progn (highlight-parentheses-mode))
+  :init (progn (global-highlight-parentheses-mode))
   :ensure t)
 
 (use-package ido
