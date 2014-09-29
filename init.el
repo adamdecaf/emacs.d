@@ -30,10 +30,6 @@
 (load-theme 'wombat t)
 
 ;; packages
-
-;; todo: need mark-all
-;; todo: need smartparens
-
 (use-package ag :ensure t)
 (use-package highlight-parentheses :ensure t)
 (use-package dockerfile-mode :ensure t)
@@ -72,11 +68,6 @@
 (require 'mine-bindings)
 (require 'mine-commands)
 (require 'mine-languages)
-
-;; (require 'mine-smartparens)
-;;   - (require 'smartparens-config)
-;;   - (provide 'mine-smartparens)
-;;   - (smartparens-global-strict-mode t)
 
 ;; language / tool specifics
 (require 'mine-sbt)
