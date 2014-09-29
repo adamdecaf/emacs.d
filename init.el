@@ -31,7 +31,6 @@
 
 ;; packages
 (use-package ag :ensure t)
-(use-package highlight-parentheses :ensure t)
 (use-package dockerfile-mode :ensure t)
 (use-package markdown-mode :ensure t)
 (use-package projectile :ensure t)
@@ -50,6 +49,10 @@
 
 (use-package switch-window
   :bind ("C-x o" . switch-window)
+  :ensure t)
+
+(use-package highlight-parentheses
+  :init (progn (highlight-parentheses-mode))
   :ensure t)
 
 (use-package ido
@@ -79,7 +82,6 @@
 
 (setq custom-file (expand-file-name "~/.emacs.d/customizations.el"))
 (load custom-file)
-
 
 (put 'dired-find-alternate-file 'disabled nil)
 (put 'ido-exit-minibuffer 'disabled nil)
