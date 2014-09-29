@@ -1,0 +1,8 @@
+*.elc
+*.eld
+el-get/
+emacs-desktop
+.emacs.desktop.lock
+auto-save-list/
+elpa/
+custom/
