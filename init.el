@@ -30,6 +30,10 @@
 (load-theme 'wombat t)
 
 ;; packages
+
+;; todo: need mark-all
+;; todo: need smartparens
+
 (use-package ag :ensure t)
 (use-package highlight-parentheses :ensure t)
 (use-package dockerfile-mode :ensure t)
