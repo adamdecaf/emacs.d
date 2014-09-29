@@ -53,6 +53,11 @@
   :bind ("C-x o" . switch-window)
   :ensure t)
 
+(use-package smartparens
+  :init (progn
+          (require 'smartparens-config)
+          (smartparens-global-strict-mode)))
+
 (use-package expand-region
   :bind ("C-e" . er/expand-region)
   :init (progn (pending-delete-mode t)
