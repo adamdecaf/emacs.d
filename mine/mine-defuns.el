@@ -43,4 +43,10 @@
       (message "Opening file...")
     (message "Aborting")))
 
+(defun mine-tramp-cleanup ()
+  (interactive)
+  (tramp-cleanup-all-buffers)
+  (tramp-cleanup-all-connections)
+  (message "cleanup of tramp buffers/connections complete"))
+
 (provide 'mine-defuns)
