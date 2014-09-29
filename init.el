@@ -81,13 +81,6 @@
 ;; language / tool specifics
 (require 'mine-sbt)
 
-;; (require 'mine-banno-ids)
-;; (require 'mine-banno-servers)
-;; (require 'mine-banno-misc)
-
-;; (require 'mine-my-servers)
-;; (require 'mine-personal-servers)
-
 (setq mine-custom-dir "~/.emacs.d/custom/")
 (if (file-exists-p mine-custom-dir)
  (let ((custom-files (directory-files mine-custom-dir t "\.el$")))
