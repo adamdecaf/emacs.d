@@ -66,6 +66,8 @@
 (require 'mine-defuns)
 (require 'mine-bindings)
 (require 'mine-commands)
+(require 'mine-languages)
+
 ;; (require 'mine-smartparens)
 ;;   - (require 'smartparens-config)
 ;;   - (provide 'mine-smartparens)
