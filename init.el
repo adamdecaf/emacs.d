@@ -39,6 +39,7 @@
 (use-package scala-mode2 :ensure t)
 (use-package yaml-mode :ensure t)
 (use-package json-reformat :ensure t)
+;; (use-package gist :ensure t)
 
 (use-package magit
   :bind ("C-x g" . magit-status)
