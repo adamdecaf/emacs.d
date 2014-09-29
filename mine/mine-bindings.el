@@ -33,8 +33,7 @@
 (global-set-key (kbd "C-c j l") 'clojure-load-file)
 
 ;; json validate
-(global-set-key (kbd "C-x j f") 'json-format-buffer)
-(global-set-key (kbd "C-x j v") 'json-validate-buffer)
+(global-set-key (kbd "C-x j f") 'json-reformat-region)
 
 ;; magit
 (global-set-key (kbd "C-x C-g") 'magit-status)
