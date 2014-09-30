@@ -59,7 +59,7 @@
           (smartparens-global-strict-mode)))
 
 (use-package expand-region
-  :bind ("C-w" . er/expand-region)
+  :bind ("C-c C-w" . er/expand-region)
   :init (progn (pending-delete-mode t))
   :ensure t)
 
