@@ -7,6 +7,11 @@
   (interactive)
   (sbt-command "compile"))
 
+(defun sbt-test()
+  "Run `test` in an sbt project."
+  (interactive)
+  (sbt-command "test"))
+
 (defun sbt-cross-test()
   "Run +test to test all cross versions of a build."
   (interactive)
