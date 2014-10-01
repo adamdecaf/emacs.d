@@ -8,7 +8,7 @@
 
 ;; text
 (global-set-key (kbd "M-g") 'goto-line)
-(global-set-key (kbd "C-o") 'indent-buffer)
+(global-set-key (kbd "C-c o") 'indent-buffer)
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
 
 ;; movement
