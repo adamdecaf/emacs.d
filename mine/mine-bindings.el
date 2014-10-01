@@ -20,6 +20,10 @@
 ;; (global-set-key (kbd "C-M-m") 'mark-more-like-this)
 ;; (global-set-key (kbd "C-*") 'mark-all-like-this)
 
+;; docview mode
+(global-set-key (kbd "C-c n") 'doc-view-next-page)
+(global-set-key (kbd "C-c p") 'doc-view-previous-page)
+
 ;; sbt-mode
 (global-set-key (kbd "C-c s t") 'sbt-test)
 (global-set-key (kbd "C-c s c") 'sbt-compile)
