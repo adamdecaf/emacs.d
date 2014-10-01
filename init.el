@@ -13,6 +13,9 @@
 
 (push "/usr/local/bin" exec-path)
 
+;; env steup
+(setenv "ESHELL" "bash")
+
 ;; setup use-package
 (push "~/.emacs.d/use-package/" load-path)
 
