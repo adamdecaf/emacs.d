@@ -3,6 +3,7 @@
   (interactive)
   (indent-region (point-min) (point-max)))
 
+;; joe
 (defun rename-file-and-buffer (new-name)
   "Renames both current buffer and file it's visiting to NEW-NAME."
   (interactive "sNew name: ")
@@ -16,6 +17,7 @@
           (set-visited-file-name new-filename)
           (set-buffer-modified-p nil))))))
 
+;; joe
 (defun mine-sql (product sql-user sql-password sql-server sql-database root-sql-script-dir)
   (let* ((sql-text-buffer (find-file (concat root-sql-script-dir sql-database "_" sql-server ".sql")))
          (new-name (concat sql-user "@" sql-database "." sql-server))
@@ -24,6 +26,7 @@
     (set (make-local-variable 'sql-buffer) sqli-buffer)
     (switch-to-buffer sqli-buffer nil t)))
 
+;; joe
 (defun delete-this-file-and-buffer ()
   "Removes file connected to current buffer and kills buffer."
   (interactive)
@@ -37,6 +40,7 @@
         (kill-buffer buffer)
         (message "File '%s' successfully removed" filename)))))
 
+;; rubbish
 (defun swap-windows ()
   "If you have 2 windows, it swaps them."
   (interactive)
@@ -55,6 +59,7 @@
            (set-window-start w2 s1))))
   (other-window 1))
 
+;; rubbish
 (defun toggle-window-split ()
   "Vertical split shows more of each line, horizontal split shows
 more lines. This code toggles between them. It only works for
@@ -83,6 +88,7 @@ frames with exactly two windows."
           (select-window first-win)
           (if this-win-2nd (other-window 1))))))
 
+;; rubbish
 (defun ido-recentf-open ()
   "Use `ido-completing-read` to \\[find-file] a recent file"
   (interactive)
@@ -96,6 +102,7 @@ frames with exactly two windows."
   (tramp-cleanup-all-connections)
   (message "cleanup of tramp buffers/connections complete"))
 
+;; rubbish
 (defun mine-command-line-tool (command &optional history history-symbol)
   (let* ((rest-of-command (read-from-minibuffer (concat command " ") (car history) nil nil history-symbol))
          (command-with-args (append (split-string command) (split-string rest-of-command)))
@@ -107,6 +114,7 @@ frames with exactly two windows."
     (switch-to-buffer buffer)
     (apply 'make-comint-in-buffer name buffer command nil args)))
 
+;; joe
 (defun ssh-tunnel-ask ()
   (interactive)
   (let* ((host (read-string "Host: "))
@@ -115,6 +123,7 @@ frames with exactly two windows."
     (ssh-tunnel-cmd host command ssh-username)
     ))
 
+;; joe
 (defun ssh-tunnel-cmd (host command &optional ssh-username)
   (require 'comint)
   (let* ((process-name (format "%s <%s>" command host))
