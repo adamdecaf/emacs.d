@@ -107,4 +107,24 @@ frames with exactly two windows."
     (switch-to-buffer buffer)
     (apply 'make-comint-in-buffer name buffer command nil args)))
 
+(defun ssh-tunnel-ask ()
+  (interactive)
+  (let* ((host (read-string "Host: "))
+         (command (read-string "Command: "))
+         (ssh-username (read-string "Username: " (getenv "USER"))))
+    (ssh-tunnel-cmd host command ssh-username)
+    ))
+
+(defun ssh-tunnel-cmd (host command &optional ssh-username)
+  (require 'comint)
+  (let* ((process-name (format "%s <%s>" command host))
+         (buffer-name (format "*%s*" process-name))
+         (buffer (get-buffer-create buffer-name))
+         (login (if ssh-username
+                    (concat ssh-username "@" host)
+                  host))
+         (tunnel-args (list "-t" login command)))
+    (apply 'make-comint-in-buffer process-name buffer "ssh" nil tunnel-args)
+    (switch-to-buffer buffer)))
+
 (provide 'mine-defuns)
