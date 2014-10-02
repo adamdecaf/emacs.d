@@ -1,5 +1,7 @@
 # emacs.d
 
+> The emacs setup I use. Lots of stuff here is copy/pasted from others.
+
 ## Thanks
 
 - [Joe Winder](https://github.com/jwinder/emacs.d)
