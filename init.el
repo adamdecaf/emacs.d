@@ -11,6 +11,14 @@
       inhibit-startup-screen t
       indent-tabs-mode nil)
 
+(setenv "PATH" (concat (getenv "HOME") "/bin" ":"
+                       "/usr/local/bin" ":"
+                       "/usr/bin" ":"
+                       "/bin" ":"
+                       "/sbin" ":"
+                       ))
+
+(push "/Users/adam/bin" exec-path)
 (push "/usr/local/bin" exec-path)
 
 ;; env steup
