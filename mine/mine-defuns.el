@@ -114,7 +114,9 @@ frames with exactly two windows."
     (switch-to-buffer buffer)
     (apply 'make-comint-in-buffer name buffer command nil args)))
 
-(defun async-shell-command (cmd &optional args)
+;; todo
+;; (command-with-args (append (split-string command) (split-string rest-of-command)))
+(defun async-shell-command (cmd)
   (interactive)
   (let* ((process-name (concat cmd " <localhost>"))
          (buffer-name (format "*%s*" process-name))
