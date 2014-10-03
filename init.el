@@ -54,6 +54,12 @@
 (use-package json-reformat :ensure t)
 ;; (use-package gist :ensure t)
 
+(use-package ido-vertical-mode
+  :init (progn
+          (ido-mode 1)
+          (ido-vertical-mode 1))
+  :ensure t)
+
 (use-package magit
   :bind ("C-x g" . magit-status)
   :ensure t)
