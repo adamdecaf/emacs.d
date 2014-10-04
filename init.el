@@ -102,9 +102,12 @@
 (require 'mine-bindings)
 (require 'mine-commands)
 (require 'mine-languages)
+(require 'mine-mode-line)
 
 ;; language / tool specifics
 (require 'mine-sbt)
+
+(mode-line-off)
 
 (setq mine-custom-dir "~/.emacs.d/custom/")
 (if (file-exists-p mine-custom-dir)
