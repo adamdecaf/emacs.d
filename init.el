@@ -61,6 +61,17 @@
           (ido-vertical-mode 1))
   :ensure t)
 
+;; w3m
+(use-package json :ensure t)
+(use-package request :ensure t)
+(use-package w3m :ensure t)
+
+(use-package multiple-cursors
+  :ensure t
+  :bind (("C->" . mc/mark-next-like-this)
+         ("C-<" . mc/mark-previous-like-this)
+         ("C-*" . mc/mark-all-like-this)))
+
 (use-package magit
   :bind ("C-x g" . magit-status)
   :ensure t)
