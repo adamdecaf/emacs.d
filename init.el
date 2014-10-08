@@ -55,6 +55,7 @@
 (use-package yaml-mode :ensure t)
 (use-package json-reformat :ensure t)
 (use-package go-mode :ensure t)
+(use-package php-mode :ensure t)
 ;; (use-package gist :ensure t)
 
 (use-package ido-vertical-mode
