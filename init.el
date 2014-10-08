@@ -41,6 +41,7 @@
 (load-theme 'wombat t)
 
 ;; packages
+(use-package s :ensure t)
 (use-package ag :ensure t)
 (use-package dockerfile-mode :ensure t)
 (use-package markdown-mode :ensure t)
