@@ -57,6 +57,7 @@
 (use-package go-mode :ensure t)
 (use-package php-mode :ensure t)
 (use-package less-css-mode :ensure t)
+(use-package rainbow-mode :ensure t)
 ;; (use-package gist :ensure t)
 
 (use-package ido-vertical-mode
