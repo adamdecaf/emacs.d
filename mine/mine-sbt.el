@@ -14,6 +14,10 @@
   (interactive)
   (sbt-command "test"))
 
+(defun sbt-scripted-test()
+  (interactive)
+  (sbt-command "scripted"))
+
 (defun sbt-cross-test()
   (interactive)
   (sbt-command "+test"))
