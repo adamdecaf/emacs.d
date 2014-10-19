@@ -10,3 +10,4 @@ var/
 tramp
 eshell/
 url/
+.mc-lists.el
