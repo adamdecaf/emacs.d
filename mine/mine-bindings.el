@@ -10,6 +10,8 @@
 (global-set-key (kbd "M-g") 'goto-line)
 (global-set-key (kbd "C-c o") 'indent-buffer)
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
+(global-set-key (kbd "C-c c r") 'comment-region)
+(global-set-key (kbd "C-c u r") 'uncomment-region)
 
 ;; movement
 (global-set-key (kbd "C-c C-b") 'beginning-of-buffer)
