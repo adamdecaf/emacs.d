@@ -1,4 +1,4 @@
 ;; pretty stuff
 
-(set-face-background 'fringe "black")
+(set-face-background 'fringe "#242424")
 (set-cursor-color "white")
