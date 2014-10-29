@@ -121,6 +121,7 @@
 (require 'mine-commands)
 (require 'mine-languages)
 (require 'mine-mode-line)
+(require 'mine-w3m)
 
 ;; language / tool specifics
 (require 'mine-sbt)
