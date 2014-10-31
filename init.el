@@ -120,6 +120,7 @@
 (require 'mine-languages)
 (require 'mine-mode-line)
 (require 'mine-w3m)
+(require 'mine-org)
 (require 'mine-pretty)
 
 ;; language / tool specifics
