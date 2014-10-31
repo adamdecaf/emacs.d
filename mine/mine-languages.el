@@ -7,4 +7,7 @@
 (add-to-list 'auto-mode-alist '("Vagrantfile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Rakefile" . ruby-mode))
 
+;; csv files
+(add-to-list 'auto-mode-alist '("\\.csv\\'" . csv-nav-mode))
+
 (provide 'mine-languages)
