@@ -1,7 +1,5 @@
 ;; org-mode setup
 (require 'org)
-(require 'color-theme)
-
 (setq org-log-done t)
 
 (setq org-directory "~/Dropbox/org")
@@ -20,15 +18,5 @@
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
               (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE" "MEETING"))))
-
-(setq org-todo-keyword-faces
-      (quote (("TODO" :foreground "white" :weight bold)
-              ("NEXT" :foreground "red" :weight bold)
-              ("DONE" :foreground "forest green" :weight bold)
-              ("WAITING" :foreground "blue" :weight bold)
-              ("HOLD" :foreground "magenta" :weight bold)
-              ("CANCELLED" :foreground "gray" :weight bold)
-              ("MEETING" :foreground "yellow" :weight bold)
-              ("PHONE" :foreground "orange" :weight bold))))
 
 (provide 'mine-org)

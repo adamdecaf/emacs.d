@@ -1,6 +1,11 @@
 ;; fix buffer switching
 (global-set-key [remap list-buffers] 'bs-show)
 
+;; org
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(global-set-key (kbd "C-c c") 'org-capture)
+
 ;; frame/window
 (global-set-key (kbd "C-x 7") 'swap-windows)
 (global-set-key (kbd "C-x 8") 'toggle-window-split)
@@ -10,7 +15,7 @@
 (global-set-key (kbd "M-g") 'goto-line)
 (global-set-key (kbd "C-c o") 'indent-buffer)
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
-(global-set-key (kbd "C-c c r") 'comment-region)
+;; (global-set-key (kbd "C-c c r") 'comment-region)
 (global-set-key (kbd "C-c u r") 'uncomment-region)
 
 ;; movement

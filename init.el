@@ -39,9 +39,6 @@
 (package-initialize)
 (package-refresh-contents)
 
-;; theme
-(load-theme 'wombat t)
-
 ;; packages
 (use-package s :ensure t)
 (use-package ag :ensure t)
@@ -59,6 +56,7 @@
 (use-package php-mode :ensure t)
 (use-package less-css-mode :ensure t)
 (use-package rainbow-mode :ensure t)
+(use-package color-theme-wombat :ensure t)
 ;; (use-package gist :ensure t)
 
 (use-package ido-vertical-mode
@@ -122,6 +120,7 @@
 (require 'mine-languages)
 (require 'mine-mode-line)
 (require 'mine-w3m)
+(require 'mine-pretty)
 
 ;; language / tool specifics
 (require 'mine-sbt)
