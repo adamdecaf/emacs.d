@@ -4,9 +4,6 @@
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-wombat)
-;; (color-theme-zenburn)
-
-;; (load-theme 'wombat t)
 
 (color-theme-install
  `(color-theme-wombat
