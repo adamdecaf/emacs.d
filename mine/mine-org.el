@@ -6,9 +6,9 @@
 (setq org-default-notes-file "~/Dropbox/org/notes.org")
 
 (setq org-capture-templates
-      (quote (("t" "todo" entry (file (concat org-directory "/todo.org"))
+      (quote (("t" "todo" plain (file (concat org-directory "/todo.org"))
                "** TODO %?" )
-              ("n" "note" entry (file (concat org-directory "/notes.org"))
+              ("n" "note" plain (file (concat org-directory "/notes.org"))
                "** %?" ))))
 
 (setq org-agenda-files (list "~/Dropbox/org/banno.org"
