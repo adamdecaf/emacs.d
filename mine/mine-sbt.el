@@ -2,6 +2,10 @@
 
 (defalias 'sbt 'sbt-start)
 
+(defun sbt-docker()
+  (interactive)
+  (sbt-command "docker"))
+
 (defun sbt-run()
   (interactive)
   (sbt-command "run"))
