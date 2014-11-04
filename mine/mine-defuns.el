@@ -3,6 +3,15 @@
   (interactive)
   (indent-region (point-min) (point-max)))
 
+;; date/time
+(defun insert-date ()
+  (interactive)
+  (insert (shell-command-to-string "echo -n $(date +%Y-%m-%d)")))
+
+(defun insert-iso-timestamp ()
+  (interactive)
+  (insert (shell-command-to-string "echo -n $(date -u +%Y-%m-%dT%H:%M:%SZ)")))
+
 ;; joe
 (defun rename-file-and-buffer (new-name)
   "Renames both current buffer and file it's visiting to NEW-NAME."

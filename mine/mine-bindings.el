@@ -1,6 +1,10 @@
 ;; fix buffer switching
 (global-set-key [remap list-buffers] 'bs-show)
 
+;; date/time
+(global-set-key (kbd "C-c d") 'insert-date)
+(global-set-key (kbd "C-c t") 'insert-iso-timestamp)
+
 ;; org
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
