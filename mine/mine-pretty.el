@@ -83,4 +83,9 @@
               ("MEETING" :foreground "yellow" :weight bold)
               ("PHONE" :foreground "orange" :weight bold))))
 
+;; scala-mode2 settings
+;; https://github.com/hvesalai/scala-mode2#parameter-lists-scala-indentalign-parameters
+(setq scala-indent:align-parameters t)
+(set-face-attribute 'font-lock-variable-name-face nil :foreground "DarkOrange1")
+
 (provide 'mine-pretty)
