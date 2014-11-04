@@ -16,8 +16,7 @@
                              "~/Dropbox/org/images.org"
                              "~/Dropbox/org/notes.org"
                              "~/Dropbox/org/personal.org"
-                             "~/Dropbox/org/todo.org"
-                             "~/Dropbox/org/water.org"))
+                             "~/Dropbox/org/todo.org"))
 
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
