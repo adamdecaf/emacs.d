@@ -11,9 +11,13 @@
               ("n" "note" plain (file (concat org-directory "/notes.org"))
                "** %?" ))))
 
-(setq org-agenda-files (list "~/Dropbox/org/banno.org"
-                             "~/Dropbox/org/backln.org"
-                             "~/Dropbox/org/personal.org"))
+(setq org-agenda-files (list "~/Dropbox/org/backln.org"
+                             "~/Dropbox/org/banno.org"
+                             "~/Dropbox/org/images.org"
+                             "~/Dropbox/org/notes.org"
+                             "~/Dropbox/org/personal.org"
+                             "~/Dropbox/org/todo.org"
+                             "~/Dropbox/org/water.org"))
 
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
