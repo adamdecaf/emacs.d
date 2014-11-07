@@ -181,4 +181,13 @@ frames with exactly two windows."
   (let* ((hostname (read-from-minibuffer "Hostname: " (car last-hostname-used) nil nil 'last-hostname-used)))
     (find-file (concat "/scp:" hostname ":/home/adam/.bashrc"))))
 
+;; curl wrappers
+(defvar curl-from-localhost-history nil)
+(defvar curl-last-verb-used (list "GET"))
+(defun mine-curl-from-localhost ()
+  (interactive)
+  (let* ((verb (read-from-minibuffer "Verb: " (car curl-last-verb-used) nil nil 'curl-last-verb-used))
+        (command (format "curl -v -X %s" verb)))
+    (mine-command-line-tool command curl-from-localhost-history 'curl-from-localhost-history)))
+
 (provide 'mine-defuns)
