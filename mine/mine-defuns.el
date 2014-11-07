@@ -174,4 +174,11 @@ frames with exactly two windows."
   (interactive)
   (shell-command "uuidgen | tr -d '\n' | tr '[A-Z]' '[a-z]'" t))
 
+;; ssh into any random server
+(defvar last-hostname-used nil)
+(defun ssh-into-server ()
+  (interactive)
+  (let* ((hostname (read-from-minibuffer "Hostname: " (car last-hostname-used) nil nil 'last-hostname-used)))
+    (find-file (concat "/scp:" hostname ":/home/adam/.bashrc"))))
+
 (provide 'mine-defuns)
