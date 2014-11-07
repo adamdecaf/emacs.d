@@ -11,11 +11,17 @@
 (global-set-key (kbd "C-c c") 'org-capture)
 
 ;; frame/window
+(global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
 (global-set-key (kbd "C-x 7") 'swap-windows)
 (global-set-key (kbd "C-x 8") 'toggle-window-split)
 (global-set-key (kbd "C-x 9") 'toggle-window-split)
 
+;; buffers
+(global-set-key (kbd "C-c k") 'delete-this-buffer-and-file)
+(global-set-key (kbd "C-x C-r") 'rename-file-and-buffer)
+
 ;; text
+(global-set-key (kbd "C-x a r") 'align-regexp)
 (global-set-key (kbd "M-g") 'goto-line)
 (global-set-key (kbd "C-c o") 'indent-buffer)
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
