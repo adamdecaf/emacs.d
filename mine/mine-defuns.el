@@ -155,4 +155,23 @@ frames with exactly two windows."
     (apply 'make-comint-in-buffer process-name buffer "ssh" nil tunnel-args)
     (switch-to-buffer buffer)))
 
+;; inspired from rubbish
+(defun mine-kill-all-buffers-by-pattern (pattern)
+  (dolist (buffer (buffer-list))
+    (if (string-match pattern (buffer-name buffer))
+        (kill-buffer buffer))))
+
+(defun mine-kill-all-log-buffers ()
+  (interactive)
+  (mine-kill-all-buffers-by-pattern ".+\\.log:?"))
+
+(defun mine-kill-all-ag-search-buffers ()
+  (interactive)
+  (mine-kill-all-buffers-by-pattern "*ag search.+"))
+
+;; rubbish
+(defun insert-random-uuid ()
+  (interactive)
+  (shell-command "uuidgen | tr -d '\n' | tr '[A-Z]' '[a-z]'" t))
+
 (provide 'mine-defuns)
