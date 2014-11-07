@@ -7,7 +7,9 @@
 
 (setq org-capture-templates
       (quote (("t" "todo" plain (file (concat org-directory "/todo.org"))
-               "** TODO %?" )
+               "** TODO %?")
+              ("N" "next" plain (file (concat org-directory "/next.org"))
+               "** NEXT %?")
               ("n" "note" plain (file (concat org-directory "/notes.org"))
                "** %?" ))))
 
