@@ -22,4 +22,8 @@
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
               (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE" "MEETING"))))
 
+;; org-reveal
+(require 'ox-reveal)
+(setq org-reveal-root "file:///Users/adam/src/banno/internal-talks/")
+
 (provide 'mine-org)
