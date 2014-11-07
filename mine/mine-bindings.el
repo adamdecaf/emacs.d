@@ -4,6 +4,7 @@
 ;; date/time
 (global-set-key (kbd "C-c d") 'insert-date)
 (global-set-key (kbd "C-c t") 'insert-iso-timestamp)
+(global-set-key (kbd "C-x t") 'mine-message-the-time)
 
 ;; org
 (define-key global-map "\C-cl" 'org-store-link)

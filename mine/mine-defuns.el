@@ -12,6 +12,10 @@
   (interactive)
   (insert (shell-command-to-string "echo -n $(date -u +%Y-%m-%dT%H:%M:%SZ)")))
 
+(defun mine-message-the-time()
+  (interactive)
+  (message (shell-command-to-string "echo -n $(date -u +%Y-%m-%dT%H:%M:%SZ)")))
+
 ;; joe
 (defun rename-file-and-buffer (new-name)
   "Renames both current buffer and file it's visiting to NEW-NAME."
