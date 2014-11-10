@@ -11,22 +11,6 @@
       inhibit-startup-screen t
       indent-tabs-mode nil)
 
-(setenv "PATH" (concat (getenv "HOME") "/bin" ":"
-                       "/usr/local/bin" ":"
-                       "/usr/bin" ":"
-                       "/bin" ":"
-                       "/sbin" ":"
-                       ))
-
-(push "/Users/adam/bin" exec-path)
-(push "/usr/local/bin" exec-path)
-
-;; env steup
-(setenv "ESHELL" "bash")
-(setenv "DOCKER_HOST" "tcp://192.168.59.103:2376")
-(setenv "DOCKER_CERT_PATH" "/Users/adam/.boot2docker/certs/boot2docker-vm")
-(setenv "DOCKER_TLS_VERIFY" "1")
-
 ;; setup use-package
 (push "~/.emacs.d/use-package/" load-path)
 
@@ -58,6 +42,7 @@
 (use-package less-css-mode :ensure t)
 (use-package rainbow-mode :ensure t)
 (use-package color-theme-wombat :ensure t)
+(use-package exec-path-from-shell :ensure t)
 ;; (use-package gist :ensure t)
 
 (use-package ido-vertical-mode
@@ -114,6 +99,7 @@
 
 ;; mine/* configs
 (add-to-list 'load-path "~/.emacs.d/mine")
+(require 'mine-env)
 (require 'mine-builtin)
 (require 'mine-defuns)
 (require 'mine-bindings)
