@@ -79,4 +79,9 @@
 (global-set-key (kbd "C-c C-p") 'magit-push)
 (global-set-key (kbd "C-x C-l") 'magit-log)
 
+;; increment/decrement numbers
+(global-set-key (kbd "C-c +") 'mine-increment-decimal)
+(global-set-key (kbd "C-c =") 'mine-increment-decimal)
+(global-set-key (kbd "C-c -") 'mine-decrement-decimal)
+
 (provide 'mine-bindings)
