@@ -43,7 +43,7 @@
 (use-package rainbow-mode :ensure t)
 (use-package color-theme-wombat :ensure t)
 (use-package exec-path-from-shell :ensure t)
-;; (use-package gist :ensure t)
+(use-package yagist :ensure t)
 
 (use-package ido-vertical-mode
   :init (progn
@@ -52,6 +52,8 @@
   :ensure t)
 
 ;; w3m
+(push "/usr/lobal/bin/w3m" exec-path)
+(setq w3m-command "/usr/local/bin/w3m")
 (use-package json :ensure t)
 (use-package request :ensure t)
 (use-package w3m :ensure t)
