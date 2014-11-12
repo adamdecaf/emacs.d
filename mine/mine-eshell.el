@@ -11,14 +11,11 @@
   (mine-kill-all-buffers-by-pattern "*eshell*"))
 
 ;; eshell buffer name
-;; from rubbish
-(defun mine-eshell-rename-buffer-pwd ()
-  (let ((pwd (eshell/pwd)))
-    (rename-buffer
-     (concat "*"
-             "eshell " "<" pwd ">"
-             "*")
-     t)))
+;; inspired / initially copied from rubbish
+(defun mine-eshell-rename-buffer-pwd (&optional name)
+  (let* ((pwd (eshell/pwd))
+         (full-name (concat "*eshell " "<" pwd ">* name: " name)))
+    (rename-buffer full-name t)))
 
 (add-hook 'eshell-directory-change-hook 'mine-eshell-rename-buffer-pwd)
 
@@ -31,10 +28,10 @@
 (defun mine-get-eshell-buffers ()
   (delq nil (mapcar 'mine-eshell-buffer-p (buffer-list))))
 
-(defun mine-eshell-create ()
+(defun mine-eshell-create (&optional name)
   (interactive)
   (eshell t)
-  (mine-eshell-rename-buffer-pwd))
+  (mine-eshell-rename-buffer-pwd name))
 
 (defun mine-eshell-find-best-match (dir)
   (let ((pwd (expand-file-name dir))
@@ -69,7 +66,7 @@
   (let ((best-match-buffer (mine-eshell-find-by-name name)))
     (if best-match-buffer
         (switch-to-buffer best-match-buffer)
-        (mine-eshell-create))))
+        (mine-eshell-create name))))
 
 ;; custom eshell search history command
 (defvar eshell-name-history nil)
