@@ -12,9 +12,10 @@
 (global-set-key (kbd "C-x t") 'mine-message-the-time)
 
 ;; org
-(define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-x C-o") 'mine-org-switch-to-file)
 
 ;; frame/window
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)

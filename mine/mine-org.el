@@ -28,4 +28,11 @@
 (require 'ox-reveal)
 (setq org-reveal-root "file:///Users/adam/src/banno/internal-talks/")
 
+;; helpers
+(defvar org-buffer-switched-to-history nil)
+(defun mine-org-switch-to-file()
+  (interactive)
+  (let ((last-buffer-name (read-from-minibuffer "Org File: " (car org-buffer-switched-to-history) nil nil 'org-buffer-switched-to-history)))
+    (find-file (concat "~/Dropbox/org/" last-buffer-name ".org"))))
+
 (provide 'mine-org)
