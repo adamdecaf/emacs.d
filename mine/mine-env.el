@@ -6,6 +6,9 @@
 ;; shell
 ;; (exec-path-from-shell-initialize "PATH") ;; done automatically on osx
 
+;; tramp
+(setenv "TMPDIR" "/tmp")
+
 ;; eshell
 (setenv "ESHELL" "bash")
 
