@@ -182,6 +182,13 @@ frames with exactly two windows."
   (interactive)
   (mine-kill-all-buffers-by-pattern "*ag search.+"))
 
+(defun mine-sweep-buffers()
+  (interactive)
+  (mine-kill-all-ag-search-buffers)
+  (mine-kill-all-eshell-buffers)
+  (mine-kill-all-log-buffers)
+  (message "ag, eshell, and log buffers swept."))
+
 ;; rubbish
 (defun insert-random-uuid ()
   (interactive)
