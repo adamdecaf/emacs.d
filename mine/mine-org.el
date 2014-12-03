@@ -21,8 +21,18 @@
                              "~/Dropbox/org/todo.org"))
 
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)" "WATCH(w)")
-              (sequence "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE" "MEETING"))))
+      '((sequence "WATCH(w)" "|" "DONE(d)")
+        (sequence "NEXT(n)" "|" "DONE(d)")
+        (sequence "TODO(t)" "|" "DONE(d)")
+        (sequence "TALK TO" "DONE(d)")
+        (sequence "HOLD(h)")
+        (sequence "CANCELLED(c)")))
+
+(setq org-agenda-custom-commands
+      '(("n" "Agenda and all TODO's" ((agenda "") (alltodo "")))
+        ("w" todo "WATCH"
+         ((org-agenda-sorting-strategy '(priority-down))
+          (org-agenda-prefix-format "  Mixed: ")))))
 
 ;; org-reveal
 (require 'ox-reveal)
