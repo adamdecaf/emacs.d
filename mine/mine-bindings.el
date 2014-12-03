@@ -33,8 +33,9 @@
 (global-set-key (kbd "C-c o") 'indent-buffer)
 (global-set-key [remap move-beginning-of-line] 'beginning-of-line-or-back-to-indention)
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
-;; (global-set-key (kbd "C-c c r") 'comment-region)
-(global-set-key (kbd "C-c u r") 'uncomment-region)
+(global-set-key [remap sh-case] 'comment-or-uncomment-region)
+(global-set-key (kbd "C-c r") 'comment-region)
+(global-set-key (kbd "C-c u") 'uncomment-region)
 
 ;; movement
 (global-set-key (kbd "C-c C-b") 'beginning-of-buffer)
