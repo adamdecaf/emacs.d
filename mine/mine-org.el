@@ -15,6 +15,7 @@
 
 (setq org-agenda-files (list "~/Dropbox/org/backln.org"
                              "~/Dropbox/org/banno.org"
+                             "~/Dropbox/org/ff.org"
                              "~/Dropbox/org/images.org"
                              "~/Dropbox/org/personal.org"))
 
