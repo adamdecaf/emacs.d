@@ -16,9 +16,7 @@
 (setq org-agenda-files (list "~/Dropbox/org/banno.org"
                              "~/Dropbox/org/backln.org"
                              "~/Dropbox/org/images.org"
-                             "~/Dropbox/org/notes.org"
-                             "~/Dropbox/org/personal.org"
-                             "~/Dropbox/org/todo.org"))
+                             "~/Dropbox/org/personal.org"))
 
 (setq org-todo-keywords
       '((sequence "WATCH(w)" "|" "DONE(d)")
