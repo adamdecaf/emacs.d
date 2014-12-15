@@ -6,15 +6,15 @@
 (setq org-default-notes-file "~/Dropbox/org/notes.org")
 
 (setq org-capture-templates
-      (quote (("t" "todo" plain (file (concat org-directory "/todo.org"))
+      (quote (("t" "todo" plain (file (concat org-directory "/incoming.org"))
                "** TODO %?")
-              ("N" "next" plain (file (concat org-directory "/next.org"))
+              ("N" "next" plain (file (concat org-directory "/incoming.org"))
                "** NEXT %?")
-              ("n" "note" plain (file (concat org-directory "/notes.org"))
+              ("n" "note" plain (file (concat org-directory "/incoming.org"))
                "** %?" ))))
 
-(setq org-agenda-files (list "~/Dropbox/org/backln.org"
-                             "~/Dropbox/org/banno.org"
+(setq org-agenda-files (list "~/Dropbox/org/banno.org"
+                             "~/Dropbox/org/backln.org"
                              "~/Dropbox/org/images.org"
                              "~/Dropbox/org/notes.org"
                              "~/Dropbox/org/personal.org"
