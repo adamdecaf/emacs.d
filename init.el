@@ -45,6 +45,10 @@
 (use-package exec-path-from-shell :ensure t)
 (use-package yagist :ensure t)
 
+(use-package terraform-mode
+  :ensure t
+  :config (setq terraform-indent-level 2))
+
 (use-package ido-vertical-mode
   :init (progn
           (ido-mode 1)
