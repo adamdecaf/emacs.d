@@ -49,9 +49,9 @@
 
 ;; rcirc
 ;;(global-set-key (kbd "C-c r c") 'rcirc) ;; reconnect...
-(global-set-key (kbd "C-c r u") 'rcirc-jump-to-first-unread-line)
-(global-set-key (kbd "C-c r s") 'mine-rcirc-shut-up)
-(global-set-key (kbd "C-c r t") 'mine-rcirc-talk-to-me)
+;;(global-set-key (kbd "C-c r u") 'rcirc-jump-to-first-unread-line)
+;;(global-set-key (kbd "C-c r s") 'mine-rcirc-shut-up)
+;;(global-set-key (kbd "C-c r t") 'mine-rcirc-talk-to-me)
 
 ;; docview mode
 (global-set-key (kbd "C-c n") 'doc-view-next-page)
