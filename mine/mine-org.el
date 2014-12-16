@@ -15,9 +15,14 @@
 
 (setq org-agenda-files (list "~/Dropbox/org/backln.org"
                              "~/Dropbox/org/banno.org"
+                             "~/Dropbox/org/data.org"
                              "~/Dropbox/org/ff.org"
                              "~/Dropbox/org/images.org"
-                             "~/Dropbox/org/personal.org"))
+                             "~/Dropbox/org/incoming.org"
+                             "~/Dropbox/org/internet-of-things.org"
+                             "~/Dropbox/org/personal.org"
+                             "~/Dropbox/org/reading.org"
+                             "~/Dropbox/org/startups.org"))
 
 (setq org-todo-keywords
       '((sequence "WATCH(w)" "|" "DONE(d)")
