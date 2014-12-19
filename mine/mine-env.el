@@ -6,6 +6,9 @@
 ;; shell
 ;; (exec-path-from-shell-initialize "PATH") ;; done automatically on osx
 
+;; time
+(setenv "TZ" "America/Chicago")
+
 ;; tramp
 (setenv "TMPDIR" "/tmp")
 
