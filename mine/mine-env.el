@@ -20,4 +20,9 @@
 (exec-path-from-shell-copy-env "DOCKER_CERT_PATH")
 (exec-path-from-shell-copy-env "DOCKER_TLS_VERIFY")
 
+(defun mine-echo-aws-creds()
+  (interactive)
+  (message (getenv "AWS_ACCESS_KEY_ID"))
+  (message (concat "aws creds in use: " whose-aws-creds-are-in-use)))
+
 (provide 'mine-env)
