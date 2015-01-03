@@ -17,8 +17,13 @@
 
 ;; docker
 (setenv "DOCKER_HOST" "tcp://192.168.59.103:2376")
-(exec-path-from-shell-copy-env "DOCKER_CERT_PATH")
-(exec-path-from-shell-copy-env "DOCKER_TLS_VERIFY")
+
+(defun mine-copy-env-variable (name)
+  (if (getenv name)
+      (exec-path-from-shell-copy-env name)))
+
+(mine-copy-env-variable "DOCKER_CERT_PATH")
+(mine-copy-env-variable "DOCKER_TLS_VERIFY")
 
 (defun mine-echo-aws-creds()
   (interactive)
