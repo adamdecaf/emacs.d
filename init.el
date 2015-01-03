@@ -115,8 +115,12 @@
  (let ((custom-files (directory-files mine-custom-dir t "\.el$")))
   (mapcar 'load-file custom-files)))
 
-(setq custom-file (expand-file-name "~/.emacs.d/customizations.el"))
-(load custom-file)
+(defun mine-load-customizations ()
+  (setq custom-file (expand-file-name "~/.emacs.d/customizations.el"))
+  (load custom-file))
+
+(if (file-exists-p "~/.emacs.d/customizations.d")
+  (mine-load-customizations))
 
 (put 'dired-find-alternate-file 'disabled nil)
 (put 'ido-exit-minibuffer 'disabled nil)
