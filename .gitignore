@@ -12,4 +12,5 @@ eshell/
 url/
 .mc-lists.el
 bookmarks
+recentf
 customizations.el
