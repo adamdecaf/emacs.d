@@ -2,7 +2,6 @@
 ;; inspired / taken from: http://www.emacswiki.org/emacs/WThreeMHintsAndTips
 
 (require 'cl)
-(require 'w3m)
 
 (autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
 
@@ -24,5 +23,6 @@
 (global-set-key (kbd "C-c b") 'w3m-browse-url)
 
 (use-package w3m :ensure t)
+(require 'w3m)
 
 (provide 'mine-w3m)
