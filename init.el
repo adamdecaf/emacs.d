@@ -55,13 +55,6 @@
           (ido-vertical-mode 1))
   :ensure t)
 
-;; w3m
-(push "/usr/lobal/bin/w3m" exec-path)
-(setq w3m-command "/usr/local/bin/w3m")
-(use-package json :ensure t)
-(use-package request :ensure t)
-(use-package w3m :ensure t)
-
 (use-package multiple-cursors
   :ensure t
   :bind (("C->" . mc/mark-next-like-this)
