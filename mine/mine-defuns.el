@@ -19,7 +19,7 @@
 
 (defun insert-iso-timestamp ()
   (interactive)
-  (insert (shell-command-to-string "echo -n $(date -u +%Y-%m-%dT%H:%M:%SZ)")))
+  (insert (format-time-string "%Y-%m-%dT%H:%M:%S")))
 
 (defun mine-message-the-time()
   (interactive)
