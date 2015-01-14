@@ -178,10 +178,6 @@ frames with exactly two windows."
   (interactive)
   (mine-kill-all-buffers-by-pattern ".+\\.log:?"))
 
-(defun mine-kill-all-ag-search-buffers ()
-  (interactive)
-  (mine-kill-all-buffers-by-pattern "*ag search.+"))
-
 (defun mine-kill-all-magit-buffers ()
   (interactive)
   (mine-kill-all-buffers-by-pattern "*magit"))
@@ -193,7 +189,7 @@ frames with exactly two windows."
 
 (defun mine-sweep-buffers()
   (interactive)
-  (mine-kill-all-ag-search-buffers)
+  (ag-kill-buffers)
   (mine-kill-all-eshell-buffers)
   (mine-kill-all-log-buffers)
   (mine-kill-all-magit-buffers)
