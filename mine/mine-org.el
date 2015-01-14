@@ -13,8 +13,8 @@
               ("n" "note" plain (file (concat org-directory "/incoming.org"))
                "** %?" ))))
 
-(setq org-agenda-files (list "~/Dropbox/org/backln.org"
-                             "~/Dropbox/org/banno.org"
+(setq org-agenda-files (list "~/Dropbox/org/banno.org"
+                             "~/Dropbox/org/backln.org"
                              "~/Dropbox/org/data.org"
                              "~/Dropbox/org/ff.org"
                              "~/Dropbox/org/images.org"
