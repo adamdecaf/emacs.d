@@ -27,7 +27,7 @@
 (setq org-todo-keywords
       '((sequence "WATCH(w)" "|" "DONE(d)")
         (sequence "NEXT(n)" "|" "DONE(d)")
-        (sequence "DOING(D" "|" "DONE(d)")
+        (sequence "STARTED(s)" "|" "DOING(D" "|" "DONE(d)")
         (sequence "TODO(t)" "|" "DONE(d)")
         (sequence "TALK TO" "DONE(d)")
         (sequence "HOLD(h)")
