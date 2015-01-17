@@ -39,6 +39,20 @@
         (list "NEXT(n)" "|" "DONE(d)")
         (list "STARTED(s)""|" "DONE(d)")))
 
+(setq org-todo-keyword-faces
+      '(("IDEA" . "DodgerBlue4")
+        ("HOLD" . "purple")
+        ("WAITING" . "dark blue")
+        ("LATER" . "blue")
+        ("QUESTION" . "firebrick2")
+        ("CANCELLED" . "gray")
+        ("WATCH" . "pink")
+        ("TODO" . "white")
+        ("NEXT" . "red")
+        ("STARTED" . "gold")))
+
+;; (list "CANCELED" (list :foreground "blue" :weight bold))))
+
 (setq org-agenda-custom-commands
       '(("n" "Agenda and all TODO's" ((agenda "") (alltodo "")))
         ("w" todo "WATCH"
