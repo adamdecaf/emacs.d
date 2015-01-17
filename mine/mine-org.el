@@ -27,9 +27,9 @@
 (setq org-todo-keywords
       '((list "IDEA(i)")
         (list "HOLD(h)")
-        (list "WAITING(W)" "|" "TODO(t)" "|" "DONE(d)")
-        (list "LATER(l)" "|" "TODO(t)" "|" "DONE(d)")
-        (list "QUESTION(q)" "|" "ANSWERED(a)")
+        (list "WAITING(W)" "|" "DONE(d)")
+        (list "LATER(l)" "|" "DONE(d)")
+        (list "QUESTION(q)")
         (list "CANCELLED(c)")
 
         (list "WATCH(w)" "|" "DONE(d)")
@@ -37,8 +37,7 @@
 
         (list "TODO(t)" "|" "DONE(d)")
         (list "NEXT(n)" "|" "DONE(d)")
-
-        (list "STARTED(s)" "|" "DOING(D" "|" "DONE(d)")))
+        (list "STARTED(s)""|" "DONE(d)")))
 
 (setq org-agenda-custom-commands
       '(("n" "Agenda and all TODO's" ((agenda "") (alltodo "")))
