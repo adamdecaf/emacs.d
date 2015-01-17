@@ -25,14 +25,20 @@
                              "~/Dropbox/org/startups.org"))
 
 (setq org-todo-keywords
-      '((sequence "WATCH(w)" "|" "DONE(d)")
-        (sequence "NEXT(n)" "|" "DONE(d)")
-        (sequence "IDEA(i)")
-        (sequence "STARTED(s)" "|" "DOING(D" "|" "DONE(d)")
-        (sequence "TODO(t)" "|" "DONE(d)")
-        (sequence "TALK TO" "DONE(d)")
-        (sequence "HOLD(h)")
-        (sequence "CANCELLED(c)")))
+      '((list "IDEA(i)" "|" "DONE(d)")
+        (list "HOLD(h)" "|" "DONE(d)")
+        (list "WAITING(W)" "|" "TODO(t)" "|" "DONE(d)")
+        (list "LATER(l)" "|" "TODO(t)" "|" "DONE(d)")
+        (list "QUESTION(q)" "|" "ANSWERED(a)")
+        (list "CANCELLED(c)")
+
+        (list "WATCH(w)" "|" "DONE(d)")
+        (list "TALK TO" "|" "DONE(d)")
+
+        (list "TODO(t)" "|" "DONE(d)")
+        (list "NEXT(n)" "|" "DONE(d)")
+
+        (list "STARTED(s)" "|" "DOING(D" "|" "DONE(d)")))
 
 (setq org-agenda-custom-commands
       '(("n" "Agenda and all TODO's" ((agenda "") (alltodo "")))
