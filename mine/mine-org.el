@@ -25,8 +25,8 @@
                              "~/Dropbox/org/startups.org"))
 
 (setq org-todo-keywords
-      '((list "IDEA(i)" "|" "DONE(d)")
-        (list "HOLD(h)" "|" "DONE(d)")
+      '((list "IDEA(i)")
+        (list "HOLD(h)")
         (list "WAITING(W)" "|" "TODO(t)" "|" "DONE(d)")
         (list "LATER(l)" "|" "TODO(t)" "|" "DONE(d)")
         (list "QUESTION(q)" "|" "ANSWERED(a)")
