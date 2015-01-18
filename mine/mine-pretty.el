@@ -71,7 +71,7 @@
 
    ))
 
-(setq magit-item-highlight t)
+(custom-set-faces '(magit-item-highlight ((t nil))))
 
 (setq org-todo-keyword-faces
       (quote (("TODO" :foreground "white" :weight bold)
