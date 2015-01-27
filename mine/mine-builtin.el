@@ -152,4 +152,6 @@
        (setq ack-executable "ack")
        )
 
+(setq vc-follow-symlinks t)
+
 (provide 'mine-builtin)
