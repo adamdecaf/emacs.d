@@ -42,14 +42,14 @@
 (setq org-todo-keyword-faces
       '(("IDEA" . "DodgerBlue4")
         ("HOLD" . "purple")
-        ("WAITING" . "dark blue")
+        ("WAITING" . "light blue")
         ("LATER" . "blue")
         ("QUESTION" . "firebrick2")
         ("CANCELLED" . "gray")
         ("WATCH" . "pink")
         ("TODO" . "white")
         ("NEXT" . "red")
-        ("STARTED" . "gold")))
+        ("STARTED" . "yellow")))
 
 ;; (list "CANCELED" (list :foreground "blue" :weight bold))))
 
