@@ -1,3 +1,5 @@
+;; from joe
+
 (setq display-time-format "\s(%I:%M%p %a %m/%d/%y)\s")
 (setq display-time-mail-file -1)
 (setq display-time-default-load-average nil)
