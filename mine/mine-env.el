@@ -12,6 +12,9 @@
 ;; tramp
 (setenv "TMPDIR" "/tmp")
 
+;; editor
+(setenv "EDITOR" "emacsclient")
+
 ;; eshell
 (setenv "ESHELL" "bash")
 
