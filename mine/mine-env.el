@@ -13,7 +13,7 @@
 (setenv "TMPDIR" "/tmp")
 
 ;; editor
-(setenv "EDITOR" "emacsclient")
+(setenv "EDITOR" "emacs")
 
 ;; eshell
 (setenv "ESHELL" "bash")
