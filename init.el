@@ -44,6 +44,7 @@
 (use-package color-theme-wombat :ensure t)
 (use-package exec-path-from-shell :ensure t)
 (use-package yagist :ensure t)
+(use-package wgrep :ensure t)
 
 (use-package terraform-mode
   :ensure t
