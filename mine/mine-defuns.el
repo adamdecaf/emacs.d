@@ -46,7 +46,8 @@
          (sqli-buffer (if sql-buffer (progn (split-window) sql-buffer) (sql-product-interactive product new-name))))
     (switch-to-buffer sql-text-buffer nil t)
     (set (make-local-variable 'sql-buffer) sqli-buffer)
-    (switch-to-buffer sqli-buffer nil t)))
+    (switch-to-buffer sqli-buffer nil t)
+    (sql-send-string "\\x")))
 
 ;; joe
 (defun delete-this-file-and-buffer ()
