@@ -78,11 +78,6 @@
                                         ; Read-only buffers
        '("^[ .*]+\\(\\%\\)" 1 font-lock-variable-name-face)))
 
-;; Always use subwords to to move around
-(if (fboundp 'subword-mode)
-    (subword-mode t)
-  (c-subword-mode t))
-
 ;; Create non-existent directories containing a new file before saving
 (add-hook 'before-save-hook
           (lambda ()

@@ -11,6 +11,8 @@
       inhibit-startup-screen t
       indent-tabs-mode nil)
 
+(subword-mode t)
+
 ;; setup use-package
 (push "~/.emacs.d/use-package/" load-path)
 
