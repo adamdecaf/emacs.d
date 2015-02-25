@@ -20,13 +20,14 @@
 
 ;; docker
 (setenv "DOCKER_HOST" "tcp://192.168.59.103:2376")
+(setenv "DOCKER_CERT_PATH" "/Users/adam/.boot2docker/certs/boot2docker-vm")
+(setenv "DOCKER_TLS_VERIFY" "1")
 
-(defun mine-copy-env-variable (name)
-  (if (getenv name)
-      (exec-path-from-shell-copy-env name)))
-
-(mine-copy-env-variable "DOCKER_CERT_PATH")
-(mine-copy-env-variable "DOCKER_TLS_VERIFY")
+(defun mine-show-docker-env-variables()
+  (interactive)
+  (message (concat "DOCKER_HOST" (getenv "DOCKER_HOST")))
+  (message (concat "DOCKER_CERT_PATH" (getenv "DOCKER_CERT_PATH")))
+  (message (concat "DOCKER_TLS_VERIFY" (getenv "DOCKER_TLS_VERIFY"))))
 
 (defun mine-echo-aws-creds()
   (interactive)
