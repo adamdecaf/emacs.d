@@ -49,7 +49,7 @@
         ("WATCH" . "pink")
         ("TODO" . "white")
         ("NEXT" . "red")
-        ("STARTED" . "yellow")))
+        ("STARTED" . "gold")))
 
 ;; (list "CANCELED" (list :foreground "blue" :weight bold))))
 
