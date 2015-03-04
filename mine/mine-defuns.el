@@ -240,4 +240,8 @@ frames with exactly two windows."
   (interactive "p*")
   (mine-increment-decimal (if arg (- arg) -1)))
 
+(defun switch-to-magit-process()
+  (interactive)
+  (switch-to-buffer "*magit-process*"))
+
 (provide 'mine-defuns)

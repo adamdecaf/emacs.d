@@ -81,6 +81,7 @@
 (global-set-key (kbd "C-x C-p") 'magit-pull)
 (global-set-key (kbd "C-c C-p") 'magit-push)
 (global-set-key (kbd "C-x C-l") 'magit-log)
+(global-set-key (kbd "C-x p") 'switch-to-magit-process)
 
 ;; increment/decrement numbers
 (global-set-key (kbd "C-c +") 'mine-increment-decimal)
