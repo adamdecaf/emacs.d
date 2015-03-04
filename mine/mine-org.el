@@ -44,6 +44,7 @@
         ("HOLD" . "purple")
         ("WAITING" . "light blue")
         ("LATER" . "blue")
+        ("DONE" . "green")
         ("QUESTION" . "firebrick2")
         ("CANCELLED" . "gray")
         ("WATCH" . "pink")
