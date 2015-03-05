@@ -101,20 +101,6 @@
   (setq mine-delete-trailing-whitespace nil))
 (add-hook 'before-save-hook '(lambda () (if mine-delete-trailing-whitespace (delete-trailing-whitespace))))
 
-;; auto indentation of yanked/pasted text
-;; (setq major-modes-to-auto-indent-yanked-text '(emacs-lisp-mode
-;;                                                clojure-mode
-;;                                                c-mode
-;;                                                c++-mode
-;;                                                objc-mode
-;;                                                scala-code
-;;                                                ruby-mode))
-
-;; (defun yank-and-indent ()
-;;   (interactive)
-;;   (yank)
-;;   (call-interactively 'indent-region))
-
 ;; dired things
 (add-hook 'dired-mode-hook '(lambda ()
                               (local-set-key (kbd "C-c R") 'wdired-change-to-wdired-mode)))
