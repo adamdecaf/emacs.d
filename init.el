@@ -104,9 +104,9 @@
 (require 'mine-languages)
 (require 'mine-mode-line)
 (require 'mine-w3m)
-(require 'mine-org)
 (require 'mine-eshell)
 (require 'mine-pretty)
+(require 'mine-org)
 
 ;; language / tool specifics
 (require 'mine-sbt)
