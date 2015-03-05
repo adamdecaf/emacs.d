@@ -45,11 +45,12 @@
         ("WAITING" . "light blue")
         ("LATER" . "blue")
         ("DONE" . "green")
-        ("QUESTION" . "firebrick2")
+        ("QUESTION" . "dark green")
         ("CANCELLED" . "gray")
         ("WATCH" . "pink")
         ("TODO" . "white")
         ("NEXT" . "red")
+        ("TALK TO" . "dark red")
         ("STARTED" . "gold")))
 
 ;; (list "CANCELED" (list :foreground "blue" :weight bold))))
