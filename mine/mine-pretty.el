@@ -89,4 +89,10 @@
 (setq scala-indent:align-forms t)
 (set-face-attribute 'font-lock-variable-name-face nil :foreground "DarkOrange1")
 
+(defun mine-set-font-size (size)
+  (interactive "sSize: ")
+  (let ((font (concat "Menlo " size)))
+    (set-frame-parameter (selected-frame) 'font font)
+    (add-to-list 'default-frame-alist (cons 'font font))))
+
 (provide 'mine-pretty)
