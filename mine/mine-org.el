@@ -33,7 +33,7 @@
         (list "CANCELLED(c)")
 
         (list "WATCH(w)" "|" "DONE(d)")
-        (list "TALK TO" "|" "DONE(d)")
+        (list "ASK" "|" "DONE(d)")
 
         (list "TODO(t)" "|" "DONE(d)")
         (list "NEXT(n)" "|" "DONE(d)")
@@ -50,7 +50,7 @@
         ("WATCH" . "pink")
         ("TODO" . "white")
         ("NEXT" . "red")
-        ("TALK TO" . "dark red")
+        ("ASK" . "orange")
         ("STARTED" . "gold")))
 
 ;; (list "CANCELED" (list :foreground "blue" :weight bold))))
