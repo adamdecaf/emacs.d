@@ -25,6 +25,10 @@
 (use-package w3m :ensure t)
 (require 'w3m)
 
+(defun mine-browse-lwn()
+  (interactive)
+  (w3m-goto-url-new-session "http://lwn.net"))
+
 (defun mine-browse-hacker-news()
   (interactive)
   (w3m-goto-url-new-session "http://news.ycombinator.com"))
