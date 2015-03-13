@@ -25,4 +25,8 @@
 (use-package w3m :ensure t)
 (require 'w3m)
 
+(defun mine-browse-hacker-news()
+  (interactive)
+  (w3m-browse-url "http://news.ycombinator.com"))
+
 (provide 'mine-w3m)
