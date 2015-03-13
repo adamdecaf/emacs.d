@@ -27,6 +27,6 @@
 
 (defun mine-browse-hacker-news()
   (interactive)
-  (w3m-browse-url "http://news.ycombinator.com"))
+  (w3m-goto-url-new-session "http://news.ycombinator.com"))
 
 (provide 'mine-w3m)
