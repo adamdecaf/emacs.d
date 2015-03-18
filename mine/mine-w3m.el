@@ -33,6 +33,24 @@
   (interactive)
   (w3m-goto-url-new-session "http://news.ycombinator.com"))
 
+(defun mine-browse-reddit()
+  (interactive)
+  (w3m-goto-url-new-session "http://m.reddit.com"))
+
 (setq w3m-use-title-buffer-name t)
+
+;; open links in the background
+;; from: http://sci.rutgers.edu/forum/showthread.php?137111-Emacs-w3m-open-link-in-background-tab
+(defun rand-w3m-view-this-url-background-session ()
+  (interactive)
+  (let ((in-background-state w3m-new-session-in-background))
+    (setq w3m-new-session-in-background t)
+    (w3m-view-this-url-new-session)
+    (setq w3m-new-session-in-background in-background-state)))
+
+(defun my-w3m-bindings ()
+  (define-key w3m-mode-map (kbd "C-<return>") 'rand-w3m-view-this-url-background-session))
+
+(add-hook 'w3m-mode-hook 'my-w3m-bindings)
 
 (provide 'mine-w3m)
