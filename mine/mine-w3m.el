@@ -33,9 +33,18 @@
   (interactive)
   (w3m-goto-url-new-session "http://news.ycombinator.com"))
 
-(defun mine-browse-reddit()
+;; reddit
+(defun mine-browse-reddit (&optional subreddit)
   (interactive)
-  (w3m-goto-url-new-session "http://m.reddit.com"))
+  (if subreddit
+      (w3m-goto-url-new-session (concat "http://m.reddit.com/r/" subreddit))
+    (w3m-goto-url-new-session "http://m.reddit.com")))
+
+(defvar w3m-last-subreddit-history nil)
+(defun mine-browse-subreddit()
+  (interactive)
+  (let ((subreddit (read-from-minibuffer "/r/" (car w3m-last-subreddit-history) nil nil 'w3m-last-subreddit-history)))
+    (mine-browse-reddit subreddit)))
 
 (setq w3m-use-title-buffer-name t)
 
