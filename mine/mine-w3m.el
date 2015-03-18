@@ -33,4 +33,6 @@
   (interactive)
   (w3m-goto-url-new-session "http://news.ycombinator.com"))
 
+(setq w3m-use-title-buffer-name t)
+
 (provide 'mine-w3m)
