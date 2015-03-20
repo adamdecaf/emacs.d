@@ -46,6 +46,15 @@
   (let ((subreddit (read-from-minibuffer "/r/" (car w3m-last-subreddit-history) nil nil 'w3m-last-subreddit-history)))
     (mine-browse-reddit subreddit)))
 
+;; security lists
+(defun mine-browse-full-disclosure()
+  (interactive)
+  (w3m-goto-url-new-session "http://seclists.org/fulldisclosure/"))
+
+(defun mine-browse-openssl-announce()
+  (interactive)
+  (w3m-goto-url-new-session "https://marc.info/?l=openssl-announce"))
+
 (setq w3m-use-title-buffer-name t)
 
 ;; open links in the background
