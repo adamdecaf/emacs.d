@@ -55,6 +55,14 @@
   (interactive)
   (w3m-goto-url-new-session "https://marc.info/?l=openssl-announce"))
 
+;; overall bookmarks
+(defun mine-browse-technology-bookmarks()
+  (interactive)
+  (mine-browse-lwn)
+  (mine-browse-hacker-news)
+  (mine-browse-full-disclosure)
+  (mine-browse-openssl-announce))
+
 (setq w3m-use-title-buffer-name t)
 
 ;; open links in the background
