@@ -47,6 +47,7 @@
         ("DONE" . "green")
         ("QUESTION" . "dark green")
         ("CANCELLED" . "gray")
+        ("BLOCKED" . "red3")
         ("WATCH" . "pink")
         ("TODO" . "white")
         ("NEXT" . "red")
