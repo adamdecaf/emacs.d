@@ -111,8 +111,6 @@
 ;; language / tool specifics
 (require 'mine-sbt)
 
-(mode-line-off)
-
 (setq mine-custom-dir "~/.emacs.d/custom/")
 (if (file-exists-p mine-custom-dir)
  (let ((custom-files (directory-files mine-custom-dir t "\.el$")))
