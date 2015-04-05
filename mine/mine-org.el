@@ -43,8 +43,6 @@
         ("ASK" . "orange")
         ("STARTED" . "gold")))
 
-;; (list "CANCELED" (list :foreground "blue" :weight bold))))
-
 (setq org-agenda-custom-commands
       '(("n" "Agenda and all TODO's" ((agenda "") (alltodo "")))
         ("w" todo "WATCH"
