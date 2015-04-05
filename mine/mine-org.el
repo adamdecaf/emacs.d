@@ -25,19 +25,8 @@
                              "~/Dropbox/org/startups.org"))
 
 (setq org-todo-keywords
-      '((list "IDEA(i)")
-        (list "HOLD(h)" "|" "DONE(d)")
-        (list "WAITING(W)" "|" "DONE(d)")
-        (list "LATER(l)" "|" "DONE(d)")
-        (list "BLOCKED(b)" "|" "DONE(d)")
-        (list "CANCELLED(c)")
-
-        (list "WATCH(w)" "|" "DONE(d)")
-        (list "ASK" "|" "DONE(d)")
-
-        (list "TODO(t)" "|" "DONE(d)")
-        (list "NEXT(n)" "|" "DONE(d)")
-        (list "STARTED(s)""|" "DONE(d)")))
+      '((sequence "IDEA(i)")
+        (sequence "BLOCKED(b)" "WATCH(w)" "STARTED(s)" "TODO(t)" "NEXT(n)" "|" "DONE(d)" "CANCELLED(c)")))
 
 (setq org-todo-keyword-faces
       '(("IDEA" . "DodgerBlue4")
@@ -70,6 +59,7 @@
 (defvar org-buffer-switched-to-history nil)
 (defun mine-org-switch-to-file()
   (interactive)
+  ;; todo: banno-ff, backln-ff, backline-ff have special meanings
   (let ((last-buffer-name (read-from-minibuffer "Org File: " (car org-buffer-switched-to-history) nil nil 'org-buffer-switched-to-history)))
     (find-file (concat "~/Dropbox/org/" last-buffer-name ".org"))))
 
