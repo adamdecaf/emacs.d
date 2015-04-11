@@ -1,4 +1,5 @@
 ;; mine-tramp.el
+(require 'tramp)
 
 (defun mine-tramp-cleanup ()
   (interactive)
