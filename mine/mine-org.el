@@ -13,19 +13,14 @@
               ("n" "note" plain (file (concat org-directory "/incoming.org"))
                "** %?" ))))
 
-(setq org-agenda-files (list "~/Dropbox/org/ff.org"
-                             "~/Dropbox/org/banno.org"
-                             "~/Dropbox/org/backln.org"
-                             "~/Dropbox/org/data.org"
-                             "~/Dropbox/org/images.org"
-                             "~/Dropbox/org/incoming.org"
-                             "~/Dropbox/org/internet-of-things.org"
-                             "~/Dropbox/org/personal.org"
-                             "~/Dropbox/org/reading.org"
-                             "~/Dropbox/org/startups.org"))
+x(setq org-agenda-files
+      (append
+       (file-expand-wildcards "~/src/banno/firefighter-notes/*/data-services/ff.org")
+       (file-expand-wildcards "~/Dropbox/org/*.org")))
 
 (setq org-todo-keywords
       '((sequence "IDEA(i)")
+        (sequence "QUESTION(i)")
         (sequence "BLOCKED(b)" "WATCH(w)" "STARTED(s)" "TODO(t)" "NEXT(n)" "|" "DONE(d)" "CANCELLED(c)")))
 
 (setq org-todo-keyword-faces
