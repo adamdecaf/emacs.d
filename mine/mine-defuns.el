@@ -119,12 +119,6 @@ frames with exactly two windows."
       (message "Opening file...")
     (message "Aborting")))
 
-(defun mine-tramp-cleanup ()
-  (interactive)
-  (tramp-cleanup-all-buffers)
-  (tramp-cleanup-all-connections)
-  (message "cleanup of tramp buffers/connections complete"))
-
 ;; rubbish
 (defun mine-command-line-tool (command &optional history history-symbol)
   (let* ((rest-of-command (read-from-minibuffer (concat command " ") (car history) nil nil history-symbol))

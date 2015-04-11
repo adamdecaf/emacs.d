@@ -99,6 +99,7 @@
 (require 'mine-env)
 (require 'mine-builtin)
 (require 'mine-defuns)
+(require 'mine-tramp)
 (require 'mine-bindings)
 (require 'mine-commands)
 (require 'mine-languages)
@@ -111,10 +112,17 @@
 ;; language / tool specifics
 (require 'mine-sbt)
 
-(setq mine-custom-dir "~/.emacs.d/custom/")
-(if (file-exists-p mine-custom-dir)
- (let ((custom-files (directory-files mine-custom-dir t "\.el$")))
-  (mapcar 'load-file custom-files)))
+;; Load random elsip straight into *your* emacs config!
+(defun load-random-elsip(dir)
+  (if (file-exists-p dir)
+      (let ((custom-files (directory-files mine-custom-dir t "\.el$")))
+        (mapcar 'load-file custom-files))))
+
+;; load custom files
+(load-random-elsip "~/.emacs.d/custom/")
+
+;; load backline code
+(load-random-elsip "/Users/adam/src/backln/musica/")
 
 (defun mine-load-customizations ()
   (setq custom-file (expand-file-name "~/.emacs.d/customizations.el"))
