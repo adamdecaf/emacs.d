@@ -135,4 +135,8 @@
 
 (setq vc-follow-symlinks t)
 
+;; don't revert files for me magit.
+(setq magit-auto-revert-mode nil)
+(setq magit-last-seen-setup-instructions "1.4.0")
+
 (provide 'mine-builtin)
