@@ -4,7 +4,7 @@ el-get/
 emacs-desktop
 .emacs.desktop.lock
 auto-save-list/
-elpa/
+elpa*
 custom/
 var/
 tramp
