@@ -45,7 +45,6 @@
 (use-package rainbow-mode :ensure t)
 (use-package color-theme-wombat :ensure t)
 (use-package exec-path-from-shell :ensure t)
-(use-package gradle-mode :ensure t)
 (use-package yagist :ensure t)
 (use-package wgrep :ensure t)
 
@@ -116,7 +115,7 @@
 ;; Load random elsip straight into *your* emacs config!
 (defun load-random-elsip(dir)
   (if (file-exists-p dir)
-      (let ((custom-files (directory-files dir t "\.el$")))
+      (let ((custom-files (directory-files mine-custom-dir t "\.el$")))
         (mapcar 'load-file custom-files))))
 
 ;; load custom files
