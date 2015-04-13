@@ -45,6 +45,7 @@
 (use-package rainbow-mode :ensure t)
 (use-package color-theme-wombat :ensure t)
 (use-package exec-path-from-shell :ensure t)
+(use-package gradle-mode :ensure t)
 (use-package yagist :ensure t)
 (use-package wgrep :ensure t)
 
