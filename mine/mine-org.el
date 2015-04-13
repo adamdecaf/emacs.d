@@ -13,7 +13,7 @@
               ("n" "note" plain (file (concat org-directory "/incoming.org"))
                "** %?" ))))
 
-x(setq org-agenda-files
+(setq org-agenda-files
       (append
        (file-expand-wildcards "~/src/banno/firefighter-notes/*/data-services/ff.org")
        (file-expand-wildcards "~/Dropbox/org/*.org")))
