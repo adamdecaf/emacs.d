@@ -115,7 +115,7 @@
 ;; Load random elsip straight into *your* emacs config!
 (defun load-random-elsip(dir)
   (if (file-exists-p dir)
-      (let ((custom-files (directory-files mine-custom-dir t "\.el$")))
+      (let ((custom-files (directory-files dir t "\.el$")))
         (mapcar 'load-file custom-files))))
 
 ;; load custom files
