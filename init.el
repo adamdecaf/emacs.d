@@ -108,6 +108,7 @@
 (require 'mine-eshell)
 (require 'mine-pretty)
 (require 'mine-org)
+(require 'mine-magit)
 
 ;; language / tool specifics
 (require 'mine-sbt)
