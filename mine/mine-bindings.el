@@ -64,6 +64,8 @@
 (global-set-key (kbd "C-c s s") 'sbt-scripted-test)
 (global-set-key (kbd "C-c s c") 'sbt-compile)
 (global-set-key (kbd "C-c s o") 'sbt-test-only-current-test)
+(global-set-key (kbd "C-c s D") 'sbt-destroy-the-world)
+(global-set-key (kbd "C-c s R") 'sbt-destroy-then-rebuild-the-world)
 
 ;; erlang-mode
 (global-set-key (kbd "C-c e c") 'erlang-compile)

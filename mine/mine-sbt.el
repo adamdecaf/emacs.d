@@ -77,4 +77,19 @@
   (interactive)
   (sbt-command (concat "test-only " (sbt-current-test-in-buffer))))
 
+;; Don't clear out the buffer before running an sbt command
+;; (setq sbt:clear-buffer-before-command nil)
+
+;; these help sometimes
+(defun sbt-destroy-the-world()
+  (interactive)
+  (sbt-command "clean")
+  (sbt-command "reload")
+  (sbt-command "update"))
+
+(defun sbt-destroy-then-rebuild-the-world()
+  (interactive)
+  (sbt-destroy-the-world)
+  (sbt-command "compile"))
+
 (provide 'mine-sbt)
