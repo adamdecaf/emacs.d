@@ -101,7 +101,6 @@
 (require 'mine-builtin)
 (require 'mine-defuns)
 (require 'mine-tramp)
-(require 'mine-bindings)
 (require 'mine-commands)
 (require 'mine-languages)
 (require 'mine-mode-line)
@@ -112,6 +111,9 @@
 
 ;; language / tool specifics
 (require 'mine-sbt)
+
+;; Don't set bindings until everything else is settled.
+(require 'mine-bindings)
 
 ;; Load random elsip straight into *your* emacs config!
 (defun load-random-elsip(dir)
