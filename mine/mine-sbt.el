@@ -96,4 +96,6 @@
   (sbt-destroy-the-world)
   (sbt-command "compile"))
 
+(setq comint-scroll-to-bottom-on-output nil)
+
 (provide 'mine-sbt)
