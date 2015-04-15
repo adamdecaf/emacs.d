@@ -241,4 +241,12 @@ frames with exactly two windows."
   (interactive "p*")
   (mine-increment-decimal (if arg (- arg) -1)))
 
+;; make shell files executable
+(setq make-shell-files-executable-by-default t)
+(defun toggle-make-shell-files-executable-by-default()
+  (interactive)
+  (setq make-shell-files-executable-by-default (not make-shell-files-executable-by-default))
+  (if make-shell-files-executable-by-default
+      (add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)))
+
 (provide 'mine-defuns)
