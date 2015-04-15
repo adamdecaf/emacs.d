@@ -187,6 +187,10 @@ frames with exactly two windows."
   (mine-kill-all-buffers-by-pattern "*SQL")
   (message "SQL buffers killed"))
 
+(defun mine-kill-sbt-buffers()
+  (interactive)
+  (mine-kill-all-buffers-by-pattern "*sbt*"))
+
 (defun mine-sweep-buffers()
   (interactive)
   (ag-kill-buffers)
