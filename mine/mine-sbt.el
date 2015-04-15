@@ -34,6 +34,10 @@
   (interactive)
   (sbt-command "test:compile"))
 
+(defun sbt-test-run()
+  (interactive)
+  (sbt-command "test:run"))
+
 (defun sbt-publoc()
   (interactive)
   (sbt-command "publish-local"))
