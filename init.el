@@ -48,6 +48,7 @@
 (use-package gradle-mode :ensure t)
 (use-package yagist :ensure t)
 (use-package wgrep :ensure t)
+(use-package rust-mode :ensure t)
 
 (use-package terraform-mode
   :ensure t
