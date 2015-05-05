@@ -49,6 +49,7 @@
 (use-package yagist :ensure t)
 (use-package wgrep :ensure t)
 (use-package rust-mode :ensure t)
+(use-package toml-mode :ensure t)
 
 (use-package terraform-mode
   :ensure t
@@ -138,3 +139,4 @@
 
 (put 'dired-find-alternate-file 'disabled nil)
 (put 'ido-exit-minibuffer 'disabled nil)
+(put 'upcase-region 'disabled nil)
