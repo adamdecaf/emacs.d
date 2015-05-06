@@ -40,14 +40,15 @@
           (set-buffer-modified-p nil))))))
 
 ;; joe
-(defun mine-sql (product sql-user sql-password sql-server sql-database root-sql-script-dir)
+(defun mine-sql (product sql-user sql-password sql-server sql-database root-sql-script-dir &optional interactive-mode)
   (let* ((sql-text-buffer (find-file (concat root-sql-script-dir sql-database "_" sql-server ".sql")))
          (new-name (concat sql-user "@" sql-database "." sql-server))
          (sqli-buffer (if sql-buffer (progn (split-window) sql-buffer) (sql-product-interactive product new-name))))
     (switch-to-buffer sql-text-buffer nil t)
     (set (make-local-variable 'sql-buffer) sqli-buffer)
     (switch-to-buffer sqli-buffer nil t)
-    (sql-send-string "\\x")))
+    (if interactive-mode
+        (sql-send-string "\\x"))))
 
 ;; joe
 (defun delete-this-file-and-buffer ()
