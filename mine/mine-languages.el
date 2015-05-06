@@ -10,4 +10,7 @@
 (add-to-list 'auto-mode-alist '("Vagrantfile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Rakefile" . ruby-mode))
 
+;; .hcl hashicorp config language files
+(add-to-list 'auto-mode-alist '("\\.hcl\\'" . conf-mode))
+
 (provide 'mine-languages)
