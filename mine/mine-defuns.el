@@ -3,6 +3,11 @@
   (interactive)
   (indent-region (point-min) (point-max)))
 
+;; pretty print xml
+(defun mine-xml-pretty-print-region ()
+  (interactive)
+  (shell-command-on-region (region-beginning) (region-end) "xmllint --format -" nil t))
+
 ;; rubbish
 (defun beginning-of-line-or-back-to-indention ()
   (interactive)

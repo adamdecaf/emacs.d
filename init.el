@@ -103,7 +103,6 @@
 (require 'mine-builtin)
 (require 'mine-defuns)
 (require 'mine-tramp)
-(require 'mine-commands)
 (require 'mine-languages)
 (require 'mine-mode-line)
 (require 'mine-w3m)
