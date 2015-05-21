@@ -27,6 +27,7 @@
 
 ;; Auto revert files
 (global-auto-revert-mode 1)
+(setq auto-revert-remote-files nil)
 (setq global-auto-revert-non-file-buffers t)
 
 (fset 'yes-or-no-p 'y-or-n-p)
