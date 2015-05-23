@@ -31,7 +31,6 @@
 (use-package ag :ensure t)
 (use-package dockerfile-mode :ensure t)
 (use-package markdown-mode :ensure t)
-(use-package projectile :ensure t)
 (use-package clojure-mode :ensure t)
 (use-package haskell-mode :ensure t)
 (use-package ruby-mode :ensure t)
