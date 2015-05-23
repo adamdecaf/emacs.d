@@ -1,7 +1,6 @@
-;; mine-tramp.el
 (require 'tramp)
 
-(defun mine-tramp-cleanup ()
+(defun mine/tramp-cleanup ()
   (interactive)
   (tramp-cleanup-all-buffers)
   (tramp-cleanup-all-connections)
@@ -28,12 +27,12 @@
     ad-do-it))
 
 ;; Show local images
-(defun tramp/list-local-images()
+(defun mine/list-local-images()
   (interactive)
   (shell-command-to-string "docker ps | grep -v IMAGE"))
 
 ;; Enter a local image
-(defun tramp/enter-local-docker-image-logs()
+(defun mine/enter-local-docker-image-logs()
   (interactive)
   (let* ((running-images (tramp/list-local-images))
          (prompt (concat running-images "\nImage name: "))

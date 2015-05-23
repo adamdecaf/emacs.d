@@ -8,60 +8,60 @@
 (setq browse-url-browser-function 'w3m-browse-url
       browse-url-new-window-flag t)
 
-(defun mine-set-linux-w3m-path()
+(defun mine/set-linux-w3m-path()
   (push "/usr/bin/w3m" exec-path)
   (setq w3m-command "/usr/bin/w3m"))
 
-(defun mine-set-osx-w3m-path()
+(defun mine/set-osx-w3m-path()
   (push "/usr/local/bin/w3m" exec-path)
   (setq w3m-command "/usr/local/bin/w3m"))
 
 (case system-type
-  ('darwin (mine-set-osx-w3m-path))
-  ('gnu/linux (mine-set-linux-w3m-path)))
+  ('darwin (mine/set-osx-w3m-path))
+  ('gnu/linux (mine/set-linux-w3m-path)))
 
 (global-set-key (kbd "C-c b") 'w3m-browse-url)
 
 (use-package w3m :ensure t)
 (require 'w3m)
 
-(defun mine-browse-lwn()
+(defun mine/browse-lwn()
   (interactive)
   (w3m-goto-url-new-session "http://lwn.net"))
 
-(defun mine-browse-hacker-news()
+(defun mine/browse-hacker-news()
   (interactive)
   (w3m-goto-url-new-session "http://news.ycombinator.com"))
 
 ;; reddit
-(defun mine-browse-reddit (&optional subreddit)
+(defun mine/browse-reddit (&optional subreddit)
   (interactive)
   (if subreddit
       (w3m-goto-url-new-session (concat "http://m.reddit.com/r/" subreddit))
     (w3m-goto-url-new-session "http://m.reddit.com")))
 
 (defvar w3m-last-subreddit-history nil)
-(defun mine-browse-subreddit()
+(defun mine/browse-subreddit()
   (interactive)
   (let ((subreddit (read-from-minibuffer "/r/" (car w3m-last-subreddit-history) nil nil 'w3m-last-subreddit-history)))
-    (mine-browse-reddit subreddit)))
+    (mine/browse-reddit subreddit)))
 
 ;; security lists
-(defun mine-browse-full-disclosure()
+(defun mine/browse-full-disclosure()
   (interactive)
   (w3m-goto-url-new-session "http://seclists.org/fulldisclosure/"))
 
-(defun mine-browse-openssl-announce()
+(defun mine/browse-openssl-announce()
   (interactive)
   (w3m-goto-url-new-session "https://marc.info/?l=openssl-announce"))
 
 ;; overall bookmarks
-(defun mine-browse-technology-bookmarks()
+(defun mine/browse-technology-bookmarks()
   (interactive)
-  (mine-browse-lwn)
-  (mine-browse-hacker-news)
-  (mine-browse-full-disclosure)
-  (mine-browse-openssl-announce))
+  (mine/browse-lwn)
+  (mine/browse-hacker-news)
+  (mine/browse-full-disclosure)
+  (mine/browse-openssl-announce))
 
 (setq w3m-use-title-buffer-name t)
 

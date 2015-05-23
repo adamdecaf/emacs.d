@@ -3,30 +3,30 @@
 
 ;; eshell
 (global-set-key (kbd "C-x m") 'eshell)
-(global-set-key (kbd "C-x C-n") 'mine-eshell-pick-and-choose)
-(global-set-key (kbd "C-x C-m") 'mine-eshell-switch-to-closest-or-create-here)
+(global-set-key (kbd "C-x C-n") 'mine/eshell-pick-and-choose)
+(global-set-key (kbd "C-x C-m") 'mine/eshell-switch-to-closest-or-create-here)
 
 ;; date/time
-(global-set-key (kbd "C-c d") 'insert-date)
-(global-set-key (kbd "C-c t") 'insert-iso-timestamp)
+(global-set-key (kbd "C-c d") 'mine/insert-date)
+(global-set-key (kbd "C-c t") 'mine/insert-iso-timestamp)
 
 ;; org
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
-(global-set-key (kbd "C-x C-o") 'mine-org-switch-to-file)
+(global-set-key (kbd "C-x C-o") 'mine/org-switch-to-file)
 
 ;; frame/window
-(global-set-key (kbd "C-x 7") 'swap-windows)
-(global-set-key (kbd "C-x 8") 'toggle-window-split)
-(global-set-key (kbd "C-x 9") 'toggle-window-split)
+(global-set-key (kbd "C-x 7") 'mine/swap-windows)
+(global-set-key (kbd "C-x 8") 'mine/toggle-window-split)
+(global-set-key (kbd "C-x 9") 'mine/toggle-window-split)
 
 ;; text
 (global-set-key (kbd "M-g") 'goto-line)
-(global-set-key (kbd "C-c o") 'indent-buffer)
+(global-set-key (kbd "C-c o") 'mine/indent-buffer)
 (global-set-key (kbd "C-x a r") 'align-regexp)
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
 (global-set-key [remap sh-case] 'comment-or-uncomment-region)
-(global-set-key [remap move-beginning-of-line] 'beginning-of-line-or-back-to-indention)
+(global-set-key [remap move-beginning-of-line] 'mine/beginning-of-line-or-back-to-indention)
 
 ;; movement
 (global-set-key (kbd "C-c C-b") 'beginning-of-buffer)

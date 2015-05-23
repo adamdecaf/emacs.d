@@ -41,7 +41,7 @@
 
 ;; helpers
 (defvar org-buffer-switched-to-history nil)
-(defun mine-org-switch-to-file()
+(defun mine/org-switch-to-file()
   (interactive)
   ;; todo: banno-ff, backln-ff, backline-ff have special meanings
   (let ((last-buffer-name (read-from-minibuffer "Org File: " (car org-buffer-switched-to-history) nil nil 'org-buffer-switched-to-history)))

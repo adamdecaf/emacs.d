@@ -9,12 +9,12 @@
  '(mode-line-inactive ((t (:family "Monaco" :background nil :foreground "gray" :box nil))))
  '(mode-line-buffer-id ((t :family "Monaco" :background nil :foreground "#7db5d6"))))
 
-(setq mine-mode-line-format '(" \u2211 " mode-line-buffer-identification " "))
+(setq mine/mode-line-format '(" \u2211 " mode-line-buffer-identification " "))
 
 (defun mode-line-on ()
   "Turn on mode line in all buffers."
   (interactive)
-  (setq-default mode-line-format mine-mode-line-format))
+  (setq-default mode-line-format mine/mode-line-format))
 
 (defun mode-line-off ()
   "Turn off mode line in all buffers."
