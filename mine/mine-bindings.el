@@ -16,18 +16,17 @@
 (global-set-key (kbd "C-x C-o") 'mine-org-switch-to-file)
 
 ;; frame/window
-(global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
 (global-set-key (kbd "C-x 7") 'swap-windows)
 (global-set-key (kbd "C-x 8") 'toggle-window-split)
 (global-set-key (kbd "C-x 9") 'toggle-window-split)
 
 ;; text
-(global-set-key (kbd "C-x a r") 'align-regexp)
 (global-set-key (kbd "M-g") 'goto-line)
 (global-set-key (kbd "C-c o") 'indent-buffer)
-(global-set-key [remap move-beginning-of-line] 'beginning-of-line-or-back-to-indention)
+(global-set-key (kbd "C-x a r") 'align-regexp)
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
 (global-set-key [remap sh-case] 'comment-or-uncomment-region)
+(global-set-key [remap move-beginning-of-line] 'beginning-of-line-or-back-to-indention)
 
 ;; movement
 (global-set-key (kbd "C-c C-b") 'beginning-of-buffer)
@@ -48,14 +47,6 @@
 (global-set-key (kbd "C-c s D") 'sbt-destroy-the-world)
 (global-set-key (kbd "C-c s R") 'sbt-destroy-then-rebuild-the-world)
 
-;; erlang-mode
-(global-set-key (kbd "C-c e c") 'erlang-compile)
-(global-set-key (kbd "C-c e i") 'erlang-indent-current-buffer)
-(global-set-key (kbd "C-c e s") 'erlang-shell)
-
-;; clojure-mode
-(global-set-key (kbd "C-c j l") 'clojure-load-file)
-
 ;; json validate
 (global-set-key (kbd "C-x j f") 'json-reformat-region)
 
@@ -65,5 +56,6 @@
 (global-set-key (kbd "C-c C-p") 'magit-push)
 (global-set-key (kbd "C-x C-l") 'magit-log)
 (global-set-key (kbd "C-x p") 'switch-to-magit-process)
+
 
 (provide 'mine-bindings)

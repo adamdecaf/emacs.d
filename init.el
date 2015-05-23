@@ -31,24 +31,15 @@
 (use-package ag :ensure t)
 (use-package dockerfile-mode :ensure t)
 (use-package markdown-mode :ensure t)
-(use-package clojure-mode :ensure t)
-(use-package haskell-mode :ensure t)
 (use-package ruby-mode :ensure t)
 (use-package sbt-mode :ensure t)
 (use-package scala-mode2 :ensure t)
 (use-package yaml-mode :ensure t)
 (use-package json-reformat :ensure t)
 (use-package go-mode :ensure t)
-(use-package php-mode :ensure t)
-(use-package less-css-mode :ensure t)
-(use-package rainbow-mode :ensure t)
-(use-package color-theme-wombat :ensure t)
 (use-package exec-path-from-shell :ensure t)
-(use-package gradle-mode :ensure t)
 (use-package yagist :ensure t)
-(use-package wgrep :ensure t)
 (use-package rust-mode :ensure t)
-(use-package toml-mode :ensure t)
 
 (use-package terraform-mode
   :ensure t
@@ -102,22 +93,18 @@
 (require 'mine-builtin)
 (require 'mine-defuns)
 (require 'mine-tramp)
-(require 'mine-commands)
 (require 'mine-languages)
 (require 'mine-mode-line)
 (require 'mine-w3m)
 (require 'mine-eshell)
 (require 'mine-pretty)
 (require 'mine-org)
-(require 'mine-magit)
-
-;; language / tool specifics
 (require 'mine-sbt)
 
 ;; Don't set bindings until everything else is settled.
 (require 'mine-bindings)
 
-;; Load random elsip straight into *your* emacs config!
+;; Load random elisp straight into *your* emacs config!
 (defun load-random-elsip(dir)
   (if (file-exists-p dir)
       (let ((custom-files (directory-files dir t "\.el$")))
@@ -125,9 +112,6 @@
 
 ;; load custom files
 (load-random-elsip "~/.emacs.d/custom/")
-
-;; load backline code
-(load-random-elsip "/Users/adam/src/backln/musica/")
 
 (defun mine-load-customizations ()
   (setq custom-file (expand-file-name "~/.emacs.d/customizations.el"))

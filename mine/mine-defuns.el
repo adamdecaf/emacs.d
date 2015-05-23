@@ -113,14 +113,6 @@ frames with exactly two windows."
           (if this-win-2nd (other-window 1))))))
 
 ;; rubbish
-(defun ido-recentf-open ()
-  "Use `ido-completing-read` to \\[find-file] a recent file"
-  (interactive)
-  (if (find-file (ido-completing-read "Find recent file: " recentf-list))
-      (message "Opening file...")
-    (message "Aborting")))
-
-;; rubbish
 (defun mine-command-line-tool (command &optional history history-symbol)
   (let* ((rest-of-command (read-from-minibuffer (concat command " ") (car history) nil nil history-symbol))
          (command-with-args (append (split-string command) (split-string rest-of-command)))
@@ -163,6 +155,11 @@ frames with exactly two windows."
          (tunnel-args (list "-t" login command)))
     (apply 'make-comint-in-buffer process-name buffer "ssh" nil tunnel-args)
     (switch-to-buffer buffer)))
+
+;; pretty print xml
+(defun mine-xml-pretty-print-region ()
+  (interactive)
+  (shell-command-on-region (region-beginning) (region-end) "xmllint --format -" nil t))
 
 ;; inspired from rubbish
 (defun mine-kill-all-buffers-by-pattern (pattern)
@@ -216,31 +213,11 @@ frames with exactly two windows."
 ;; curl wrappers
 (defvar curl-from-localhost-history nil)
 (defvar curl-last-verb-used (list "GET"))
-(defun mine-curl-from-localhost ()
+(defun mine/curl-from-localhost ()
   (interactive)
   (let* ((verb (read-from-minibuffer "Verb: " (car curl-last-verb-used) nil nil 'curl-last-verb-used))
         (command (format "curl -v -X %s" verb)))
     (mine-command-line-tool command curl-from-localhost-history 'curl-from-localhost-history)))
-
-;; joe
-(defun mine-increment-decimal (&optional arg)
-  (interactive "p*")
-  (save-excursion
-    (save-match-data
-      (let (inc-by field-width answer)
-        (setq inc-by (if arg arg 1))
-        (skip-chars-backward "0123456789")
-        (when (re-search-forward "[0-9]+" nil t)
-          (setq field-width (- (match-end 0) (match-beginning 0)))
-          (setq answer (+ (string-to-number (match-string 0) 10) inc-by))
-          (when (< answer 0)
-            (setq answer (+ (expt 10 field-width) answer)))
-          (replace-match (format (concat "%0" (int-to-string field-width) "d")
-                                 answer)))))))
-
-(defun mine-decrement-decimal (&optional arg)
-  (interactive "p*")
-  (mine-increment-decimal (if arg (- arg) -1)))
 
 ;; make shell files executable
 (setq make-shell-files-executable-by-default t)
@@ -249,5 +226,10 @@ frames with exactly two windows."
   (setq make-shell-files-executable-by-default (not make-shell-files-executable-by-default))
   (if make-shell-files-executable-by-default
       (add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)))
+
+;; alias to jump to the magit-process buffer
+(defun switch-to-magit-process()
+  (interactive)
+  (switch-to-buffer "*magit-process*"))
 
 (provide 'mine-defuns)

@@ -2,7 +2,6 @@
 (require 's)
 
 (setq eshell-path-env (getenv "PATH"))
-
 (setq eshell-buffer-shorthand t)
 
 ;; helpful defuns

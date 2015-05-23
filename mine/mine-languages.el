@@ -1,6 +1,6 @@
 ;; languages
 
-;; cause screw tabs
+;; setup javascript indenting
 (setq js-indent-level 2)
 
 ;; protobuf files are like c

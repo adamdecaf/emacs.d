@@ -15,28 +15,19 @@
 
 (setq org-agenda-files
       (append
-       (file-expand-wildcards "~/src/banno/firefighter-notes/*/data-services/ff.org")
        (file-expand-wildcards "~/Dropbox/org/*.org")))
 
 (setq org-todo-keywords
-      '((sequence "IDEA(i)")
-        (sequence "QUESTION(i)")
-        (sequence "BLOCKED(b)" "WATCH(w)" "STARTED(s)" "TODO(t)" "NEXT(n)" "|" "DONE(d)" "CANCELLED(c)")))
+      '((sequence "BLOCKED(b)" "WATCH(w)" "STARTED(s)" "TODO(t)" "NEXT(n)" "|" "DONE(d)" "CANCELLED(c)")))
 
 (setq org-todo-keyword-faces
-      '(("IDEA" . "DodgerBlue4")
-        ("HOLD" . "purple")
-        ("WAITING" . "light blue")
-        ("LATER" . "blue")
-        ("DONE" . "green")
-        ("QUESTION" . "dark green")
-        ("CANCELLED" . "gray")
-        ("BLOCKED" . "red3")
+      '(("BLOCKED" . "red3")
         ("WATCH" . "pink")
+        ("STARTED" . "gold")
         ("TODO" . "white")
-        ("NEXT" . "red")
-        ("ASK" . "orange")
-        ("STARTED" . "gold")))
+        ("NEXT" . "yellow")
+        ("DONE" . "green")
+        ("CANCELLED" . "gray")))
 
 (setq org-agenda-custom-commands
       '(("n" "Agenda and all TODO's" ((agenda "") (alltodo "")))
