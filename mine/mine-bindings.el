@@ -55,7 +55,6 @@
 (global-set-key (kbd "C-x C-p") 'magit-pull)
 (global-set-key (kbd "C-c C-p") 'magit-push)
 (global-set-key (kbd "C-x C-l") 'magit-log)
-(global-set-key (kbd "C-x p") 'switch-to-magit-process)
-
+(global-set-key (kbd "C-x p") 'mine/switch-to-magit-process)
 
 (provide 'mine-bindings)
