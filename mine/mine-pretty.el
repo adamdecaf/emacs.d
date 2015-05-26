@@ -25,4 +25,6 @@
     (set-frame-parameter (selected-frame) 'font font)
     (add-to-list 'default-frame-alist (cons 'font font))))
 
+(set-cursor-color "#ffffff")
+
 (provide 'mine-pretty)
