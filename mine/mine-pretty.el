@@ -1,5 +1,5 @@
 ;; pretty things
-(load-theme 'wombat)
+(load-theme 'tango-dark t)
 
 (custom-set-faces '(magit-item-highlight ((t nil))))
 
