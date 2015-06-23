@@ -1,6 +1,6 @@
 (require 'tramp)
 
-(defun mine/tramp-cleanup ()
+(defun mine/tramp-cleanup-connections-and-buffers ()
   (interactive)
   (tramp-cleanup-all-buffers)
   (tramp-cleanup-all-connections)
@@ -34,7 +34,7 @@
 ;; Enter a local image
 (defun mine/enter-local-docker-image-logs()
   (interactive)
-  (let* ((running-images (tramp/list-local-images))
+  (let* ((running-images (mine/list-local-images))
          (prompt (concat running-images "\nImage name: "))
          (image-name (read-from-minibuffer prompt)))
     (find-file (concat "/docker:" image-name ":/var/log/"))))
