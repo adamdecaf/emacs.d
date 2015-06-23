@@ -27,6 +27,7 @@
 (package-refresh-contents)
 
 ;; packages
+(use-package zenburn-theme :ensure t)
 (use-package s :ensure t)
 (use-package ag :ensure t)
 (use-package dockerfile-mode :ensure t)
