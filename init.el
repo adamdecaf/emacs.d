@@ -49,7 +49,8 @@
 (use-package ido-vertical-mode
   :init (progn
           (ido-mode 1)
-          (ido-vertical-mode 1))
+          (ido-vertical-mode 1)
+          (setq ido-vertical-define-keys 'C-n-and-C-p-only))
   :ensure t)
 
 (use-package multiple-cursors
