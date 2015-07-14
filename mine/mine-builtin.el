@@ -87,4 +87,7 @@
 ;; don't revert files for me magit.
 (setq magit-last-seen-setup-instructions "1.4.0")
 
+;; git settings
+(setq git-commit-summary-max-length 150)
+
 (provide 'mine-builtin)
