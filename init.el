@@ -62,6 +62,9 @@
   :bind ("C-x g" . magit-status)
   :ensure t)
 
+(use-package magit-gh-pulls
+  :ensure t)
+
 (use-package smex
   :bind (("M-x" . smex))
   :ensure t)
@@ -101,6 +104,7 @@
 (require 'mine-pretty)
 (require 'mine-org)
 (require 'mine-sbt)
+(require 'mine-magit)
 
 ;; Don't set bindings until everything else is settled.
 (require 'mine-bindings)
