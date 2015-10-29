@@ -46,6 +46,7 @@
 (global-set-key (kbd "C-c s o") 'sbt-test-only-current-test)
 (global-set-key (kbd "C-c s D") 'sbt-destroy-the-world)
 (global-set-key (kbd "C-c s R") 'sbt-destroy-then-rebuild-the-world)
+(global-set-key (kbd "C-c s x") 'sbt-run-specific-examples)
 
 ;; json validate
 (global-set-key (kbd "C-x j f") 'json-reformat-region)
