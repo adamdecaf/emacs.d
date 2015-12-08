@@ -15,6 +15,9 @@
 ;; shell
 ;; (exec-path-from-shell-initialize "PATH") ;; done automatically on osx
 
+;; java
+(setenv "JAVA_HOME" "/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home")
+
 ;; time
 (setenv "TZ" "America/Chicago")
 
