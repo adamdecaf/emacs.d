@@ -59,22 +59,25 @@
   (sbt-command "clear-local-banno-artifacts"))
 
 ;; copied from
-;; https://github.com/rubbish/sbt.el/blob/master/sbt.el#L179
+;; https://github.com/jwinder/emacs/blob/emacs-24/emacs.org#scala
 (defun sbt-current-test-in-buffer ()
+  (interactive)
   (save-excursion
-    (goto-char (point-min))
-    (let* ((pkg-name (progn
-                       (re-search-forward "package ")
-                       (filter-buffer-substring (point) (point-at-eol))))
-           (test-name (progn
-                        (re-search-forward "\\(object\\|class\\) ")
-                        (filter-buffer-substring
-                         (point)
-                         (progn
-                           (re-search-forward " ")
-                           (forward-char -1)
-                           (point))))))
-      (concat pkg-name "." test-name))))
+    (let* ((pkg-name-components)
+           (test-names))
+      (goto-char (point-min))
+      (while (re-search-forward "package " nil t)
+        (push (filter-buffer-substring (point) (point-at-eol)) pkg-name-components))
+      (goto-char (point-min))
+      (while (re-search-forward "\\(object\\|class\\) " nil t)
+        (push (filter-buffer-substring (point) (progn (re-search-forward " ")
+                                                      (forward-char -1)
+                                                      (point)))
+              test-names))
+      (let* ((full-pkg-name (string-join (reverse pkg-name-components) "."))
+             (full-test-names (mapcar #'(lambda (test-name) (string-join (list full-pkg-name "." test-name))) test-names))
+             (full-test-names-str (string-join full-test-names " ")))
+        (message full-test-names-str)))))
 
 (defun sbt-test-only-current-test ()
   "Run test-only for the test in the current buffer"
