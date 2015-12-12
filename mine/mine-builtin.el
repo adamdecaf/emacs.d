@@ -72,8 +72,8 @@
 (setq create-lockfiles nil)
 
 ;; Force no case sensitivity
-(if (not case-fold-search)
-    (toggle-case-fold-search))
+(if (not case-fold-search) (toggle-case-fold-search))
+(if (not ido-case-fold) (setq ido-case-fold 'f))
 
 ;; mac os x specific
 (progn ()
