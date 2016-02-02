@@ -227,9 +227,4 @@ frames with exactly two windows."
   (if make-shell-files-executable-by-default
       (add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)))
 
-;; alias to jump to the magit-process buffer
-(defun mine/switch-to-magit-process()
-  (interactive)
-  (switch-to-buffer "*magit-process*"))
-
 (provide 'mine-defuns)
