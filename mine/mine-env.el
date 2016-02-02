@@ -31,9 +31,10 @@
 (setenv "ESHELL" "bash")
 
 ;; docker
-(setenv "DOCKER_HOST" "tcp://192.168.59.103:2376")
-(setenv "DOCKER_CERT_PATH" "/Users/adam/.boot2docker/certs/boot2docker-vm")
 (setenv "DOCKER_TLS_VERIFY" "1")
+(setenv "DOCKER_HOST" "tcp://192.168.99.100:2376")
+(setenv "DOCKER_CERT_PATH" "/Users/adam/.docker/machine/machines/banno-big")
+(setenv "DOCKER_MACHINE_NAME" "banno-big")
 
 ;; go
 (mine/set-emacs-env-variable "GOPATH" "/Users/adam/src/go")
