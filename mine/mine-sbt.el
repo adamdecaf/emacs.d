@@ -2,55 +2,55 @@
 
 (defalias 'sbt 'sbt-start)
 
-(defun sbt-docker()
+(defun sbt/docker()
   (interactive)
   (sbt-command "docker"))
 
-(defun sbt-run()
+(defun sbt/run()
   (interactive)
   (sbt-command "run"))
 
-(defun sbt-compile()
+(defun sbt/compile()
   (interactive)
   (sbt-command "compile"))
 
-(defun sbt-test()
+(defun sbt/test()
   (interactive)
   (sbt-command "test"))
 
-(defun sbt-scripted-test()
+(defun sbt/scripted-test()
   (interactive)
   (sbt-command "scripted"))
 
-(defun sbt-cross-test()
+(defun sbt/cross-test()
   (interactive)
   (sbt-command "+test"))
 
-(defun sbt-cross-test-compile()
+(defun sbt/cross-test-compile()
   (interactive)
   (sbt-command "+test:compile"))
 
-(defun sbt-test-compile()
+(defun sbt/test-compile()
   (interactive)
   (sbt-command "test:compile"))
 
-(defun sbt-test-run()
+(defun sbt/test-run()
   (interactive)
   (sbt-command "test:run"))
 
-(defun sbt-publoc()
+(defun sbt/publoc()
   (interactive)
   (sbt-command "publish-local"))
 
-(defun sbt-assembly()
+(defun sbt/assembly()
   (interactive)
   (sbt-command "assembly"))
 
-(defun sbt-ci()
+(defun sbt/ci()
   (interactive)
   (sbt-command "ci"))
 
-(defun sbt-clean()
+(defun sbt/clean()
   (interactive)
   (sbt-command "clean"))
 
@@ -90,13 +90,13 @@
 ;; (setq sbt:clear-buffer-before-command nil)
 
 ;; these help sometimes
-(defun sbt-destroy-the-world()
+(defun sbt/destroy-the-world()
   (interactive)
   (sbt-command "clean")
   (sbt-command "reload")
   (sbt-command "update"))
 
-(defun sbt-destroy-then-rebuild-the-world()
+(defun sbt/destroy-then-rebuild-the-world()
   (interactive)
   (sbt-destroy-the-world)
   (sbt-command "compile"))
