@@ -1,5 +1,7 @@
 ;; org-mode setup
 (require 'org)
+(require 'org-install)
+
 (setq org-log-done t)
 
 (setq org-directory "~/Dropbox/org")
@@ -34,6 +36,17 @@
         ("w" todo "WATCH"
          ((org-agenda-sorting-strategy '(priority-down))
           (org-agenda-prefix-format "  Mixed: ")))))
+
+;; setup babel
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+   (sh . t)
+   (python . t)
+   (R . t)
+   (ruby . t)
+   (sql . t)
+   ))
 
 ;; org-reveal
 (require 'ox-reveal)
