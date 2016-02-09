@@ -54,10 +54,6 @@
   (interactive)
   (sbt-command "clean"))
 
-(defun sbt-clear-local-banno-artifacts()
-  (interactive)
-  (sbt-command "clear-local-banno-artifacts"))
-
 ;; copied from
 ;; https://github.com/jwinder/emacs/blob/emacs-24/emacs.org#scala
 (defun sbt-current-test-in-buffer ()
