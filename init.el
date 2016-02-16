@@ -91,6 +91,9 @@
            uniquify-buffer-name-style 'post-forward
            uniquify-separator ":")))
 
+(use-package prodigy
+  :ensure t)
+
 ;; mine/* configs
 (add-to-list 'load-path "~/.emacs.d/mine")
 (require 'mine-env)
@@ -105,6 +108,7 @@
 (require 'mine-org)
 (require 'mine-sbt)
 (require 'mine-magit)
+(require 'mine-prodigy)
 
 ;; Don't set bindings until everything else is settled.
 (require 'mine-bindings)
