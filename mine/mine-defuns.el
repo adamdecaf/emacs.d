@@ -175,10 +175,6 @@ frames with exactly two windows."
   (interactive)
   (mine/kill-all-buffers-by-pattern ".+\\.log:?"))
 
-(defun mine/kill-all-magit-buffers ()
-  (interactive)
-  (mine/kill-all-buffers-by-pattern "*magit"))
-
 (defun mine/kill-sql-buffers ()
   (interactive)
   (mine/kill-all-buffers-by-pattern ".sql")
