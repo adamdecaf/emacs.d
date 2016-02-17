@@ -48,6 +48,9 @@
 (global-set-key (kbd "C-c s R") 'sbt/destroy-then-rebuild-the-world)
 (global-set-key (kbd "C-c s x") 'sbt/run-specific-examples)
 
+;; prodigy
+(global-set-key (kbd "C-c P") 'prodigy)
+
 ;; json validate
 (global-set-key (kbd "C-x j f") 'json-reformat-region)
 

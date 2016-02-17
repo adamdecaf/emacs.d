@@ -1,13 +1,16 @@
 ;; prodigy services
 
-;; phyom simple http server
+(defun mine/prodigy-clear-services()
+  (interactive)
+  (setq prodigy-services nil))
+
+;; python simple http server
 (prodigy-define-service
-  :name "Python app"
+  :name "web server @ directory"
   :command "python"
   :args '("-m" "SimpleHTTPServer" "6001")
   :cwd "~/.emacs.d/mine/"
-  :tags '(work)
-  :kill-signal 'sigkill
-  :kill-process-buffer-on-stop t)
+  :tags '(mine)
+  :kill-signal 'sigkill)
 
 (provide 'mine-prodigy)
