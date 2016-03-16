@@ -81,7 +81,7 @@
   (sbt-command (concat "test-only " (sbt-current-test-in-buffer))))
 
 ;; run N example(s) at a time
-(defun sbt-run-specific-examples()
+(defun sbt/run-specific-examples()
   "Run test-only for the matching examples"
   (interactive)
   (sbt-command (concat "test-only " (sbt-current-test-in-buffer) " -- ex zzz")))
