@@ -25,10 +25,6 @@
 (use-package w3m :ensure t)
 (require 'w3m)
 
-(defun mine/browse-lwn()
-  (interactive)
-  (w3m-goto-url-new-session "http://lwn.net"))
-
 (defun mine/browse-hacker-news()
   (interactive)
   (w3m-goto-url-new-session "http://news.ycombinator.com"))
@@ -51,17 +47,11 @@
   (interactive)
   (w3m-goto-url-new-session "http://seclists.org/fulldisclosure/"))
 
-(defun mine/browse-openssl-announce()
-  (interactive)
-  (w3m-goto-url-new-session "https://marc.info/?l=openssl-announce"))
-
 ;; overall bookmarks
 (defun mine/browse-technology-bookmarks()
   (interactive)
-  (mine/browse-lwn)
   (mine/browse-hacker-news)
-  (mine/browse-full-disclosure)
-  (mine/browse-openssl-announce))
+  (mine/browse-full-disclosure))
 
 (setq w3m-use-title-buffer-name t)
 
