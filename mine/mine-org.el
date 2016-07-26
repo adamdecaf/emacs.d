@@ -37,17 +37,6 @@
          ((org-agenda-sorting-strategy '(priority-down))
           (org-agenda-prefix-format "  Mixed: ")))))
 
-;; setup babel
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '(
-   (sh . t)
-   (python . t)
-   (R . t)
-   (ruby . t)
-   (sql . t)
-   ))
-
 ;; helpers
 (defvar org-buffer-switched-to-history nil)
 (defun mine/org-switch-to-file()
