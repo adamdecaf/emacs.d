@@ -199,28 +199,4 @@ frames with exactly two windows."
   (interactive)
   (shell-command "uuidgen | tr -d '\n' | tr '[A-Z]' '[a-z]'" t))
 
-;; ssh into any random server
-(defvar last-hostname-used nil)
-(defun mine/ssh-into-server ()
-  (interactive)
-  (let* ((hostname (read-from-minibuffer "Hostname: " (car last-hostname-used) nil nil 'last-hostname-used)))
-    (find-file (concat "/scp:" hostname ":/home/adam/.bashrc"))))
-
-;; curl wrappers
-(defvar curl-from-localhost-history nil)
-(defvar curl-last-verb-used (list "GET"))
-(defun mine/curl-from-localhost ()
-  (interactive)
-  (let* ((verb (read-from-minibuffer "Verb: " (car curl-last-verb-used) nil nil 'curl-last-verb-used))
-        (command (format "curl -v -X %s" verb)))
-    (mine/command-line-tool command curl-from-localhost-history 'curl-from-localhost-history)))
-
-;; make shell files executable
-(setq make-shell-files-executable-by-default t)
-(defun mine/toggle-make-shell-files-executable-by-default()
-  (interactive)
-  (setq make-shell-files-executable-by-default (not make-shell-files-executable-by-default))
-  (if make-shell-files-executable-by-default
-      (add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)))
-
 (provide 'mine-defuns)
