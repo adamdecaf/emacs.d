@@ -15,7 +15,7 @@
 ;; date/time
 (defun mine/insert-date ()
   (interactive)
-  (insert (shell-command-to-string "echo -n $(date +%Y-%m-%d)")))
+  (insert (format-time-string "%Y-%m-%d")))
 
 (defun mine/insert-iso-timestamp ()
   (interactive)
