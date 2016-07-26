@@ -16,13 +16,12 @@
 ;; setup use-package
 (push "~/.emacs.d/use-package/" load-path)
 
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("marmalade" . "https://marmalade-repo.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")))
+
 (require 'package)
 (require 'use-package)
-
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ;;("melpa" . "http://melpa.milkbox.net/packages/")
-			 ))
 
 (package-initialize)
 (package-refresh-contents)
@@ -34,7 +33,7 @@
 (use-package markdown-mode :ensure t)
 (use-package ruby-mode :ensure t)
 (use-package sbt-mode :ensure t)
-(use-package scala-mode2 :ensure t)
+(use-package scala-mode2 :ensure t) ;; was renamed back to 'scala-mode'
 (use-package yaml-mode :ensure t)
 (use-package json-reformat :ensure t)
 (use-package go-mode :ensure t)
@@ -91,8 +90,6 @@
            uniquify-buffer-name-style 'post-forward
            uniquify-separator ":")))
 
-(use-package prodigy
-  :ensure t)
 
 ;; mine/* configs
 (add-to-list 'load-path "~/.emacs.d/mine")
@@ -108,7 +105,6 @@
 (require 'mine-org)
 (require 'mine-sbt)
 (require 'mine-magit)
-(require 'mine-prodigy)
 
 ;; Don't set bindings until everything else is settled.
 (require 'mine-bindings)
