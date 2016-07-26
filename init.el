@@ -116,13 +116,6 @@
 ;; load custom files
 (load-random-elsip "~/.emacs.d/custom/")
 
-(defun mine/load-customizations ()
-  (setq custom-file (expand-file-name "~/.emacs.d/customizations.el"))
-  (load custom-file))
-
-(if (file-exists-p "~/.emacs.d/customizations.d")
-  (mine/load-customizations))
-
 (put 'dired-find-alternate-file 'disabled nil)
 (put 'ido-exit-minibuffer 'disabled nil)
 (put 'upcase-region 'disabled nil)
