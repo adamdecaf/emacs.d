@@ -12,23 +12,11 @@
   (if (not (s-contains? (getenv "PATH") incoming))
       (setenv (concat (getenv "PATH") ":" incoming))))
 
-;; shell
-;; (exec-path-from-shell-initialize "PATH") ;; done automatically on osx
-
-;; java
-(setenv "JAVA_HOME" "/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home")
-
-;; time
-(setenv "TZ" "America/Chicago")
-
-;; tramp
-(setenv "TMPDIR" "/tmp")
-
-;; editor
 (setenv "EDITOR" "emacs")
-
-;; eshell
 (setenv "ESHELL" "bash")
+(setenv "JAVA_HOME" "/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home")
+(setenv "TMPDIR" "/tmp") ;; tramp
+(setenv "TZ" "America/Chicago")
 
 ;; docker
 (setenv "DOCKER_TLS_VERIFY" "1")
