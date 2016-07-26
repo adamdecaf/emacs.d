@@ -90,7 +90,6 @@
            uniquify-buffer-name-style 'post-forward
            uniquify-separator ":")))
 
-
 ;; mine/* configs
 (add-to-list 'load-path "~/.emacs.d/mine")
 (require 'mine-env)
