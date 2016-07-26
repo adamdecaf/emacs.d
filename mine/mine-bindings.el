@@ -31,10 +31,6 @@
 (global-set-key (kbd "C-c C-b") 'beginning-of-buffer)
 (global-set-key (kbd "C-c C-e") 'end-of-buffer)
 
-;; docview mode
-(global-set-key (kbd "C-c n") 'doc-view-next-page)
-(global-set-key (kbd "C-c p") 'doc-view-previous-page)
-
 ;; sbt-mode
 (global-set-key (kbd "C-c s d") 'sbt/docker)
 (global-set-key (kbd "C-c s r") 'sbt/run)
