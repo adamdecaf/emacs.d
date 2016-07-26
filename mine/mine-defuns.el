@@ -23,7 +23,7 @@
 
 (defun mine/message-the-time()
   (interactive)
-  (message (shell-command-to-string "echo -n $(date -u +%Y-%m-%dT%H:%M:%SZ)")))
+  (message (string-trim (shell-command-to-string "date"))))
 
 ;; joe
 (defun mine/rename-file-and-buffer (new-name)
