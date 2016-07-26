@@ -39,7 +39,6 @@
 (use-package json-reformat :ensure t)
 (use-package go-mode :ensure t)
 (use-package exec-path-from-shell :ensure t)
-(use-package yagist :ensure t)
 (use-package rust-mode :ensure t)
 
 (use-package terraform-mode
