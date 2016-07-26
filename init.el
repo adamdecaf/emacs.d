@@ -105,9 +105,7 @@
 (require 'mine-org)
 (require 'mine-sbt)
 (require 'mine-magit)
-
-;; Don't set bindings until everything else is settled.
-(require 'mine-bindings)
+(require 'mine-bindings) ;; Load bindings after everything else
 
 ;; Load random elisp straight into *your* emacs config!
 (defun load-random-elsip(dir)
