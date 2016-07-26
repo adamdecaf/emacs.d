@@ -48,10 +48,6 @@
    (sql . t)
    ))
 
-;; org-reveal
-(require 'ox-reveal)
-(setq org-reveal-root "file:///Users/adam/src/banno/internal-talks/")
-
 ;; helpers
 (defvar org-buffer-switched-to-history nil)
 (defun mine/org-switch-to-file()
