@@ -33,7 +33,7 @@
 (use-package markdown-mode :ensure t)
 (use-package ruby-mode :ensure t)
 (use-package sbt-mode :ensure t)
-(use-package scala-mode2 :ensure t) ;; was renamed back to 'scala-mode'
+(use-package scala-mode :ensure t)
 (use-package yaml-mode :ensure t)
 (use-package json-reformat :ensure t)
 (use-package go-mode :ensure t)
