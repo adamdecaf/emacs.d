@@ -17,7 +17,6 @@
 (push "~/.emacs.d/use-package/" load-path)
 
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-                         ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
 
 (require 'package)
