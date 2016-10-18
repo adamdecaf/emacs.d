@@ -38,6 +38,7 @@
 (use-package go-mode :ensure t)
 (use-package exec-path-from-shell :ensure t)
 (use-package rust-mode :ensure t)
+(use-package groovy-mode :ensure t)
 
 (use-package terraform-mode
   :ensure t

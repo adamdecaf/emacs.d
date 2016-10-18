@@ -13,4 +13,7 @@
 ;; .hcl hashicorp config language files
 (add-to-list 'auto-mode-alist '("\\.hcl\\'" . conf-mode))
 
+;; Jenkinsfile's are in groovy
+(add-to-list 'auto-mode-alist '("Jenkinsfile" . groovy-mode))
+
 (provide 'mine-languages)
