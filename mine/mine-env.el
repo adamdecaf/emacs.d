@@ -1,9 +1,6 @@
 ;; env steup
 (require 's)
 
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
-
 (defun mine/set-emacs-env-variable (name value)
   (if (s-blank? (getenv name))
       (setenv name value)))
@@ -11,6 +8,20 @@
 (defun mine/update-path (incoming)
   (if (not (s-contains? (getenv "PATH") incoming))
       (setenv (concat (getenv "PATH") ":" incoming))))
+
+;; golang
+(setq gopath "/Users/adam/src/go")
+(mine/set-emacs-env-variable "GOPATH" gopath)
+(mine/update-path (concat gopath "/bin"))
+
+;; force path
+(setq ruby-path "/Users/adam/.rvm/rubies/default/bin:/Users/adam/.rvm/gems/ruby-2.3.1/bin:$HOME/.rvm/bin")
+(setq go-path (concat gopath "/bin"))
+(setenv "PATH" (concat ruby-path ":/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$BANNO_DEPLOY_DIR/bin:/Users/adam/bin:/Users/adam/node_modules/.bin:" go-path))
+
+;; exec-path-from-shell
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 
 (setenv "EDITOR" "emacs")
 (setenv "ESHELL" "bash")
@@ -23,10 +34,6 @@
 (setenv "DOCKER_HOST" "tcp://192.168.99.100:2376")
 (setenv "DOCKER_CERT_PATH" "/Users/adam/.docker/machine/machines/banno-big")
 (setenv "DOCKER_MACHINE_NAME" "banno-big")
-
-;; go
-(mine/set-emacs-env-variable "GOPATH" "/Users/adam/src/go")
-(mine/update-path (concat (getenv "GOPATH") "/bin"))
 
 (defun mine/show-docker-env-variables()
   (interactive)
