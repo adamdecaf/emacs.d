@@ -45,4 +45,35 @@
   (let ((last-buffer-name (read-from-minibuffer "Org File: " (car org-buffer-switched-to-history) nil nil 'org-buffer-switched-to-history)))
     (find-file (concat "~/Dropbox/org/" last-buffer-name ".org"))))
 
+;; RSS feeds
+(setq org-feed-alist
+      '((;; News
+         "Al Jazeera"
+         "http://www.aljazeera.com/xml/rss/all.xml" "~/Dropbox/org/feeds.org" "Al Jazeera" :filter mine/org-feed-cleanse-cdata-tags)
+
+        ;; no guids :(
+        ;; ("FiveThirtyEight Politics"
+        ;;  "https://fivethirtyeight.com/politics/feed" "~/Dropbox/org/feeds.org" "FiveThirtyEight Politics")
+        ;; ("FiveThirtyEight Economics"
+        ;;  "https://fivethirtyeight.com/economics/feed" "~/Dropbox/org/feeds.org" "FiveThirtyEight Economics")
+
+        ;; Tech
+        ("Hackernews" ;; https://news.ycombinator.com/rss doesn't have guid
+         "http://hnrss.org/newest?points=100" "~/Dropbox/org/feeds.org" "Hackernews" :filter mine/org-feed-cleanse-cdata-tags)
+
+        ;; Weather
+        ("DSM Weather"
+         "http://w1.weather.gov/xml/current_obs/KDSM.rss" "~/Dropbox/org/feeds.org" "DSM Weather" :filter mine/org-feed-cleanse-cdata-tags)
+        ))
+
+(defun mine/strip-html (text)
+  (string-trim
+   (replace-regexp-in-string (regexp-quote "</?[a-zA-Z]*>") ""
+                             (replace-regexp-in-string (regexp-quote "<![CDATA[") ""
+                                                       (replace-regexp-in-string (regexp-quote "]]>") "" text)))))
+
+(defun mine/org-feed-cleanse-cdata-tags(e)
+  (plist-put e :title (mine/strip-html (plist-get e :title)))
+  (plist-put e :description (mine/strip-html (plist-get e :description))))
+
 (provide 'mine-org)
