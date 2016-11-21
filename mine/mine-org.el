@@ -50,6 +50,8 @@
       '((;; News
          "Al Jazeera"
          "http://www.aljazeera.com/xml/rss/all.xml" "~/Dropbox/org/feeds.org" "Al Jazeera" :filter mine/org-feed-cleanse-cdata-tags)
+        ("BBC Top Stories"
+         "http://feeds.bbci.co.uk/news/rss.xml" "~/Dropbox/org/feeds.org" "BBC Top Stories" :filter mine/org-feed-cleanse-cdata-tags)
 
         ;; no guids :(
         ;; ("FiveThirtyEight Politics"
