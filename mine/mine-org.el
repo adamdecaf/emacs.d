@@ -72,11 +72,15 @@
 
 
 (defun mine/strip-cdata (text)
+  (if (not text)
+      (setq text ""))
   (string-trim
    (replace-regexp-in-string (regexp-quote "<![CDATA[") ""
                              (replace-regexp-in-string (regexp-quote "]]>") "" text))))
 
 (defun mine/strip-html (text)
+  (if (not text)
+      (setq text ""))
   (string-trim
    (replace-regexp-in-string "<[a-zA-Z]*.*/>" ""
                              (replace-regexp-in-string "<.*>.*</[a-zA-Z]*>" "" text))))
