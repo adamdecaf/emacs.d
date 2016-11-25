@@ -15,9 +15,8 @@
 (mine/update-path (concat gopath "/bin"))
 
 ;; force path
-(setq ruby-path "/Users/adam/.rvm/rubies/default/bin:/Users/adam/.rvm/gems/ruby-2.3.1/bin:$HOME/.rvm/bin")
 (setq go-path (concat gopath "/bin"))
-(setenv "PATH" (concat ruby-path ":/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$BANNO_DEPLOY_DIR/bin:/Users/adam/bin:/Users/adam/node_modules/.bin:" go-path))
+(setenv "PATH" (concat "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$BANNO_DEPLOY_DIR/bin:/Users/adam/bin:/Users/adam/node_modules/.bin:" go-path))
 
 ;; exec-path-from-shell
 (when (memq window-system '(mac ns))
