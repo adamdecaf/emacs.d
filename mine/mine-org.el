@@ -17,6 +17,11 @@
         ("DONE" . "green")
         ("CANCELLED" . "gray")))
 
+;; Load up languages to use
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
+   (sh . t)))
 
 ;; helpers
 (defvar org-buffer-switched-to-history nil)
