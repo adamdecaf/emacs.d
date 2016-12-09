@@ -5,43 +5,23 @@
 (setq org-log-done t)
 
 (setq org-directory "~/Dropbox/org")
-(setq org-default-notes-file "~/Dropbox/org/notes.org")
-
-(setq org-capture-templates
-      (quote (("t" "todo" plain (file (concat org-directory "/incoming.org"))
-               "** TODO %?")
-              ("N" "next" plain (file (concat org-directory "/incoming.org"))
-               "** NEXT %?")
-              ("n" "note" plain (file (concat org-directory "/incoming.org"))
-               "** %?" ))))
-
-(setq org-agenda-files
-      (append
-       (file-expand-wildcards "~/Dropbox/org/*.org")))
 
 (setq org-todo-keywords
-      '((sequence "BLOCKED(b)" "WATCH(w)" "STARTED(s)" "TODO(t)" "NEXT(n)" "|" "DONE(d)" "CANCELLED(c)")))
+      '((sequence "BLOCKED(b)" "STARTED(s)" "TODO(t)" "NEXT(n)" "|" "DONE(d)" "CANCELLED(c)")))
 
 (setq org-todo-keyword-faces
       '(("BLOCKED" . "red3")
-        ("WATCH" . "pink")
         ("STARTED" . "gold")
         ("TODO" . "white")
         ("NEXT" . "yellow")
         ("DONE" . "green")
         ("CANCELLED" . "gray")))
 
-(setq org-agenda-custom-commands
-      '(("n" "Agenda and all TODO's" ((agenda "") (alltodo "")))
-        ("w" todo "WATCH"
-         ((org-agenda-sorting-strategy '(priority-down))
-          (org-agenda-prefix-format "  Mixed: ")))))
 
 ;; helpers
 (defvar org-buffer-switched-to-history nil)
 (defun mine/org-switch-to-file()
   (interactive)
-  ;; todo: banno-ff, backln-ff, backline-ff have special meanings
   (let ((last-buffer-name (read-from-minibuffer "Org File: " (car org-buffer-switched-to-history) nil nil 'org-buffer-switched-to-history)))
     (find-file (concat "~/Dropbox/org/" last-buffer-name ".org"))))
 
@@ -85,7 +65,7 @@
    (replace-regexp-in-string "<[a-zA-Z]*.*/>" ""
                              (replace-regexp-in-string "<.*>.*</[a-zA-Z]*>" "" text))))
 
-;; this is an org-feed filter
+;; filter org-mode feeds
 (defun mine/org-feed-clean (f e)
   (let* ((title (funcall f (plist-get e :title)))
          (desc  (funcall f (plist-get e :description))))
@@ -102,7 +82,6 @@
                        e))
 
 ;; Hacker news custom filter
-;; Comments URL: <a href="https://news.ycombinator.com/item?id=13022663"
 (defun mine/org-feed-capture-comments-url (text)
   (let* ((raw (when (string-match "Comments URL: <a href=\"\\(.*\\)\"" text)
                 (match-string 0 text))))
