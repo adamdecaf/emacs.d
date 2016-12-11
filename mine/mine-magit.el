@@ -1,8 +1,3 @@
-(require 'magit-gh-pulls)
-
-;; Turn on magit modes
-(add-hook 'magit-mode-hook 'turn-on-magit-gh-pulls)
-
 (setq magit-push-always-verify nil)
 
 ;; don't revert files for me magit.

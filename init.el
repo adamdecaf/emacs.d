@@ -62,9 +62,6 @@
   :bind ("C-x g" . magit-status)
   :ensure t)
 
-(use-package magit-gh-pulls
-  :ensure t)
-
 (use-package smex
   :bind (("M-x" . smex))
   :ensure t)
