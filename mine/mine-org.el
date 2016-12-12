@@ -53,8 +53,6 @@
         ;; Weather
         ("DSM Weather"
          "http://w1.weather.gov/xml/current_obs/KDSM.rss" "~/Dropbox/org/feeds.org" "DSM Weather" :filter mine/org-feed-strip-html)
-        ("DSM Forecast"
-         "http://www.rssweather.com/zipcode/50301/rss.php" "~/Dropbox/org/feeds.org" "DSM Forecast" :filter mine/org-feed-strip-html)
         ))
 
 
