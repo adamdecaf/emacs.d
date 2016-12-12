@@ -62,7 +62,7 @@
 (setq rcirc-notify-message "%s: %s"
       rcirc-buffer-maximum-lines 2000)
 
-(setq rcirc-omit-responses '("JOIN" "PART" "QUIT" "NICK" "AWAY"))
+(setq rcirc-omit-responses '("JOIN" "PART" "QUIT" "NICK" "AWAY" "MODE"))
 
 (setq rcirc-keywords '("adam" "adamdecaf" ;; Personal
                        "@ds-design" "@infrastructure" ;; Banno
