@@ -25,6 +25,7 @@
   (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/snoonet:" znc-pass) 'tls)
   (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/indymedia:" znc-pass) 'tls)
   (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/mozilla:" znc-pass) 'tls)
+  (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/efnet:" znc-pass) 'tls)
 
   ;; Bad SSL certs
   ;; (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adamdecaf" "adam" '() (concat "adam/netfuze:" znc-pass) 'tls)
