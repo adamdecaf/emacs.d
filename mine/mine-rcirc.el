@@ -25,6 +25,7 @@
   (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/snoonet:" znc-pass) 'tls)
   (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/indymedia:" znc-pass) 'tls)
   (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/mozilla:" znc-pass) 'tls)
+  (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/efnet:" znc-pass) 'tls)
 
   ;; Bad SSL certs
   ;; (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adamdecaf" "adam" '() (concat "adam/netfuze:" znc-pass) 'tls)
@@ -61,7 +62,7 @@
 (setq rcirc-notify-message "%s: %s"
       rcirc-buffer-maximum-lines 2000)
 
-(setq rcirc-omit-responses '("JOIN" "PART" "QUIT" "NICK" "AWAY"))
+(setq rcirc-omit-responses '("JOIN" "PART" "QUIT" "NICK" "AWAY" "MODE"))
 
 (setq rcirc-keywords '("adam" "adamdecaf" ;; Personal
                        "@ds-design" "@infrastructure" ;; Banno
