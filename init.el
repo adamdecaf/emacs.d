@@ -26,6 +26,7 @@
 (package-refresh-contents)
 
 ;; packages
+(use-package cl :ensure t)
 (use-package s :ensure t)
 (use-package ag :ensure t)
 (use-package dockerfile-mode :ensure t)
