@@ -19,12 +19,13 @@
 
 ;; force path
 (let* ((base-path "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin")
-       (go-path (concat gopath "/bin"))
+       (my-go-path (concat gopath "/bin"))
+       (go-path "/usr/local/go/bin")
        (ovftool-path "/Applications/VMware\ OVF\ Tool/")
        (banno-deploy-path "$BANNO_DEPLOY_DIR/bin")
        (home-path "/Users/adam/bin")
        (node-path "/Users/adam/node_modules/.bin"))
-  (setenv "PATH" (format "%s:%s:%s:%s:%s:%s" base-path go-path ovftool-path banno-deploy-path home-path node-path)))
+  (setenv "PATH" (format "%s:%s:%s:%s:%s:%s:%s" base-path go-path my-go-path ovftool-path banno-deploy-path home-path node-path)))
 
 ;; exec-path-from-shell
 (when (memq window-system '(mac ns))
