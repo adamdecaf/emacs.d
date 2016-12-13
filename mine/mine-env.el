@@ -10,7 +10,10 @@
       (setenv (concat (getenv "PATH") ":" incoming))))
 
 ;; golang
-(setq gopath "/Users/adam/src/go")
+(if (eq system-type 'gnu/linux)
+    (setq gopath "/home/adam/src/go"))
+(if (eq system-type 'darwin)
+    (setq gopath "/Users/adam/src/go"))
 (mine/set-emacs-env-variable "GOPATH" gopath)
 (mine/update-path (concat gopath "/bin"))
 
