@@ -48,17 +48,15 @@
         (rcirc-toggle-ignore-buffer-activity))
     (switch-to-buffer buf)))
 
-;; From github somewhere
-(defun rcirc-handler-NOTICE (process sender args text)) ;; swallow annoying KEEPALIVE messages with a sledgehammer
+;; From Joe
+(defun rcirc-handler-NOTICE--advice--ignore-KEEPALIVE (original-function &rest args)
+  (let* ((function-args (nth 2 args))
+         (msg (cadr function-args)))
+    (unless (string-match "keepalive" msg)
+      (apply original-function args))))
+(advice-add 'rcirc-handler-NOTICE :around 'rcirc-handler-NOTICE--advice--ignore-KEEPALIVE)
 
-(defun mine/ignore-slack-meta-buffers()
-  (interactive)
-  (mine/rcirc-ignore-slack-keepalive "*znc0.decaf.zone<1>*") ;; Banno Slack
-  (mine/rcirc-ignore-slack-keepalive "*znc0.decaf.zone<2>*") ;; UNIFI Slack
-  )
-
-(mine/ignore-slack-meta-buffers)
-
+;; Set some rcirc configs
 (setq rcirc-notify-message "%s: %s"
       rcirc-buffer-maximum-lines 2000)
 
