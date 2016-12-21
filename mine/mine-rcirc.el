@@ -48,13 +48,8 @@
         (rcirc-toggle-ignore-buffer-activity))
     (switch-to-buffer buf)))
 
-;; From Joe
-(defun rcirc-handler-NOTICE--advice--ignore-KEEPALIVE (original-function &rest args)
-  (let* ((function-args (nth 2 args))
-         (msg (cadr function-args)))
-    (unless (string-match "keepalive" msg)
-      (apply original-function args))))
-(advice-add 'rcirc-handler-NOTICE :around 'rcirc-handler-NOTICE--advice--ignore-KEEPALIVE)
+;; swallow annoying KEEPALIVE messages with a sledgehammer
+(defun rcirc-handler-NOTICE (process sender args text))
 
 ;; Set some rcirc configs
 (setq rcirc-notify-message "%s: %s"
