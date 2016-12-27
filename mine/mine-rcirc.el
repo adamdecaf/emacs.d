@@ -17,6 +17,8 @@
 (defun mine/rcirc-connect()
   (interactive)
   (setq-local znc-pass "")
+  (if (get-buffer-process "*znc0.decaf.zone*")
+      (error "Already connected to rcirc"))
 
   (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adamdecaf" "adam" '() (concat "adam/freenode:" znc-pass) 'tls)
   (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/banno:" znc-pass) 'tls)
