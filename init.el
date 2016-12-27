@@ -1,6 +1,22 @@
-;; emacs setup
+;; my emacs setup
 (setq debug-on-error t)
 
+;; Setup use-package
+(require 'package)
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")))
+
+(package-initialize)
+(package-refresh-contents)
+
+;; Install use-package
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
+(require 'use-package)
+(setq use-package-always-ensure t)
+(setq package-enable-at-startup nil)
+
+;; Start our emacs server
 (server-start)
 
 ;; Load hidden.el
@@ -17,81 +33,58 @@
 
 (subword-mode t)
 
-;; setup use-package
-(push "~/.emacs.d/use-package/" load-path)
-
-(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-                         ("melpa" . "https://melpa.org/packages/")))
-
-(require 'package)
-(require 'use-package)
-
-(package-initialize)
-(package-refresh-contents)
-
 ;; packages
-(use-package cl :ensure t)
+(use-package cl)
 (use-package s :ensure t)
-(use-package ag :ensure t)
-(use-package dockerfile-mode :ensure t)
-(use-package markdown-mode :ensure t)
-(use-package ruby-mode :ensure t)
-(use-package sbt-mode :ensure t)
-(use-package scala-mode :ensure t)
-(use-package yaml-mode :ensure t)
-(use-package json-reformat :ensure t)
-(use-package go-mode :ensure t)
-(use-package exec-path-from-shell :ensure t)
-(use-package rust-mode :ensure t)
-(use-package groovy-mode :ensure t)
-(use-package vlf :ensure t)
+(use-package ag)
+(use-package dockerfile-mode)
+(use-package markdown-mode)
+(use-package ruby-mode)
+(use-package sbt-mode)
+(use-package scala-mode)
+(use-package yaml-mode)
+(use-package json-reformat)
+(use-package go-mode)
+(use-package exec-path-from-shell)
+(use-package rust-mode)
+(use-package groovy-mode)
+(use-package vlf)
 
 (use-package terraform-mode
-  :ensure t
   :config (setq terraform-indent-level 2))
 
 (use-package ido-vertical-mode
   :init (progn
           (ido-mode 1)
           (ido-vertical-mode 1)
-          (setq ido-vertical-define-keys 'C-n-and-C-p-only))
-  :ensure t)
+          (setq ido-vertical-define-keys 'C-n-and-C-p-only)))
 
 (use-package multiple-cursors
-  :ensure t
   :bind (("C->" . mc/mark-next-like-this)
          ("C-<" . mc/mark-previous-like-this)
          ("C-*" . mc/mark-all-like-this)))
 
 (use-package magit
-  :bind ("C-x g" . magit-status)
-  :ensure t)
+  :bind ("C-x g" . magit-status))
 
 (use-package smex
-  :bind (("M-x" . smex))
-  :ensure t)
+  :bind (("M-x" . smex)))
 
 (use-package switch-window
-  :bind ("C-x o" . switch-window)
-  :ensure t)
+  :bind ("C-x o" . switch-window))
 
 (use-package expand-region
   :bind ("C-c C-w" . er/expand-region)
-  :init (progn (pending-delete-mode t))
-  :ensure t)
+  :init (progn (pending-delete-mode t)))
 
 (use-package highlight-parentheses
-  :init (progn (global-highlight-parentheses-mode))
-  :ensure t)
+  :init (progn (global-highlight-parentheses-mode)))
 
 (use-package ido
   :init (progn (ido-mode t)))
 
-(use-package uniquify
-  :init (progn
-          (setq
-           uniquify-buffer-name-style 'post-forward
-           uniquify-separator ":")))
+;; uniquify
+(setq uniquify-buffer-name-style 'post-forward)
 
 ;; mine/* configs
 (add-to-list 'load-path "~/.emacs.d/mine")
