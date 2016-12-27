@@ -19,7 +19,7 @@
   (if (get-buffer-process "*znc0.decaf.zone*")
       (error "Already connected to rcirc"))
 
-  (if (not (boundp znc-pass))
+  (if (not (boundp 'znc-pass))
       (error "Not connecting to znc as znc-pass is not set!"))
 
   (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adamdecaf" "adam" '() (concat "adam/freenode:" znc-pass) 'tls)
