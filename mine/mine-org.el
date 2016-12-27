@@ -39,14 +39,18 @@
         ;;  "http://feeds.bbci.co.uk/news/rss.xml" "~/Dropbox/org/feeds.org" "BBC Top Stories" :filter mine/org-feed-strip-html)
         ("Des Moines Register"
          "http://rssfeeds.desmoinesregister.com/desmoines/news&x=1" "~/Dropbox/org/feeds.org" "Des Moines Register" :filter mine/org-feed-strip-html)
-        ("Infowars"
-         "http://www.infowars.com/feed/custom_feed_rss" "~/Dropbox/org/feeds.org" "Infowars" :filter mine/org-feed-strip-html)
+        ;; ("Infowars"
+        ;;  "http://www.infowars.com/feed/custom_feed_rss" "~/Dropbox/org/feeds.org" "Infowars" :filter mine/org-feed-strip-html)
 
         ;; no guids :(
         ;; ("FiveThirtyEight Politics"
         ;;  "https://fivethirtyeight.com/politics/feed" "~/Dropbox/org/feeds.org" "FiveThirtyEight Politics")
         ;; ("FiveThirtyEight Economics"
         ;;  "https://fivethirtyeight.com/economics/feed" "~/Dropbox/org/feeds.org" "FiveThirtyEight Economics")
+
+        ;; Blogs
+        ;; ("Scary Beast"
+        ;;  "https://scarybeastsecurity.blogspot.com/feeds/posts/default" "~/Dropbox/org/feeds.org" "Scary Beasts" :filter mine/org-feed-strip-html)
 
         ;; Tech
         ("Hackernews" ;; https://news.ycombinator.com/rss doesn't have guid
