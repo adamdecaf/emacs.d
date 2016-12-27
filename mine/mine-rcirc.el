@@ -29,9 +29,18 @@
   (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/mozilla:" znc-pass) 'tls)
   (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/efnet:" znc-pass) 'tls)
 
+  ;; (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/soylent:" znc-pass) 'tls) ;; spammy
+
   ;; Bad SSL certs
   ;; (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adamdecaf" "adam" '() (concat "adam/netfuze:" znc-pass) 'tls)
   ;; (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adamdecaf" "adam" '() (concat "adam/ferwy:" znc-pass) 'tls)
+
+  ;; Checkout these networks
+  ;; encom
+  ;; ramen
+  ;; cfl
+  ;; slashnet
+  ;; oftc -- more channels?
   )
 
 (defun mine/rcirc-detach-all()
