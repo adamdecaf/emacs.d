@@ -18,7 +18,6 @@
   (interactive)
   (if (get-buffer-process "*znc0.decaf.zone*")
       (error "Already connected to rcirc"))
-
   (if (not (boundp 'znc-pass))
       (error "Not connecting to znc as znc-pass is not set!"))
 
