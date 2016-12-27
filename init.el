@@ -3,6 +3,10 @@
 
 (server-start)
 
+;; Load hidden.el
+(if (file-exists-p "hidden.el")
+    (load-file "hidden.el"))
+
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
