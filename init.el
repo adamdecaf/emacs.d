@@ -20,8 +20,9 @@
 (server-start)
 
 ;; Load hidden.el
-(if (file-exists-p "hidden.el")
-    (load-file "hidden.el"))
+(let ((hidden-path "~/.emacs.d/hidden.el"))
+  (if (file-exists-p hidden-path)
+      (load-file hidden-path)))
 
 (tool-bar-mode -1)
 (menu-bar-mode -1)
