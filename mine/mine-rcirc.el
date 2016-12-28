@@ -32,6 +32,8 @@
 
   ;; (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/soylent:" znc-pass) 'tls) ;; spammy
 
+  ;; todo: https://irc.gitter.im/
+
   ;; Bad SSL certs
   ;; (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adamdecaf" "adam" '() (concat "adam/netfuze:" znc-pass) 'tls)
   ;; (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adamdecaf" "adam" '() (concat "adam/ferwy:" znc-pass) 'tls)
