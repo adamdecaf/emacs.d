@@ -16,9 +16,6 @@
 (setq use-package-always-ensure t)
 (setq package-enable-at-startup nil)
 
-;; Start our emacs server
-(server-start)
-
 ;; Load hidden.el
 (let ((hidden-path "~/.emacs.d/hidden.el"))
   (if (file-exists-p hidden-path)
@@ -115,3 +112,7 @@
 (put 'dired-find-alternate-file 'disabled nil)
 (put 'ido-exit-minibuffer 'disabled nil)
 (put 'upcase-region 'disabled nil)
+
+;; (cd (getenv "HOME"))
+;; (fullscreen)
+(server-start)
