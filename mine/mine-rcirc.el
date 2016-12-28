@@ -115,4 +115,8 @@ With prefix ARG, go to the next low priority buffer with activity."
 
 (mine/rcirc-talk-to-me)
 
+(defun mine/rcirc-browse-logs()
+  (interactive)
+  (find-file "/sshx:znc0.decaf.zone:/opt/znc/moddata/log/adam"))
+
 (provide 'mine-rcirc)
