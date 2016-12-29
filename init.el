@@ -112,6 +112,13 @@
 (put 'ido-exit-minibuffer 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
-;; (cd (getenv "HOME"))
-;; (fullscreen)
+;; joe
+(defun fullscreen ()
+  (interactive)
+  (unless (frame-parameter (selected-frame) 'fullscreen)
+    (toggle-frame-fullscreen)))
+
+;; Normalize
+(cd (getenv "HOME"))
+(fullscreen)
 (server-start)
