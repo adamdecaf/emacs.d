@@ -140,8 +140,7 @@ frames with exactly two windows."
   (let* ((host (read-string "Host: "))
          (command (read-string "Command: "))
          (ssh-username (read-string "Username: " (getenv "USER"))))
-    (ssh-tunnel-cmd host command ssh-username)
-    ))
+    (mine/ssh-tunnel-cmd host command ssh-username)))
 
 ;; joe
 (defun mine/ssh-tunnel-cmd (host command &optional ssh-username)
