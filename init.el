@@ -91,7 +91,6 @@
 (require 'mine-defuns)
 (require 'mine-tramp)
 (require 'mine-languages)
-(require 'mine-mode-line)
 (require 'mine-eshell)
 (require 'mine-pretty)
 (require 'mine-org)
