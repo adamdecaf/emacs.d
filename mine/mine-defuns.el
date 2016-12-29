@@ -160,39 +160,6 @@ frames with exactly two windows."
   (interactive)
   (shell-command-on-region (region-beginning) (region-end) "xmllint --format -" nil t))
 
-;; inspired from rubbish
-(defun mine/kill-all-buffers-by-pattern (pattern)
-  (dolist (buffer (buffer-list))
-    (if (string-match pattern (buffer-name buffer))
-        (kill-buffer buffer))))
-
-(defun mine/kill-all-ag-buffers()
-  (interactive)
-  (mine/kill-all-buffers-by-pattern "*ag "))
-
-(defun mine/kill-all-log-buffers ()
-  (interactive)
-  (mine/kill-all-buffers-by-pattern ".+\\.log:?"))
-
-(defun mine/kill-sql-buffers ()
-  (interactive)
-  (mine/kill-all-buffers-by-pattern ".sql")
-  (mine/kill-all-buffers-by-pattern "*SQL")
-  (message "SQL buffers killed"))
-
-(defun mine/kill-sbt-buffers()
-  (interactive)
-  (mine/kill-all-buffers-by-pattern "*sbt*"))
-
-(defun mine/sweep-buffers()
-  (interactive)
-  (ag-kill-buffers)
-  (mine/kill-all-ag-buffers)
-  (mine/kill-all-eshell-buffers)
-  (mine/kill-all-log-buffers)
-  (mine/kill-all-magit-buffers)
-  (message "ag, eshell, magit, and log buffers swept."))
-
 ;; rubbish
 (defun mine/insert-random-uuid ()
   (interactive)
