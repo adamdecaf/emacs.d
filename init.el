@@ -21,6 +21,13 @@
   (if (file-exists-p hidden-path)
       (load-file hidden-path)))
 
+;; Load the rest of the config from readme.org
+;; (use-package org-plus-contrib)
+;; (setq package-enable-at-startup nil)
+;; (org-babel-load-file (concat user-emacs-directory "readme.org"))
+;; todo: move everything below to init-old.el to slowly bring back into the main config
+;;  - or to allow pulling things one-by-one into readme.org
+
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
