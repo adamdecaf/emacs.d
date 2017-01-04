@@ -44,10 +44,4 @@
 ;; json validate
 (global-set-key (kbd "C-x j f") 'json-reformat-region)
 
-;; magit
-(global-set-key (kbd "C-x C-g") 'magit-status)
-(global-set-key (kbd "C-x C-p") 'magit-pull)
-(global-set-key (kbd "C-c C-p") 'magit-push)
-(global-set-key (kbd "C-x C-l") 'magit-log)
-
 (provide 'mine-bindings)
