@@ -43,22 +43,26 @@
                             ))
   (rcirc nil))
 
+(setq debug-on-message "Selecting deleted buffer")
+
+;; detach from all buffers
+(defun mine/rcirc-detach(buf)
+  (with-current-buffer buf
+    (if (and (process-live-p (get-buffer-process buf))
+             (string-suffix-p ".znc.decaf.zone*" (buffer-name buf)))
+        (rcirc-detach-buffer))))
+
+(defun mine/get-sorted-buffers()
+  (sort
+   (mapcar 'buffer-name (buffer-list))
+   'string-lessp))
 
 (defun mine/rcirc-detach-all()
   (interactive)
-  (dolist (buffer (buffer-list))
-    (if (string-prefix-p "*znc" (buffer-name buffer))
-        (progn
-          (switch-to-buffer buffer)
-          (rcirc-detach-buffer)))))
+  (let* ((sorted (mine/get-sorted-buffers)))
+    (dolist (buf sorted)
+      (mine/rcirc-detach (get-buffer buf)))))
 
-(defun mine/rcirc-ignore-slack-keepalive(buf-name)
-  (let* (buf (current-buffer))
-    (switch-to-buffer buf-name)
-    (if (and (not (boundp 'rcirc-ignore-channel-activity))
-             (not 'rcirc-ignore-channel-activity))
-        (rcirc-toggle-ignore-buffer-activity))
-    (switch-to-buffer buf)))
 ;; From https://superuser.com/questions/249563/using-rcirc-with-a-irc-bouncer-like-znc
 (defun rcirc-detach-buffer ()
   (interactive)
