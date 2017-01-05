@@ -1,0 +1,11 @@
+(
+ (:id "sha1:3043739184c125f4ef2081fdfdf8f51a80094306" :fingerprint "sha1:ea:7a:1e:7c:39:87:5e:b6:41:ea:19:4e:8e:24:b4:b8:67:54:38:ce" :host "efnet.znc.decaf.zone:6697" :conditions (:self-signed :no-host-match :unknown-ca :invalid))
+ (:id "sha1:d7ddfdfc006545191b7e95743b75676d4b1af832" :fingerprint "sha1:ea:7a:1e:7c:39:87:5e:b6:41:ea:19:4e:8e:24:b4:b8:67:54:38:ce" :host "mozilla.znc.decaf.zone:6697" :conditions (:self-signed :no-host-match :unknown-ca :invalid))
+ (:id "sha1:69fdbe0abbe7d49419104a431cb8362cd4bc2af9" :fingerprint "sha1:ea:7a:1e:7c:39:87:5e:b6:41:ea:19:4e:8e:24:b4:b8:67:54:38:ce" :host "indymedia.znc.decaf.zone:6697" :conditions (:self-signed :no-host-match :unknown-ca :invalid))
+ (:id "sha1:85f848f7164e476a33390389335e098f97597b64" :fingerprint "sha1:ea:7a:1e:7c:39:87:5e:b6:41:ea:19:4e:8e:24:b4:b8:67:54:38:ce" :host "snoonet.znc.decaf.zone:6697" :conditions (:self-signed :no-host-match :unknown-ca :invalid))
+ (:id "sha1:b9d7859c35a11e04f2275c86cd9ecdd48e8b23f2" :fingerprint "sha1:ea:7a:1e:7c:39:87:5e:b6:41:ea:19:4e:8e:24:b4:b8:67:54:38:ce" :host "oftc.znc.decaf.zone:6697" :conditions (:self-signed :no-host-match :unknown-ca :invalid))
+ (:id "sha1:9d7c50df21378e764c569e142c4d598097461038" :fingerprint "sha1:ea:7a:1e:7c:39:87:5e:b6:41:ea:19:4e:8e:24:b4:b8:67:54:38:ce" :host "unifi.znc.decaf.zone:6697" :conditions (:self-signed :no-host-match :unknown-ca :invalid))
+ (:id "sha1:c67a74e76a0beae519bbf3d9c57c85d39198a977" :fingerprint "sha1:ea:7a:1e:7c:39:87:5e:b6:41:ea:19:4e:8e:24:b4:b8:67:54:38:ce" :host "banno.znc.decaf.zone:6697" :conditions (:self-signed :no-host-match :unknown-ca :invalid))
+ (:id "sha1:1d81042c3b7dd50d9d96ae08e96ef18ce83444a6" :fingerprint "sha1:ea:7a:1e:7c:39:87:5e:b6:41:ea:19:4e:8e:24:b4:b8:67:54:38:ce" :host "freenode.znc.decaf.zone:6697" :conditions (:self-signed :no-host-match :unknown-ca :invalid))
+ (:id "sha1:70b9511630b84d24cb60cdeb8cdbd5b32b803006" :fingerprint "sha1:ea:7a:1e:7c:39:87:5e:b6:41:ea:19:4e:8e:24:b4:b8:67:54:38:ce" :host "znc0.decaf.zone:6697" :conditions (:self-signed :no-host-match :unknown-ca :invalid))
+)
