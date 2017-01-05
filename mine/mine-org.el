@@ -41,6 +41,8 @@
          "http://rssfeeds.desmoinesregister.com/desmoines/news&x=1" "~/Dropbox/org/feeds.org" "Des Moines Register" :filter mine/org-feed-strip-html)
         ;; ("Infowars"
         ;;  "http://www.infowars.com/feed/custom_feed_rss" "~/Dropbox/org/feeds.org" "Infowars" :filter mine/org-feed-strip-html)
+        ("Longform"
+         "https://longform.org/feed.rss" "~/Dropbox/org/feeds.org" "Longform.org" :filter mine/org-feed-strip-html)
 
         ;; no guids :(
         ;; ("FiveThirtyEight Politics"
