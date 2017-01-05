@@ -61,6 +61,21 @@
              (not 'rcirc-ignore-channel-activity))
         (rcirc-toggle-ignore-buffer-activity))
     (switch-to-buffer buf)))
+;; From https://superuser.com/questions/249563/using-rcirc-with-a-irc-bouncer-like-znc
+(defun rcirc-detach-buffer ()
+  (interactive)
+  (let ((buffer (current-buffer)))
+    (when (and (rcirc-buffer-process)
+               (eq (process-status (rcirc-buffer-process)) 'open))
+      (with-rcirc-server-buffer
+        (setq rcirc-buffer-alist
+              (rassq-delete-all buffer rcirc-buffer-alist)))
+      (rcirc-update-short-buffer-names)
+      (if (rcirc-channel-p rcirc-target)
+          (rcirc-send-string (rcirc-buffer-process)
+                             (concat "DETACH " rcirc-target))))
+    (setq rcirc-target nil)
+    (kill-buffer buffer)))
 
 ;; swallow annoying KEEPALIVE messages with a sledgehammer
 (defun rcirc-handler-NOTICE (process sender args text))
@@ -90,23 +105,6 @@ With prefix ARG, go to the next low priority buffer with activity."
 (defun mine/rcirc-shut-up ()
   (interactive)
   (rcirc-track-minor-mode -1))
-
-;; From https://superuser.com/questions/249563/using-rcirc-with-a-irc-bouncer-like-znc
-(defun rcirc-detach-buffer ()
-  (interactive)
-  (let ((buffer (current-buffer)))
-    (when (and (rcirc-buffer-process)
-               (eq (process-status (rcirc-buffer-process)) 'open))
-      (with-rcirc-server-buffer
-        (setq rcirc-buffer-alist
-              (rassq-delete-all buffer rcirc-buffer-alist)))
-      (rcirc-update-short-buffer-names)
-      (if (rcirc-channel-p rcirc-target)
-          (rcirc-send-string (rcirc-buffer-process)
-                             (concat "DETACH " rcirc-target))))
-    (setq rcirc-target nil)
-    (kill-buffer buffer)))
-(define-key rcirc-mode-map [(control c) (control d)] 'rcirc-detach-buffer)
 
 ;; nice trick to make rcirc windows bigger
 (add-hook 'window-configuration-change-hook
