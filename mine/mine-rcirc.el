@@ -16,35 +16,33 @@
 
 (defun mine/rcirc-connect()
   (interactive)
-  (if (get-buffer-process "*znc0.decaf.zone*")
-      (error "Already connected to rcirc"))
   (if (not (boundp 'znc-pass))
       (error "Not connecting to znc as znc-pass is not set!"))
 
-  (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adamdecaf" "adam" '() (concat "adam/freenode:" znc-pass) 'tls)
-  (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/banno:" znc-pass) 'tls)
-  (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/unifreethought:" znc-pass) 'tls)
-  (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adamdecaf" "adam" '() (concat "adam/oftc:" znc-pass) 'tls)
-  (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/snoonet:" znc-pass) 'tls)
-  (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/indymedia:" znc-pass) 'tls)
-  (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/mozilla:" znc-pass) 'tls)
-  (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/efnet:" znc-pass) 'tls)
+  ;; Notes
+  ;; - soylent (channels: #soylent) is really noisy
+  ;; - Is there anything on https://irc.gitter.im/ ?
+  ;; - netfuze and ferwy have bad ssl certs that won't connect
+  ;;
+  ;; New Networks
+  ;; - encom
+  ;; - ramen
+  ;; - cfl
+  ;; - slashnet
 
-  ;; (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adam" "adam" '() (concat "adam/soylent:" znc-pass) 'tls) ;; spammy
+  ;; Big'old list of servers
+  (setq rcirc-server-alist (list
+                            (list "freenode.znc.decaf.zone"  :port 6697 :nick "adam" :user-name "adamdecaf" :password (concat "adam/freenode:" znc-pass)       :encryption 'tls)
+                            (list "banno.znc.decaf.zone"     :port 6697 :nick "adam" :user-name "adam"      :password (concat "adam/banno:" znc-pass)          :encryption 'tls)
+                            (list "unifi.znc.decaf.zone"     :port 6697 :nick "adam" :user-name "adam"      :password (concat "adam/unifreethought:" znc-pass) :encryption 'tls)
+                            (list "oftc.znc.decaf.zone"      :port 6697 :nick "adam" :user-name "adamdecaf" :password (concat "adam/oftc:" znc-pass)           :encryption 'tls)
+                            (list "snoonet.znc.decaf.zone"   :port 6697 :nick "adam" :user-name "adam"      :password (concat "adam/snoonet:" znc-pass)        :encryption 'tls)
+                            (list "indymedia.znc.decaf.zone" :port 6697 :nick "adam" :user-name "adam"      :password (concat "adam/indymedia:" znc-pass)      :encryption 'tls)
+                            (list "mozilla.znc.decaf.zone"   :port 6697 :nick "adam" :user-name "adam"      :password (concat "adam/mozilla:" znc-pass)        :encryption 'tls)
+                            (list "efnet.znc.decaf.zone"     :port 6697 :nick "adam" :user-name "adam"      :password (concat "adam/efnet:" znc-pass)          :encryption 'tls)
+                            ))
+  (rcirc nil))
 
-  ;; todo: https://irc.gitter.im/
-
-  ;; Bad SSL certs
-  ;; (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adamdecaf" "adam" '() (concat "adam/netfuze:" znc-pass) 'tls)
-  ;; (rcirc-connect "znc0.decaf.zone" 6697 "adam" "adamdecaf" "adam" '() (concat "adam/ferwy:" znc-pass) 'tls)
-
-  ;; Checkout these networks
-  ;; encom
-  ;; ramen
-  ;; cfl
-  ;; slashnet
-  ;; oftc -- more channels?
-  )
 
 (defun mine/rcirc-detach-all()
   (interactive)
