@@ -57,12 +57,13 @@
         ;; Tech
         ("Hackernews" ;; https://news.ycombinator.com/rss doesn't have guid
          "http://hnrss.org/newest?points=100" "~/Dropbox/org/feeds.org" "Hackernews" :filter mine/org-feed-clean-hacker-news)
+        ("Touchpine"
+         "https://touchpine.com/rss/de5d62ad7f" "~/Dropbox/org/feeds.org" "Touchpine")
 
         ;; Weather
         ("DSM Weather"
          "http://w1.weather.gov/xml/current_obs/KDSM.rss" "~/Dropbox/org/feeds.org" "DSM Weather" :filter mine/org-feed-strip-html)
         ))
-
 
 (defun mine/strip-cdata (text)
   (if (not text)
