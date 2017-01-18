@@ -57,6 +57,8 @@
    (mapcar 'buffer-name (buffer-list))
    'string-lessp))
 
+;; todo: try just iterating over rcirc-server-alist and getting server name -> buffer name
+;; use get-buffer to see if it's there and check if a process is running
 (defun mine/rcirc-detach-all()
   (interactive)
   (let* ((sorted (mine/get-sorted-buffers)))
