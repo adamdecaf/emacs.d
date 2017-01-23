@@ -42,6 +42,7 @@
 (use-package cl)
 (use-package s :ensure t)
 (use-package ag)
+(use-package php-mode)
 (use-package dockerfile-mode)
 (use-package markdown-mode)
 (use-package ruby-mode)
