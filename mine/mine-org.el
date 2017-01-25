@@ -17,6 +17,8 @@
         ("DONE" . "green")
         ("CANCELLED" . "gray")))
 
+;; org-feed-alist is read from ~/.emacs.d/hidden.el
+
 ;; Load up languages to use
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -29,41 +31,6 @@
   (interactive)
   (let ((last-buffer-name (read-from-minibuffer "Org File: " (car org-buffer-switched-to-history) nil nil 'org-buffer-switched-to-history)))
     (find-file (concat "~/Dropbox/org/" last-buffer-name ".org"))))
-
-;; RSS feeds
-(setq org-feed-alist
-      '((;; News
-         "Al Jazeera"
-         "http://www.aljazeera.com/xml/rss/all.xml" "~/Dropbox/org/feeds.org" "Al Jazeera" :filter mine/org-feed-strip-html)
-        ;; ("BBC Top Stories"
-        ;;  "http://feeds.bbci.co.uk/news/rss.xml" "~/Dropbox/org/feeds.org" "BBC Top Stories" :filter mine/org-feed-strip-html)
-        ;; ("Des Moines Register"
-        ;;  "http://rssfeeds.desmoinesregister.com/desmoines/news&x=1" "~/Dropbox/org/feeds.org" "Des Moines Register" :filter mine/org-feed-strip-html)
-        ;; ("Infowars"
-        ;;  "http://www.infowars.com/feed/custom_feed_rss" "~/Dropbox/org/feeds.org" "Infowars" :filter mine/org-feed-strip-html)
-        ("Longform"
-         "https://longform.org/feed.rss" "~/Dropbox/org/feeds.org" "Longform.org" :filter mine/org-feed-strip-html)
-
-        ;; no guids :(
-        ;; ("FiveThirtyEight Politics"
-        ;;  "https://fivethirtyeight.com/politics/feed" "~/Dropbox/org/feeds.org" "FiveThirtyEight Politics")
-        ;; ("FiveThirtyEight Economics"
-        ;;  "https://fivethirtyeight.com/economics/feed" "~/Dropbox/org/feeds.org" "FiveThirtyEight Economics")
-
-        ;; Blogs
-        ;; ("Scary Beast"
-        ;;  "https://scarybeastsecurity.blogspot.com/feeds/posts/default" "~/Dropbox/org/feeds.org" "Scary Beasts" :filter mine/org-feed-strip-html)
-
-        ;; Tech
-        ("Hackernews" ;; https://news.ycombinator.com/rss doesn't have guid
-         "http://hnrss.org/newest?points=100" "~/Dropbox/org/feeds.org" "Hackernews" :filter mine/org-feed-clean-hacker-news)
-        ("Touchpine"
-         "https://touchpine.com/rss/de5d62ad7f" "~/Dropbox/org/feeds.org" "Touchpine")
-
-        ;; Weather
-        ("DSM Weather"
-         "http://w1.weather.gov/xml/current_obs/KDSM.rss" "~/Dropbox/org/feeds.org" "DSM Weather" :filter mine/org-feed-strip-html)
-        ))
 
 (defun mine/strip-cdata (text)
   (if (not text)

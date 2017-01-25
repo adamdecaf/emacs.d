@@ -19,28 +19,12 @@
   (if (not (boundp 'znc-pass))
       (error "Not connecting to znc as znc-pass is not set!"))
 
-  ;; Notes
-  ;; - soylent (channels: #soylent) is really noisy
-  ;; - Is there anything on https://irc.gitter.im/ ?
-  ;; - netfuze and ferwy have bad ssl certs that won't connect
-  ;;
-  ;; New Networks
-  ;; - encom
-  ;; - ramen
-  ;; - cfl
-  ;; - slashnet
+  ;; rcirc-server-alist is read from ~/.emacs.d/hidden.el
+  (if (or (not (boundp 'rcirc-server-alist))
+          (not rcirc-server-alist))
+      (error "rcirc-server-alist is not specified"))
 
-  ;; Big'old list of servers
-  (setq rcirc-server-alist (list
-                            (list "freenode.znc.decaf.zone"  :port 6697 :nick "adam" :user-name "adamdecaf" :password (concat "adam/freenode:" znc-pass)       :encryption 'tls)
-                            (list "banno.znc.decaf.zone"     :port 6697 :nick "adam" :user-name "adam"      :password (concat "adam/banno:" znc-pass)          :encryption 'tls)
-                            (list "unifi.znc.decaf.zone"     :port 6697 :nick "adam" :user-name "adam"      :password (concat "adam/unifreethought:" znc-pass) :encryption 'tls)
-                            (list "oftc.znc.decaf.zone"      :port 6697 :nick "adam" :user-name "adamdecaf" :password (concat "adam/oftc:" znc-pass)           :encryption 'tls)
-                            (list "snoonet.znc.decaf.zone"   :port 6697 :nick "adam" :user-name "adam"      :password (concat "adam/snoonet:" znc-pass)        :encryption 'tls)
-                            (list "indymedia.znc.decaf.zone" :port 6697 :nick "adam" :user-name "adam"      :password (concat "adam/indymedia:" znc-pass)      :encryption 'tls)
-                            (list "mozilla.znc.decaf.zone"   :port 6697 :nick "adam" :user-name "adam"      :password (concat "adam/mozilla:" znc-pass)        :encryption 'tls)
-                            (list "efnet.znc.decaf.zone"     :port 6697 :nick "adam" :user-name "adam"      :password (concat "adam/efnet:" znc-pass)          :encryption 'tls)
-                            ))
+  ;; Connect!
   (rcirc nil))
 
 (setq debug-on-message "Selecting deleted buffer")
