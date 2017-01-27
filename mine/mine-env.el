@@ -27,10 +27,6 @@
        (node-path "/Users/adam/node_modules/.bin"))
   (setenv "PATH" (format "%s:%s:%s:%s:%s:%s:%s" base-path go-path my-go-path ovftool-path banno-deploy-path home-path node-path)))
 
-;; exec-path-from-shell
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
-
 (setenv "EDITOR" "emacs")
 (setenv "JAVA_HOME" "/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home")
 (setenv "TMPDIR" "/tmp") ;; tramp

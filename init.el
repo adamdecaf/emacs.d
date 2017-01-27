@@ -51,7 +51,6 @@
 (use-package yaml-mode)
 (use-package json-reformat)
 (use-package go-mode)
-(use-package exec-path-from-shell)
 (use-package rust-mode)
 (use-package groovy-mode)
 (use-package vlf)
