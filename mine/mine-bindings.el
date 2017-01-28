@@ -5,10 +5,6 @@
 (global-set-key (kbd "C-c d") 'mine/insert-date)
 (global-set-key (kbd "C-c t") 'mine/insert-iso-timestamp)
 
-;; org
-(global-set-key (kbd "C-c c") 'org-capture)
-(global-set-key (kbd "C-x C-o") 'mine/org-switch-to-file)
-
 ;; frame/window
 (global-set-key (kbd "C-x 7") 'mine/swap-windows)
 (global-set-key (kbd "C-x 8") 'mine/toggle-window-split)

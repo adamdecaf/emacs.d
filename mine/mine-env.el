@@ -38,19 +38,4 @@
 (setenv "DOCKER_CERT_PATH" "/Users/adam/.docker/machine/machines/banno-big")
 (setenv "DOCKER_MACHINE_NAME" "banno-big")
 
-(defun mine/show-docker-env-variables()
-  (interactive)
-  (message (concat "DOCKER_HOST" (getenv "DOCKER_HOST")))
-  (message (concat "DOCKER_CERT_PATH" (getenv "DOCKER_CERT_PATH")))
-  (message (concat "DOCKER_TLS_VERIFY" (getenv "DOCKER_TLS_VERIFY"))))
-
-(defun mine/echo-aws-creds()
-  (interactive)
-  (message (getenv "AWS_ACCESS_KEY_ID"))
-  (message (concat "aws creds in use: " whose-aws-creds-are-in-use)))
-
-(defun mine/echo-path()
-  (interactive)
-  (message (getenv "PATH")))
-
 (provide 'mine-env)

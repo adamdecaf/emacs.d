@@ -62,7 +62,8 @@
 (add-hook 'emacs-lisp-mode-hook '(lambda () (eldoc-mode t)))
 
 ;; Miscallaneous Things
-(if (fboundp 'mouse-wheel-mode) (mouse-wheel-mode t))
+(if (fboundp 'mouse-wheel-mode)
+    (mouse-wheel-mode t))
 (setq x-select-enable-clipboard t)
 
 ;; Backups

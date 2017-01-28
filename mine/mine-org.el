@@ -25,13 +25,6 @@
  '((emacs-lisp . t)
    (sh . t)))
 
-;; helpers
-(defvar org-buffer-switched-to-history nil)
-(defun mine/org-switch-to-file()
-  (interactive)
-  (let ((last-buffer-name (read-from-minibuffer "Org File: " (car org-buffer-switched-to-history) nil nil 'org-buffer-switched-to-history)))
-    (find-file (concat "~/Dropbox/org/" last-buffer-name ".org"))))
-
 (defun mine/strip-cdata (text)
   (if (not text)
       (setq text ""))
