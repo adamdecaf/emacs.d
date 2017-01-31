@@ -1,4 +1,5 @@
 (
+ (:id "sha1:abd928b2ff669269838aa36e3a9489453572329a" :fingerprint "sha1:ea:7a:1e:7c:39:87:5e:b6:41:ea:19:4e:8e:24:b4:b8:67:54:38:ce" :host "synIRC.znc.decaf.zone:6697" :conditions (:self-signed :no-host-match :unknown-ca :invalid))
  (:id "sha1:3043739184c125f4ef2081fdfdf8f51a80094306" :fingerprint "sha1:ea:7a:1e:7c:39:87:5e:b6:41:ea:19:4e:8e:24:b4:b8:67:54:38:ce" :host "efnet.znc.decaf.zone:6697" :conditions (:self-signed :no-host-match :unknown-ca :invalid))
  (:id "sha1:d7ddfdfc006545191b7e95743b75676d4b1af832" :fingerprint "sha1:ea:7a:1e:7c:39:87:5e:b6:41:ea:19:4e:8e:24:b4:b8:67:54:38:ce" :host "mozilla.znc.decaf.zone:6697" :conditions (:self-signed :no-host-match :unknown-ca :invalid))
  (:id "sha1:69fdbe0abbe7d49419104a431cb8362cd4bc2af9" :fingerprint "sha1:ea:7a:1e:7c:39:87:5e:b6:41:ea:19:4e:8e:24:b4:b8:67:54:38:ce" :host "indymedia.znc.decaf.zone:6697" :conditions (:self-signed :no-host-match :unknown-ca :invalid))
