@@ -18,14 +18,9 @@
 (mine/update-path (concat gopath "/bin"))
 
 ;; force path
-(let* ((base-path "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin")
-       (my-go-path (concat gopath "/bin"))
-       (go-path "/usr/local/go/bin")
-       (ovftool-path "/Applications/VMware\ OVF\ Tool/")
-       (banno-deploy-path "$BANNO_DEPLOY_DIR/bin")
-       (home-path "/Users/adam/bin")
-       (node-path "/Users/adam/node_modules/.bin"))
-  (setenv "PATH" (format "%s:%s:%s:%s:%s:%s:%s" base-path go-path my-go-path ovftool-path banno-deploy-path home-path node-path)))
+(when (not (string-match "local" (getenv "PATH")))
+  (setenv "PATH" (concat (getenv "PATH")
+                         ":/usr/local/bin:/usr/local/sbin")))
 
 (setenv "EDITOR" "emacs")
 (setenv "JAVA_HOME" "/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home")
