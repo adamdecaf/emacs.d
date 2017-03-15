@@ -12,6 +12,12 @@
     (if (equal previous-point (point))
 	(beginning-of-line))))
 
+;; make scratch buffer
+(defun mine/scratch()
+  (interactive)
+  (switch-to-buffer
+   (get-buffer-create "*scratch*")))
+
 ;; date/time
 (defun mine/insert-date ()
   (interactive)
