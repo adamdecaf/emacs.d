@@ -75,7 +75,7 @@
 (setq rcirc-omit-responses '("JOIN" "PART" "QUIT" "NICK" "AWAY" "MODE"))
 
 (setq rcirc-keywords '("adam" "adamdecaf" ;; Personal
-                       "@ds-design" "@infrastructure" ;; Banno
+                       "@infrastructure" "prod" "production" "production-2" ;; Banno
                        ))
 
 (defun mine/rcirc-next-active-buffer-bury-rcirc-buffers (arg)
