@@ -171,4 +171,8 @@ frames with exactly two windows."
   (interactive)
   (shell-command "uuidgen | tr -d '\n' | tr '[A-Z]' '[a-z]'" t))
 
+(defun mine/ssh-workstation()
+  (interactive)
+  (find-file "/sshx:znc0.decaf.zone:/root"))
+
 (provide 'mine-defuns)
