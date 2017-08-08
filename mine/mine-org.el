@@ -4,7 +4,7 @@
 
 (setq org-log-done t)
 
-(setq org-directory "~/Dropbox/org")
+(setq org-directory "~/archive/org")
 
 (setq org-todo-keywords
       '((sequence "BLOCKED(b)" "STARTED(s)" "TODO(t)" "NEXT(n)" "|" "DONE(d)" "CANCELLED(c)")))
