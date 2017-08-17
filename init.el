@@ -73,6 +73,10 @@
 (use-package magit
   :bind ("C-x g" . magit-status))
 
+(use-package magithub
+  :after magit
+  :config (magithub-feature-autoinject t))
+
 (use-package smex
   :bind (("M-x" . smex)))
 
