@@ -130,3 +130,29 @@
 (cd (getenv "HOME"))
 (fullscreen)
 (server-start)
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(magit-item-highlight ((t nil)))
+ '(markdown-code-face ((t (:inherit fixed-pitch))))
+ '(mode-line ((t (:family "Monaco" :background nil :foreground "#ff7a58" :box nil))))
+ '(mode-line-buffer-id ((t :family "Monaco" :background nil :foreground "#7db5d6")))
+ '(mode-line-inactive ((t (:family "Monaco" :background nil :foreground "gray" :box nil))))
+ '(rcirc-my-nick ((t (:foreground "#00ffff"))))
+ '(rcirc-nick-in-message ((t (:foreground "#00ffff"))))
+ '(rcirc-other-nick ((t (:foreground "#90ee90"))))
+ '(rcirc-prompt ((t (:foreground "#00bfff"))))
+ '(rcirc-server ((t (:foreground "#a2b5cd"))))
+ '(rcirc-server-prefix ((t (:foreground "#00bfff"))))
+ '(rcirc-timestamp ((t (:foreground "#7d7d7d")))))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (highlight-parentheses expand-region switch-window smex magit multiple-cursors ido-vertical-mode terraform-mode vlf groovy-mode rust-mode go-mode json-reformat yaml-mode scala-mode sbt-mode markdown-mode dockerfile-mode php-mode erlang ag s use-package))))
