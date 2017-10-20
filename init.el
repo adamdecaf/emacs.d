@@ -71,7 +71,12 @@
          ("C-*" . mc/mark-all-like-this)))
 
 (use-package magit
-  :bind ("C-x g" . magit-status))
+  :bind (("C-x g" . magit-status)
+         ("C-x G" . magit-blame)))
+
+(use-package magithub
+  :after magit
+  :config (magithub-feature-autoinject t))
 
 (use-package smex
   :bind (("M-x" . smex)))
@@ -155,4 +160,4 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (highlight-parentheses expand-region switch-window smex magit multiple-cursors ido-vertical-mode terraform-mode vlf groovy-mode rust-mode go-mode json-reformat yaml-mode scala-mode sbt-mode markdown-mode dockerfile-mode php-mode erlang ag s use-package))))
+    (magithub highlight-parentheses expand-region switch-window smex magit multiple-cursors ido-vertical-mode terraform-mode vlf groovy-mode rust-mode go-mode json-reformat yaml-mode scala-mode sbt-mode markdown-mode dockerfile-mode php-mode erlang ag s use-package))))
