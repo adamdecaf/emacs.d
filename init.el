@@ -74,9 +74,9 @@
   :bind (("C-x g" . magit-status)
          ("C-x G" . magit-blame)))
 
-(use-package magithub
-  :after magit
-  :config (magithub-feature-autoinject t))
+;; (use-package magithub
+;;   :after magit
+;;   :config (magithub-feature-autoinject t))
 
 (use-package smex
   :bind (("M-x" . smex)))
@@ -158,6 +158,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(epg-gpg-program "/usr/local/bin/gpg")
  '(package-selected-packages
    (quote
     (magithub highlight-parentheses expand-region switch-window smex magit multiple-cursors ido-vertical-mode terraform-mode vlf groovy-mode rust-mode go-mode json-reformat yaml-mode scala-mode sbt-mode markdown-mode dockerfile-mode php-mode erlang ag s use-package))))

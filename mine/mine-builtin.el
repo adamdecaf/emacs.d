@@ -85,6 +85,11 @@
 
 (setq vc-follow-symlinks t)
 
+;; gpg
+(require 'epa-file)
+(custom-set-variables '(epg-gpg-program  "/usr/local/bin/gpg"))
+(epa-file-enable)
+
 ;; git settings
 (setq git-commit-summary-max-length 150)
 
