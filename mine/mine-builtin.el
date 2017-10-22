@@ -61,6 +61,9 @@
 
 (add-hook 'emacs-lisp-mode-hook '(lambda () (eldoc-mode t)))
 
+;; ispell
+(setq ispell-program-name "/usr/local/bin/ispell")
+
 ;; Miscallaneous Things
 (if (fboundp 'mouse-wheel-mode)
     (mouse-wheel-mode t))
