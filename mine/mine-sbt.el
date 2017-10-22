@@ -2,6 +2,9 @@
 
 (defalias 'sbt 'sbt-start)
 
+(setq sbt:program-name
+      (concat (getenv "HOME") "/bin/sbt"))
+
 (defun sbt/docker()
   (interactive)
   (sbt-command "docker"))
