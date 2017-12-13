@@ -54,7 +54,8 @@
 (use-package go-mode)
 (use-package rust-mode)
 (use-package groovy-mode)
-(use-package jsonnet-mode)
+(use-package jsonnet-mode
+  :mode ("\\.libsonnet\\'" . jsonnet-mode))
 (use-package vlf)
 
 (use-package terraform-mode
