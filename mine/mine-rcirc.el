@@ -74,7 +74,7 @@
 
 (setq rcirc-omit-responses '("JOIN" "PART" "QUIT" "NICK" "AWAY" "MODE"))
 
-(setq rcirc-keywords '("adam" "adamdecaf" ;; Personal
+(setq rcirc-keywords '("adam" "adamdecaf" "adamkshannon" ;; Personal
                        "@infrastructure" ;; Banno
                        ))
 
