@@ -148,6 +148,7 @@
  '(mode-line ((t (:family "Monaco" :background nil :foreground "#ff7a58" :box nil))))
  '(mode-line-buffer-id ((t :family "Monaco" :background nil :foreground "#7db5d6")))
  '(mode-line-inactive ((t (:family "Monaco" :background nil :foreground "gray" :box nil))))
+ '(rcirc-keyword ((t (:foreground "turquoise2"))))
  '(rcirc-my-nick ((t (:foreground "#00ffff"))))
  '(rcirc-nick-in-message ((t (:foreground "#00ffff"))))
  '(rcirc-other-nick ((t (:foreground "#90ee90"))))
