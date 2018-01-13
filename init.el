@@ -3,9 +3,10 @@
 
 ;; Setup use-package
 (require 'package)
-(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-                         ("melpa" . "https://melpa.org/packages/")))
-
+(setq package-archives
+      '(("gnu" . "https://elpa.gnu.org/packages/")
+        ("melpa" . "https://melpa.org/packages/")
+        ("melpa-stable" . "https://stable.melpa.org/packages/")))
 (package-initialize)
 (package-refresh-contents)
 
@@ -73,6 +74,7 @@
          ("C-*" . mc/mark-all-like-this)))
 
 (use-package magit
+  :pin melpa-stable
   :bind (("C-x g" . magit-status)
          ("C-x G" . magit-blame)))
 
