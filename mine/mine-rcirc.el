@@ -74,7 +74,8 @@
 
 (setq rcirc-omit-responses '("JOIN" "PART" "QUIT" "NICK" "AWAY" "MODE"))
 
-(setq rcirc-keywords '("adam" "adamdecaf" "adamkshannon" "Adam Shannon"))
+(setq rcirc-keywords '("adam" "adamdecaf" "adamkshannon" "Adam Shannon"
+                       "infrastructure"))
 
 (defun mine/rcirc-next-active-buffer-bury-rcirc-buffers (arg)
   "Switch to the next rcirc buffer with activity, burying all rcirc buffers after returning to a non-rcirc buffer.
