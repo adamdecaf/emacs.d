@@ -17,6 +17,11 @@
 (setenv "TMPDIR" "/tmp") ;; tramp
 (setenv "TZ" "America/Chicago")
 
+;; Misc
+(setenv "GOPATH" "/Users/adam/code")
+(setenv "JAVA_HOME" (shell-command-to-string "/usr/libexec/java_home"))
+(setenv "TF_PLUGIN_CACHE_DIR" (concat (getenv "HOME") "/.terraform.d/plugin-cache"))
+
 ;; kubernetes
 (setenv "KUBECONFIG" (let ((home (getenv "HOME")))
                        (concat
