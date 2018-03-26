@@ -17,4 +17,12 @@
 (setenv "TMPDIR" "/tmp") ;; tramp
 (setenv "TZ" "America/Chicago")
 
+;; kubernetes
+(setenv "KUBECONFIG" (let ((home (getenv "HOME")))
+                       (concat
+                        (concat home "/.kube/config:")
+                        (concat home "/.kube/kube-config-k8s-banno-staging:")
+                        (concat home "/.kube/kube-config-k8s-banno-uat:")
+                        (concat home "/.kube/kube-config-k8s-banno-production"))))
+
 (provide 'mine-env)
