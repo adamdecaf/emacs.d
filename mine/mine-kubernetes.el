@@ -7,3 +7,5 @@
 
 ;; Settings for https://github.com/chrisbarrett/kubernetes-el
 (setq kubernetes-kubectl-executable "/usr/local/bin/kubectl")
+
+(provide 'mine-kubernetes)
