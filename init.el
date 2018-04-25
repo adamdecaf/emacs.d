@@ -56,6 +56,7 @@
 (use-package rust-mode)
 (use-package haskell-mode)
 (use-package groovy-mode)
+(use-package crystal-mode)
 (use-package jsonnet-mode
   :mode ("\\.libsonnet\\'" . jsonnet-mode))
 (use-package vlf)
@@ -172,4 +173,4 @@
  '(epg-gpg-program "/usr/local/bin/gpg")
  '(package-selected-packages
    (quote
-    (haskell-mode kubernetes jsonnet-mode magithub highlight-parentheses expand-region switch-window smex magit multiple-cursors ido-vertical-mode terraform-mode vlf groovy-mode rust-mode go-mode json-reformat yaml-mode scala-mode sbt-mode markdown-mode dockerfile-mode php-mode erlang ag s use-package))))
+    (crystal-mode haskell-mode kubernetes jsonnet-mode magithub highlight-parentheses expand-region switch-window smex magit multiple-cursors ido-vertical-mode terraform-mode vlf groovy-mode rust-mode go-mode json-reformat yaml-mode scala-mode sbt-mode markdown-mode dockerfile-mode php-mode erlang ag s use-package))))
