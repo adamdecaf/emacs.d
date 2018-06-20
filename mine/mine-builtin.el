@@ -28,6 +28,9 @@
 (setq enable-recursive-minibuffers t)
 (minibuffer-depth-indicate-mode t)
 
+;; Set default comment
+(setq-default comment-start "# ")
+
 ;; Create non-existent directories containing a new file before saving
 (add-hook 'before-save-hook
           (lambda ()
