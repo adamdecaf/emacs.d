@@ -1,8 +1,7 @@
 (
- (:id "sha1:6d4eb958390599243ba9f5035cb671fa8dd6a93a" :fingerprint "sha1:46:cc:ea:ab:17:18:b3:1a:22:52:6e:c5:bd:bc:82:12:8e:ea:5a:19" :host "elpa.gnu.org:443" :conditions (:insecure :unknown-ca :invalid))
- (:id "sha1:ccfd2cc2a08c89a9b10969be8c1e926954d53e28" :fingerprint "sha1:b2:85:5c:6f:45:23:d5:88:0e:82:ee:17:b9:eb:c1:88:ed:50:84:44" :host "stable.melpa.org:443" :conditions (:insecure :unknown-ca :invalid))
- (:id "sha1:85b31c268009209a8d3c5387033b219264f7e62b" :fingerprint "sha1:f8:e1:fc:e4:34:8e:19:e8:48:c1:61:fe:3d:09:dd:d4:d2:7a:cb:db" :host "melpa.org:443" :conditions (:insecure :unknown-ca :invalid))
  (:id "sha1:d7ddfdfc006545191b7e95743b75676d4b1af832" :fingerprint "sha1:ea:7a:1e:7c:39:87:5e:b6:41:ea:19:4e:8e:24:b4:b8:67:54:38:ce" :host "mozilla.znc.decaf.zone:6697" :conditions (:self-signed :no-host-match :insecure :unknown-ca :invalid))
- (:id "sha1:c67a74e76a0beae519bbf3d9c57c85d39198a977" :fingerprint "sha1:ea:7a:1e:7c:39:87:5e:b6:41:ea:19:4e:8e:24:b4:b8:67:54:38:ce" :host "banno.znc.decaf.zone:6697" :conditions (:self-signed :no-host-match :insecure :unknown-ca :invalid))
  (:id "sha1:1d81042c3b7dd50d9d96ae08e96ef18ce83444a6" :fingerprint "sha1:ea:7a:1e:7c:39:87:5e:b6:41:ea:19:4e:8e:24:b4:b8:67:54:38:ce" :host "freenode.znc.decaf.zone:6697" :conditions (:self-signed :no-host-match :insecure :unknown-ca :invalid))
+ (:id "sha1:ccfd2cc2a08c89a9b10969be8c1e926954d53e28" :fingerprint "sha1:fb:7f:46:32:1a:10:44:3b:bf:29:38:1a:c7:7b:da:42:f8:fe:94:e1" :host "stable.melpa.org:443" :conditions (:insecure :unknown-ca :invalid))
+ (:id "sha1:85b31c268009209a8d3c5387033b219264f7e62b" :fingerprint "sha1:01:ab:88:52:9e:a2:f9:95:50:1b:3d:22:b6:d1:16:8d:de:ec:14:25" :host "melpa.org:443" :conditions (:insecure :unknown-ca :invalid))
+ (:id "sha1:6d4eb958390599243ba9f5035cb671fa8dd6a93a" :fingerprint "sha1:24:41:12:07:52:a8:07:91:5f:c4:bc:fa:37:d8:a2:85:8b:0b:da:45" :host "elpa.gnu.org:443" :conditions (:insecure :unknown-ca :invalid))
 )
