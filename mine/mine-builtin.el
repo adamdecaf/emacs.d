@@ -99,4 +99,7 @@
 ;; git settings
 (setq git-commit-summary-max-length 150)
 
+;; network settings
+(setq network-security-level 'paranoid)
+
 (provide 'mine-builtin)
