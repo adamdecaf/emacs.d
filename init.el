@@ -113,6 +113,7 @@
 ;; mine/* configs
 (add-to-list 'load-path "~/.emacs.d/mine")
 (require 'mine-env)
+(require 'mine-eshell)
 (require 'mine-builtin)
 (require 'mine-defuns)
 (require 'mine-tramp)
