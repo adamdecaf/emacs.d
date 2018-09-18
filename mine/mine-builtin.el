@@ -65,7 +65,10 @@
 (add-hook 'emacs-lisp-mode-hook '(lambda () (eldoc-mode t)))
 
 ;; ispell
-(setq ispell-program-name "/usr/local/bin/ispell")
+(setq ispell-program-name
+      (if (file-exists-p "/usr/local/bin/ispell")
+          "/usr/local/bin/ispell"
+        "/usr/bin/ispell"))
 
 ;; Miscallaneous Things
 (if (fboundp 'mouse-wheel-mode)
