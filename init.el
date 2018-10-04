@@ -120,6 +120,7 @@
 (require 'mine-languages)
 (require 'mine-mode-line)
 (require 'mine-pretty)
+(require 'mine-go)
 (require 'mine-org)
 (require 'mine-sbt)
 (require 'mine-magit)
