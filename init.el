@@ -7,8 +7,17 @@
       '(("gnu" . "https://elpa.gnu.org/packages/")
         ("melpa" . "https://melpa.org/packages/")
         ("melpa-stable" . "https://stable.melpa.org/packages/")))
+
 (package-initialize)
-(package-refresh-contents)
+
+;; From https://emacs.stackexchange.com/a/18515
+(defun internet-up-p (&optional host)
+  (= 0 (call-process "ping" nil nil nil "-c" "1" "-W" "1"
+                     (if host host "www.google.com"))))
+
+;; Only try and refresh packages if we're online
+(if (internet-up-p)
+    (package-refresh-contents))
 
 ;; Install use-package
 (unless (package-installed-p 'use-package)

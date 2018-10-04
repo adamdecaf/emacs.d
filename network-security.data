@@ -1,7 +1,7 @@
 (
- (:id "sha1:ccfd2cc2a08c89a9b10969be8c1e926954d53e28" :fingerprint "sha1:1f:8f:9d:5a:d6:fb:04:c1:1f:5d:2a:00:3c:31:90:36:9f:2a:bd:56")
  (:id "sha1:85b31c268009209a8d3c5387033b219264f7e62b" :fingerprint "sha1:1f:8f:9d:5a:d6:fb:04:c1:1f:5d:2a:00:3c:31:90:36:9f:2a:bd:56")
- (:id "sha1:6d4eb958390599243ba9f5035cb671fa8dd6a93a" :fingerprint "sha1:6e:02:e7:24:0e:78:33:a0:70:b5:7a:0c:bb:74:cb:db:0a:ac:20:ce")
+ (:id "sha1:6d4eb958390599243ba9f5035cb671fa8dd6a93a" :fingerprint "sha1:cd:d1:13:58:c9:83:43:f0:54:68:cf:9c:00:44:4c:4b:ad:0f:85:ef")
+ (:id "sha1:ccfd2cc2a08c89a9b10969be8c1e926954d53e28" :fingerprint "sha1:1f:8f:9d:5a:d6:fb:04:c1:1f:5d:2a:00:3c:31:90:36:9f:2a:bd:56")
  (:id "sha1:d7ddfdfc006545191b7e95743b75676d4b1af832" :fingerprint "sha1:ea:7a:1e:7c:39:87:5e:b6:41:ea:19:4e:8e:24:b4:b8:67:54:38:ce" :host "mozilla.znc.decaf.zone:6697" :conditions (:self-signed :no-host-match :insecure :unknown-ca :invalid))
  (:id "sha1:1d81042c3b7dd50d9d96ae08e96ef18ce83444a6" :fingerprint "sha1:ea:7a:1e:7c:39:87:5e:b6:41:ea:19:4e:8e:24:b4:b8:67:54:38:ce" :host "freenode.znc.decaf.zone:6697" :conditions (:self-signed :no-host-match :insecure :unknown-ca :invalid))
 )
