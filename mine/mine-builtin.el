@@ -52,7 +52,6 @@
   (interactive)
   (make-variable-buffer-local 'mine/leave-whitespace)
   (setq mine/delete-trailing-whitespace nil))
-(add-hook 'before-save-hook '(lambda () (if mine/delete-trailing-whitespace (delete-trailing-whitespace))))
 
 ;; dired things
 (add-hook 'dired-mode-hook '(lambda ()
