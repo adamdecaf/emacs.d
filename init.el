@@ -92,6 +92,11 @@
   :bind (("C-x g" . magit-status)
          ("C-x G" . magit-blame)))
 
+(use-package keyfreq
+  :init (progn
+          (keyfreq-mode 1)
+          (keyfreq-autosave-mode 1)))
+
 ;; (use-package magithub
 ;;   :after magit
 ;;   :config (magithub-feature-autoinject t))
@@ -188,4 +193,4 @@
  '(epg-gpg-program "/usr/local/bin/gpg")
  '(package-selected-packages
    (quote
-    (toml-mode crystal-mode haskell-mode kubernetes jsonnet-mode magithub highlight-parentheses expand-region switch-window smex magit multiple-cursors ido-vertical-mode terraform-mode vlf groovy-mode rust-mode go-mode json-reformat yaml-mode scala-mode sbt-mode markdown-mode dockerfile-mode php-mode erlang ag s use-package))))
+    (keyfreq toml-mode crystal-mode haskell-mode kubernetes jsonnet-mode magithub highlight-parentheses expand-region switch-window smex magit multiple-cursors ido-vertical-mode terraform-mode vlf groovy-mode rust-mode go-mode json-reformat yaml-mode scala-mode sbt-mode markdown-mode dockerfile-mode php-mode erlang ag s use-package))))
