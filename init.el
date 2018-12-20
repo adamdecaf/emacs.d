@@ -66,6 +66,7 @@
 (use-package haskell-mode)
 (use-package groovy-mode)
 (use-package crystal-mode)
+(use-package lua-mode)
 (use-package toml-mode
   :mode ("\\.toml\\'" . toml-mode))
 (use-package jsonnet-mode
@@ -193,4 +194,4 @@
  '(epg-gpg-program "/usr/local/bin/gpg")
  '(package-selected-packages
    (quote
-    (keyfreq toml-mode crystal-mode haskell-mode kubernetes jsonnet-mode magithub highlight-parentheses expand-region switch-window smex magit multiple-cursors ido-vertical-mode terraform-mode vlf groovy-mode rust-mode go-mode json-reformat yaml-mode scala-mode sbt-mode markdown-mode dockerfile-mode php-mode erlang ag s use-package))))
+    (lua-mode keyfreq toml-mode crystal-mode haskell-mode kubernetes jsonnet-mode magithub highlight-parentheses expand-region switch-window smex magit multiple-cursors ido-vertical-mode terraform-mode vlf groovy-mode rust-mode go-mode json-reformat yaml-mode scala-mode sbt-mode markdown-mode dockerfile-mode php-mode erlang ag s use-package))))
