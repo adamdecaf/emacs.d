@@ -16,4 +16,7 @@
 ;; Jenkinsfile's are in groovy
 (add-to-list 'auto-mode-alist '("Jenkinsfile" . groovy-mode))
 
+;; Tilt (local Kubernetes dev tool)
+(add-to-list 'auto-mode-alist '("Tiltfile" . python-mode))
+
 (provide 'mine-languages)
