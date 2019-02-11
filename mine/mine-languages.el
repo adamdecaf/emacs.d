@@ -3,6 +3,9 @@
 ;; setup javascript indenting
 (setq js-indent-level 2)
 
+;; Dockerfiles
+(add-to-list 'auto-mode-alist '("Dockerfile-.+" . dockerfile-mode))
+
 ;; protobuf files are like c
 (add-to-list 'auto-mode-alist '("\\.proto\\'" . c-mode))
 
