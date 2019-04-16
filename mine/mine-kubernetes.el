@@ -6,6 +6,8 @@
 
 
 ;; Settings for https://github.com/chrisbarrett/kubernetes-el
-(setq kubernetes-kubectl-executable "/usr/local/bin/kubectl")
+(setq kubernetes-kubectl-executable
+      ;; From gcloud cli
+      "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/kubectl")
 
 (provide 'mine-kubernetes)
