@@ -27,6 +27,12 @@
   (interactive)
   (insert (format-time-string "%Y-%m-%dT%H:%M:%S")))
 
+(defun mine/insert-todo ()
+  (interactive)
+  (move-end-of-line nil)
+  (insert " // TODO(adam): ")
+  (move-end-of-line nil))
+
 (defun mine/message-the-time()
   (interactive)
   (message (string-trim (shell-command-to-string "date"))))
