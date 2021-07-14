@@ -49,7 +49,7 @@
 (subword-mode t)
 
 ;; packages
-(use-package cl)
+(use-package cl-lib)
 (use-package s :ensure t)
 (use-package ag)
 (use-package erlang)
@@ -64,6 +64,7 @@
 (use-package go-mode)
 (use-package rust-mode)
 (use-package haskell-mode)
+(use-package clojure-mode)
 (use-package groovy-mode)
 (use-package crystal-mode)
 (use-package typescript-mode)
@@ -96,7 +97,7 @@
          ("C-x G" . magit-blame)))
 
 (use-package magit-todos)
-(use-package magit-gh-pulls)
+;;(use-package magit-gh-pulls)
 
 (use-package keyfreq
   :init (progn
@@ -199,5 +200,4 @@
  ;; If there is more than one, they won't work right.
  '(epg-gpg-program "/usr/local/bin/gpg")
  '(package-selected-packages
-   (quote
-    (handlebars-mode typescript-mode magit-todos magit-gh-pulls lua-mode keyfreq toml-mode crystal-mode haskell-mode kubernetes jsonnet-mode magithub highlight-parentheses expand-region switch-window smex magit multiple-cursors ido-vertical-mode terraform-mode vlf groovy-mode rust-mode go-mode json-reformat yaml-mode scala-mode sbt-mode markdown-mode dockerfile-mode php-mode erlang ag s use-package))))
+   '(clojure-mode handlebars-mode typescript-mode magit-todos magit-gh-pulls lua-mode keyfreq toml-mode crystal-mode haskell-mode kubernetes jsonnet-mode magithub highlight-parentheses expand-region switch-window smex magit multiple-cursors ido-vertical-mode terraform-mode vlf groovy-mode rust-mode go-mode json-reformat yaml-mode scala-mode sbt-mode markdown-mode dockerfile-mode php-mode erlang ag s use-package)))
