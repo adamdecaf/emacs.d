@@ -2,6 +2,6 @@
       (list
        "--smart-case"
        "--stats"
-       "--only-matching"))
+       )) ;; "--only-matching"
 
 (provide 'mine-ag)
