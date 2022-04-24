@@ -40,6 +40,8 @@
 
 (tool-bar-mode -1)
 (menu-bar-mode -1)
+
+(require 'scroll-bar)
 (scroll-bar-mode -1)
 
 (setq ring-bell-function #'ignore
