@@ -144,7 +144,6 @@
 (require 'mine-tramp)
 (require 'mine-languages)
 (require 'mine-mode-line)
-(require 'mine-eshell)
 (require 'mine-pretty)
 (require 'mine-go)
 (require 'mine-org)

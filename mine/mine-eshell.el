@@ -1,18 +1,7 @@
 ;; eshell setup
 (require 's)
 
-(setq eshell-path-env (string-join
-                       '(
-                         "/usr/bin"
-                         "/bin"
-                         "/usr/sbin"
-                         "/sbin"
-                         "/usr/local/bin/"
-                         "/home/adam/bin"
-                         "/home/adam/code/bin"
-                         "/usr/local/go/bin/")
-                       ":"))
-
+(setq eshell-path-env mine-path)
 (setq eshell-buffer-shorthand t)
 
 ;; helpful defuns
@@ -28,6 +17,11 @@
     (rename-buffer full-name t)))
 
 (add-hook 'eshell-directory-change-hook 'mine/eshell-rename-buffer-pwd)
+
+;; Force PATH in each buffer
+(defun mine/eshell-mode-hook ()
+  (setq eshell-path-env mine-path))
+(add-hook 'eshell-mode-hook #'mine/eshell-mode-hook)
 
 ;; find / create eshells
 ;; from rubbish
