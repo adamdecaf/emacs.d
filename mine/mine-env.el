@@ -24,6 +24,9 @@
 (setenv "ESHELL" "bash")
 (setenv "TZ" "America/Chicago")
 
+(setenv "GOPATH" "/Users/adam/code/")
+(setenv "GOPRIVATE" "github.com/moov-io/*,github.com/moovfinancial/*")
+
 ;; kubernetes
 (setenv "KUBECONFIG" (let ((home (getenv "HOME")))
                        (concat
