@@ -1,6 +1,11 @@
 ;; fix buffer switching
 (global-set-key [remap list-buffers] 'bs-show)
 
+;; eshell
+(global-set-key (kbd "C-x m") 'eshell)
+(global-set-key (kbd "C-x C-n") 'mine/eshell-pick-and-choose)
+(global-set-key (kbd "C-x C-m") 'mine/eshell-switch-to-closest-or-create-here)
+
 ;; date/time
 (global-set-key (kbd "C-c d") 'mine/insert-date)
 (global-set-key (kbd "C-c t") 'mine/insert-iso-timestamp)
