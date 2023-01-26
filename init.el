@@ -76,6 +76,7 @@
   :mode ("\\.toml\\'" . toml-mode))
 (use-package jsonnet-mode
   :mode ("\\.libsonnet\\'" . jsonnet-mode))
+(use-package zig-mode)
 
 (use-package vlf)
 
@@ -202,4 +203,4 @@
  ;; If there is more than one, they won't work right.
  '(epg-gpg-program "/usr/local/bin/gpg")
  '(package-selected-packages
-   '(clojure-mode handlebars-mode typescript-mode magit-todos magit-gh-pulls lua-mode keyfreq toml-mode crystal-mode haskell-mode kubernetes jsonnet-mode magithub highlight-parentheses expand-region switch-window smex magit multiple-cursors ido-vertical-mode terraform-mode vlf groovy-mode rust-mode go-mode json-reformat yaml-mode scala-mode sbt-mode markdown-mode dockerfile-mode php-mode erlang ag s use-package)))
+   '(zig-mode clojure-mode handlebars-mode typescript-mode magit-todos magit-gh-pulls lua-mode keyfreq toml-mode crystal-mode haskell-mode kubernetes jsonnet-mode magithub highlight-parentheses expand-region switch-window smex magit multiple-cursors ido-vertical-mode terraform-mode vlf groovy-mode rust-mode go-mode json-reformat yaml-mode scala-mode sbt-mode markdown-mode dockerfile-mode php-mode erlang ag s use-package)))
