@@ -67,7 +67,9 @@
 (setq ispell-program-name
       (if (file-exists-p "/usr/local/bin/ispell")
           "/usr/local/bin/ispell"
-        "/usr/bin/ispell"))
+        (if (file-exists-p "/opt/homebrew/bin/ispell")
+            "/opt/homebrew/bin/ispell"
+          "/usr/bin/ispell")))
 
 ;; Miscallaneous Things
 (if (fboundp 'mouse-wheel-mode)

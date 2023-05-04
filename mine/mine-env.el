@@ -10,6 +10,7 @@
                    "/sbin"
                    "/Users/adam/code/bin"
                    "/Users/adam/bin"
+                   "/opt/homebrew/bin/"
                    )
                  ":"))
 
