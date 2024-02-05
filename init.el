@@ -40,8 +40,6 @@
 
 (tool-bar-mode -1)
 (menu-bar-mode -1)
-
-(require 'scroll-bar)
 (scroll-bar-mode -1)
 
 (setq ring-bell-function #'ignore
@@ -51,7 +49,6 @@
 (subword-mode t)
 
 ;; packages
-(use-package cl-lib)
 (use-package s :ensure t)
 (use-package ag)
 (use-package erlang)
@@ -76,7 +73,6 @@
   :mode ("\\.toml\\'" . toml-mode))
 (use-package jsonnet-mode
   :mode ("\\.libsonnet\\'" . jsonnet-mode))
-(use-package zig-mode)
 
 (use-package vlf)
 
@@ -98,9 +94,6 @@
   :pin melpa-stable
   :bind (("C-x g" . magit-status)
          ("C-x G" . magit-blame)))
-
-(use-package magit-todos)
-;;(use-package magit-gh-pulls)
 
 (use-package keyfreq
   :init (progn
@@ -147,11 +140,11 @@
 (require 'mine-mode-line)
 (require 'mine-pretty)
 (require 'mine-go)
-(require 'mine-org)
-(require 'mine-sbt)
+;; (require 'mine-org)
+;; (require 'mine-sbt)
 (require 'mine-magit)
-(require 'mine-rcirc)
-(require 'mine-kubernetes)
+;; (require 'mine-rcirc)
+;; (require 'mine-kubernetes)
 (require 'mine-bindings) ;; Load bindings after everything else
 
 ;; Load random elisp straight into *your* emacs config!
@@ -203,4 +196,4 @@
  ;; If there is more than one, they won't work right.
  '(epg-gpg-program "/usr/local/bin/gpg")
  '(package-selected-packages
-   '(zig-mode clojure-mode handlebars-mode typescript-mode magit-todos magit-gh-pulls lua-mode keyfreq toml-mode crystal-mode haskell-mode kubernetes jsonnet-mode magithub highlight-parentheses expand-region switch-window smex magit multiple-cursors ido-vertical-mode terraform-mode vlf groovy-mode rust-mode go-mode json-reformat yaml-mode scala-mode sbt-mode markdown-mode dockerfile-mode php-mode erlang ag s use-package)))
+   '(clojure-mode handlebars-mode typescript-mode magit-todos magit-gh-pulls lua-mode keyfreq toml-mode crystal-mode haskell-mode kubernetes jsonnet-mode magithub highlight-parentheses expand-region switch-window smex magit multiple-cursors ido-vertical-mode terraform-mode vlf groovy-mode rust-mode go-mode json-reformat yaml-mode scala-mode sbt-mode markdown-mode dockerfile-mode php-mode erlang ag s use-package)))
