@@ -95,6 +95,9 @@
   :bind (("C-x g" . magit-status)
          ("C-x G" . magit-blame)))
 
+;;(use-package magit-todos)
+;;(use-package magit-gh-pulls)
+
 (use-package keyfreq
   :init (progn
           (keyfreq-mode 1)
