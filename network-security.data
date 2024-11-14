@@ -1,7 +1,10 @@
+;;;; -*- mode: lisp-data -*-
 (
- (:id "sha1:6d4eb958390599243ba9f5035cb671fa8dd6a93a" :fingerprint "sha1:24:5c:a5:b0:32:51:8d:3f:8a:9d:da:db:82:f1:2d:a6:c2:53:19:6e" :conditions nil)
  (:id "sha1:ccfd2cc2a08c89a9b10969be8c1e926954d53e28" :fingerprint "sha1:ad:5e:68:31:f8:06:b7:fd:43:fa:c7:26:67:7c:97:fb:47:f3:dd:41" :conditions nil)
  (:id "sha1:85b31c268009209a8d3c5387033b219264f7e62b" :fingerprint "sha1:ad:5e:68:31:f8:06:b7:fd:43:fa:c7:26:67:7c:97:fb:47:f3:dd:41" :conditions nil)
+ (:id "sha1:6d4eb958390599243ba9f5035cb671fa8dd6a93a" :fingerprint "sha1:24:5c:a5:b0:32:51:8d:3f:8a:9d:da:db:82:f1:2d:a6:c2:53:19:6e" :conditions nil)
+ (:id "sha1:4c4bbf68801de341a54ea4c98e58c08e6d81bd51" :fingerprints ("sha1:35:6a:71:b2:3a:b8:50:78:1e:b7:d4:00:32:fa:a5:51:7e:21:d1:4a") :conditions nil)
+ (:id "sha1:4ce556b8a42349c3b6bb96e3e8b347ee2de4a3ad" :fingerprints ("sha1:35:6a:71:b2:3a:b8:50:78:1e:b7:d4:00:32:fa:a5:51:7e:21:d1:4a") :conditions nil)
  (:id "sha1:1d81042c3b7dd50d9d96ae08e96ef18ce83444a6" :fingerprint "sha1:ea:7a:1e:7c:39:87:5e:b6:41:ea:19:4e:8e:24:b4:b8:67:54:38:ce" :host "freenode.znc.decaf.zone:6697" :conditions (:self-signed :no-host-match :insecure :unknown-ca :invalid))
  (:id "sha1:88d4df3ce5800820f90edda8f27d13572234b2b9" :fingerprint "sha1:5c:17:9b:05:15:2d:6b:84:c4:89:1e:55:48:ea:78:8c:74:35:16:34")
  (:id "sha1:3f465d088c6fc241efca10e0003e39f602a9f8d3" :fingerprint "sha1:8c:0b:34:c2:58:9b:11:02:12:8f:fb:bf:24:d4:9d:dd:38:1e:fa:7b")
