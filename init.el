@@ -192,3 +192,10 @@
  '(rcirc-server ((t (:foreground "#a2b5cd"))))
  '(rcirc-server-prefix ((t (:foreground "#00bfff"))))
  '(rcirc-timestamp ((t (:foreground "#7d7d7d")))))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(epg-gpg-program "/usr/local/bin/gpg")
+ '(package-selected-packages nil))
