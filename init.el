@@ -130,17 +130,6 @@
 ;; uniquify
 (setq uniquify-buffer-name-style 'post-forward)
 
-;; https://github.com/xenodium/chatgpt-shell
-(use-package chatgpt-shell
-  :ensure t
-  :custom
-  ((chatgpt-shell-openai-key "")))
-
-(use-package claude-shell
-  :ensure t
-  :custom
-  ((claude-shell-api-token "")))
-
 ;; mine/* configs
 (add-to-list 'load-path "~/.emacs.d/mine")
 (require 'mine-mine)
