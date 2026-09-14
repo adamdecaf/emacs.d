@@ -118,7 +118,11 @@
   :init (progn (pending-delete-mode t)))
 
 (use-package highlight-parentheses
-  :init (progn (global-highlight-parentheses-mode)))
+  :config
+  ;; Emacs 31's define-globalized-minor-mode reads this after
+  ;; kill-all-local-variables; without a default it is void.
+  (setq-default highlight-parentheses-mode--set-explicitly nil)
+  (global-highlight-parentheses-mode 1))
 
 (use-package ido
   :init (progn (ido-mode t)))
